@@ -1,9 +1,9 @@
+import { DigiFarmIcon } from '../components/icons/DigiFarmIcon'
 import digiFarmCover from '../assets/DigiFarmCover.png'
-import Header from '../components/Header'
 import Hero from '../components/Hero'
 import InfoCard from '../components/InfoCard'
 
-export default function Home() {
+export default function DigiFarm() {
   // Data for crop variety card
   const cropData = [
     { label: 'Giống mía', value: 'KK3' },
@@ -50,24 +50,24 @@ export default function Home() {
 
   return (
     <main>
-      <Hero 
+      <Hero
+        icon={<DigiFarmIcon />}
         coverImage={digiFarmCover}
-        title="Title cho DigiFarm"
-        description="Donec dictum tristique porta. Etiam convallis lorem lobortis nulla molestie, nec tincidunt ex ullamcorper. Quisque ultrices lobortis elit sed euismod. Duis in ultrices dolor, ac rhoncus odio. Suspendisse tempor sollicitudin dui sed lacinia. Nulla quis enim posuere"
       />
+      <div className='layout-container'>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Crop Variety Information Card */}
+          <InfoCard title="Giống mía" data={cropData} />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Crop Variety Information Card */}
-        <InfoCard title="Giống mía" data={cropData} />
+          {/* Planting Information Card */}
+          <InfoCard title="Trồng trọt" data={plantingData} />
 
-        {/* Planting Information Card */}
-        <InfoCard title="Trồng trọt" data={plantingData} />
+          {/* Farming Activities Card */}
+          <InfoCard title="Canh tác" data={farmingData} />
 
-        {/* Farming Activities Card */}
-        <InfoCard title="Canh tác" data={farmingData} />
-
-        {/* Harvest Planning Card */}
-        <InfoCard title="Thu hoạch" data={harvestData} />
+          {/* Harvest Planning Card */}
+          <InfoCard title="Thu hoạch" data={harvestData} />
+        </div>
       </div>
     </main>
   )
