@@ -13,7 +13,7 @@ export default function Home() {
   ]
 
   const distributorData = [
-    { label: 'Nhầ phân phối', value: 'Hùng Tín LTD Company' },
+    { label: 'Nhà phân phối', value: 'Hùng Tín LTD Company' },
     { label: 'Địa chỉ', value: 'Phạm Đăng Giảng, Phường Bình Hưng Hoà, Quận Bình Tân, TPHCM, Việt Nam' },
   ]
 
