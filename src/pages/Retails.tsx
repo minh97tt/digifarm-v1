@@ -35,7 +35,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <InfoCard title="Sản phẩm" data={productData} />
 
-        <InfoCard title="Nhầ phân phối" data={distributorData} />
+        <InfoCard title="Nhà phân phối" data={distributorData} />
 
         <InfoCard className="md:col-span-2" title="Điểm bán" data={retailLocationData} />
         </div>
