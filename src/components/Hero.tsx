@@ -1,19 +1,27 @@
 
+import Navigation from "./Navigation";
+
 type HeroProps = {
   coverImage: string;
-  icon?: React.ReactNode;
+  icon?: React.FunctionComponent<any>;
   title?: string;
   description?: string;
 };
 
-export default function Hero({ coverImage, icon, title, description }: HeroProps) {
+export default function Hero({ coverImage, icon: Icon, title, description }: HeroProps) {
   return (
-    <section className="relative z-0 overflow-hidden bg-green-200">
-      <img src={coverImage} alt="Cover" className="w-full h-auto block" />
-      <div className="absolute inset-0 items-center flex flex-col pt-4 mb-6 lg:pt-13">
-          {icon}
+    <section className="relative border-none flex flex-col items-center z-0 overflow-hidden">
+      <div
+        style={{ backgroundImage: `url(${coverImage})` }}
+        className="w-full md:h-50 h-32 bg-cover bg-center absolute top-0 z-0"
+      >
+        <div className="absolute bottom-0 md:h-34 h-20 w-full bg-gradient-to-b to-white from-white/0" />
       </div>
-      <div className="absolute bottom-0 h-40 w-full bg-linear-gradient-to-t from-white to-white/1" />
+      <div className="md:my-7 mt-6 mb-12 z-1">
+        {Icon && <Icon className='w-40 h-12 md:w-auto md:h-auto md:max-w-70' />}
+      </div>
+
+      <Navigation />
     </section>
   );
 }

@@ -1,6 +1,7 @@
 import CoverImage from '../assets/DigiFactoryCover.png'
 import Hero from '../components/Hero'
 import InfoCard from '../components/InfoCard'
+import { DigiFactIcon } from '../components/icons/DigiFactIcon'
 
 export default function Factory() {
   const rawMaterialWarehouseData = [
@@ -49,6 +50,7 @@ export default function Factory() {
     <main>
       <Hero
         coverImage={CoverImage}
+        icon={DigiFactIcon}
       />
       <div className='layout-container'>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

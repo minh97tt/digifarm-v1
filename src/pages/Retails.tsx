@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <main>
       <Hero
-        icon={<DigiRetailsIcon />}
+        icon={DigiRetailsIcon}
         coverImage={CoverImage}
       />
 

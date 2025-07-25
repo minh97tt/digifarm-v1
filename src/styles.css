@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    font-family: theme('fontFamily.sans');
-    line-height: 1.5;
-    font-weight: 400;
-    color-scheme: light;
-    background-color: #f9fafb; /* Use a hex value instead of theme function */
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
 
-  @layer components {
-    body {
-      @apply m-0 min-w-[320px] min-h-screen;
-    }
+:root {
+  font-family: Tahoma, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  background-color: #f9fafb; /* Use a hex value instead of theme function */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  body {
+    @apply m-0 min-w-[320px] min-h-screen;
+    background-color: rgba(242, 255,253, 1);
   }
 }
 
 .layout-container {
-  @apply relative z-1 lg:px-10 pb-10 lg:mt-[-80px] md:mt-[-40px] md:px-5 px-4 mt-[-18px]
+  @apply relative z-1 pt-6 lg:px-10 pb-10 md:px-5 px-4 md:mt-0 mt-[-50px]
 }
 
 @theme {
@@ -29,7 +29,4 @@
   --color-text-primary: rgba(0, 120, 54, 1);
   --color-text-content: rgba(32, 32, 32, 1);
   --color-text-label-secondary: rgba(111, 111, 111, 1);
-  
 }
-
-

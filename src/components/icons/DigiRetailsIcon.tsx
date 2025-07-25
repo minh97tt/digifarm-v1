@@ -1,5 +1,5 @@
-export const DigiRetailsIcon = () => (
-  <svg width="240" height="65" viewBox="0 0 240 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const DigiRetailsIcon = ({ className }: { className?: string }) => (
+  <svg width="240" height="65" viewBox="0 0 240 65" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
     <g clipPath="url(#a)">
       <path
         fill="#0F2F4F"

@@ -2,11 +2,18 @@ import { DigiFarmIcon } from '../components/icons/DigiFarmIcon'
 import digiFarmCover from '../assets/DigiFarmCover.png'
 import Hero from '../components/Hero'
 import InfoCard from '../components/InfoCard'
+import { PngIcon } from '../components/PngIcon'
+
+import fertilizerIcon from '../assets/farm/fertilizer.png'
+import sugarIcon from '../assets/farm/sugar.png'
+import deliveryIcon from '../assets/farm/delivery.png'
+import treeIcon from '../assets/farm/trees.png'
+import truckIcon from '../assets/farm/truck.png'
 
 export default function DigiFarm() {
   // Data for crop variety card
   const cropData = [
-    { label: 'Giống mía', value: 'KK3' },
+    { label: 'Giống cây trồng', value: 'KK3' },
     { label: 'Nguồn gốc giống', value: 'Viện Nghiên cứu Mía đường, Trung tâm Nông nghiệp địa phương' },
     { label: 'Thời gian chọn giống', value: '1/11/2023' },
     { label: 'Tiêu chí chọn', value: 'Năng suất cao, chịu hạn tốt, kháng sâu bệnh' },
@@ -48,25 +55,37 @@ export default function DigiFarm() {
     { label: 'Số nhân công', value: '15 người' },
   ]
 
+    // Data for delivery planning card
+    const deliveryData = [
+      { label: 'Đơn vị vận chuyển', value: 'Tự vận chuyển' },
+      { label: 'Tài xế', value: 'Lê Văn Việt' },
+      { label: 'Biển số xe', value: '70A1 - 123.45' },
+      { label: 'Điểm đến', value: 'Nhà kho TTCS' },
+      { label: 'Địa chỉ', value: 'Xã Tân Hưng, Huyện Tân Châu, Tỉnh Tây Ninh, Việt Nam' },
+    ]
+
   return (
     <main>
       <Hero
-        icon={<DigiFarmIcon />}
+        icon={DigiFarmIcon}
         coverImage={digiFarmCover}
       />
       <div className='layout-container'>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Crop Variety Information Card */}
-          <InfoCard title="Giống mía" data={cropData} />
+          <InfoCard title="Giống cây trồng" data={cropData} icon={<PngIcon imageUrl={sugarIcon} />} />
 
           {/* Planting Information Card */}
-          <InfoCard title="Trồng trọt" data={plantingData} />
+          <InfoCard title="Trồng trọt" data={plantingData} icon={<PngIcon imageUrl={treeIcon} />} />
 
           {/* Farming Activities Card */}
-          <InfoCard title="Canh tác" data={farmingData} />
+          <InfoCard title="Canh tác" data={farmingData} icon={<PngIcon imageUrl={fertilizerIcon} />} />
 
           {/* Harvest Planning Card */}
-          <InfoCard title="Thu hoạch" data={harvestData} />
+          <InfoCard title="Thu hoạch" data={harvestData} icon={<PngIcon imageUrl={truckIcon} />} />
+
+          {/* Harvest Planning Card */}
+          <InfoCard className="md:col-span-2" title="Vận chuyển" data={deliveryData} icon={<PngIcon imageUrl={deliveryIcon} />} />
         </div>
       </div>
     </main>
