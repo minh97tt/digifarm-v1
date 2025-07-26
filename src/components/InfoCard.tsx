@@ -18,7 +18,7 @@ export default function InfoCard({ title,icon, data, className }: InfoCardProps)
       <table className="w-full border-collapse">
         <tbody>
           {data.map((item, index) => (
-            <tr key={index} >
+            <tr key={index} className="align-top">
               <td className="py-2 text-text-label-secondary w-2/5">{item.label}</td>
               <td className="py-2 text-text-content text-right font-medium">{item.value}</td>
             </tr>
