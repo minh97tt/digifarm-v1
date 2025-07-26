@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import InfoCard from '../components/InfoCard'
 import MapWithPolygon from '../components/FarmMap'
 import { PngIcon } from '../components/PngIcon'
+import { useParams } from 'react-router-dom'
 
 import fertilizerIcon from '../assets/farm/fertilizer.png'
 import sugarIcon from '../assets/farm/sugar.png'
@@ -13,6 +14,8 @@ import truckIcon from '../assets/farm/truck.png'
 
 
 export default function DigiFarm() {
+  // Lấy tham số id từ URL
+  const { id } = useParams()
   // Data for crop variety card
   const cropData = [
     { label: 'Giống cây trồng', value: 'KK3' },
@@ -72,6 +75,7 @@ export default function DigiFarm() {
         icon={DigiFarmIcon}
         coverImage={digiFarmCover}
       />
+     
       <div className='layout-container'>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Crop Variety Information Card */}
