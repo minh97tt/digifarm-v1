@@ -2,6 +2,7 @@ import { DigiFarmIcon } from '../components/icons/DigiFarmIcon'
 import digiFarmCover from '../assets/DigiFarmCover.png'
 import Hero from '../components/Hero'
 import InfoCard from '../components/InfoCard'
+import MapWithPolygon from '../components/FarmMap'
 import { PngIcon } from '../components/PngIcon'
 
 import fertilizerIcon from '../assets/farm/fertilizer.png'
@@ -9,6 +10,7 @@ import sugarIcon from '../assets/farm/sugar.png'
 import deliveryIcon from '../assets/farm/delivery.png'
 import treeIcon from '../assets/farm/trees.png'
 import truckIcon from '../assets/farm/truck.png'
+
 
 export default function DigiFarm() {
   // Data for crop variety card
@@ -55,14 +57,14 @@ export default function DigiFarm() {
     { label: 'Số nhân công', value: '15 người' },
   ]
 
-    // Data for delivery planning card
-    const deliveryData = [
-      { label: 'Đơn vị vận chuyển', value: 'Tự vận chuyển' },
-      { label: 'Tài xế', value: 'Lê Văn Việt' },
-      { label: 'Biển số xe', value: '70A1 - 123.45' },
-      { label: 'Điểm đến', value: 'Nhà kho TTCS' },
-      { label: 'Địa chỉ', value: 'Xã Tân Hưng, Huyện Tân Châu, Tỉnh Tây Ninh, Việt Nam' },
-    ]
+  // Data for delivery planning card
+  const deliveryData = [
+    { label: 'Đơn vị vận chuyển', value: 'Tự vận chuyển' },
+    { label: 'Tài xế', value: 'Lê Văn Việt' },
+    { label: 'Biển số xe', value: '70A1 - 123.45' },
+    { label: 'Điểm đến', value: 'Nhà kho TTCS' },
+    { label: 'Địa chỉ', value: 'Xã Tân Hưng, Huyện Tân Châu, Tỉnh Tây Ninh, Việt Nam' },
+  ]
 
   return (
     <main>
@@ -87,6 +89,7 @@ export default function DigiFarm() {
           {/* Harvest Planning Card */}
           <InfoCard className="md:col-span-2" title="Vận chuyển" data={deliveryData} icon={<PngIcon imageUrl={deliveryIcon} />} />
         </div>
+        <MapWithPolygon />
       </div>
     </main>
   )
