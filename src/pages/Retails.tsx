@@ -2,6 +2,12 @@ import CoverImage from '../assets/DigiRetailsCover.png'
 import { DigiRetailsIcon } from '../components/icons/DigiRetailsIcon'
 import Hero from '../components/Hero'
 import InfoCard from '../components/InfoCard'
+import { PngIcon } from '../components/PngIcon'
+
+import DistributorIcon from '../assets/retails/distributor.png'
+import ProductIcon from '../assets/retails/product.png'
+import StoreLocationIcon from '../assets/retails/store-location.png'
+
 
 export default function Home() {
   const productData = [
@@ -33,11 +39,11 @@ export default function Home() {
 
       <div className='layout-container'>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <InfoCard title="Sản phẩm" data={productData} />
+        <InfoCard title="Sản phẩm" data={productData} icon={<PngIcon imageUrl={ProductIcon} />} />
 
-        <InfoCard title="Nhà phân phối" data={distributorData} />
+        <InfoCard title="Nhà phân phối" data={distributorData} icon={<PngIcon imageUrl={DistributorIcon} />} />
 
-        <InfoCard className="md:col-span-2" title="Điểm bán" data={retailLocationData} />
+        <InfoCard className="md:col-span-2" title="Điểm bán" data={retailLocationData} icon={<PngIcon imageUrl={StoreLocationIcon} />} />
         </div>
       </div>
     </main>

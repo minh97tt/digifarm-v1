@@ -1,7 +1,17 @@
+
 import CoverImage from '../assets/DigiFactoryCover.png'
 import Hero from '../components/Hero'
 import InfoCard from '../components/InfoCard'
 import { DigiFactIcon } from '../components/icons/DigiFactIcon'
+import { PngIcon } from '../components/PngIcon'
+
+import FactoryIcon from '../assets/factory/factory.png'
+import LineIcon from '../assets/factory/line.png'
+import WarehouseIcon from '../assets/factory/warehouse.png'
+import TransportIcon from '../assets/factory/transport.png'
+import ProductIcon from '../assets/factory/product.png'
+import ProductWarehouseIcon from '../assets/factory/product-warehouse.png'
+
 
 export default function Factory() {
   const rawMaterialWarehouseData = [
@@ -54,17 +64,17 @@ export default function Factory() {
       />
       <div className='layout-container'>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <InfoCard title="Kho nguyên liệu" data={rawMaterialWarehouseData} />
+          <InfoCard title="Kho nguyên liệu" data={rawMaterialWarehouseData}  icon={<PngIcon imageUrl={WarehouseIcon} />} />
 
-          <InfoCard title="Nhà máy sản xuất" data={factoryData} />
+          <InfoCard title="Nhà máy sản xuất" data={factoryData} icon={<PngIcon imageUrl={FactoryIcon} />} />
 
-          <InfoCard title="Dây chuyền sản xuất" data={productionLineData} />
+          <InfoCard title="Dây chuyền sản xuất" data={productionLineData} icon={<PngIcon imageUrl={LineIcon} />} />
 
-          <InfoCard title="Thành phẩm" data={finishedProductData} />
+          <InfoCard title="Thành phẩm" data={finishedProductData} icon={<PngIcon imageUrl={ProductIcon} />} />
 
-          <InfoCard title="Kho thành phẩm" data={finishedGoodsWarehouseData} />
+          <InfoCard title="Kho thành phẩm" data={finishedGoodsWarehouseData} icon={<PngIcon imageUrl={ProductWarehouseIcon} />} />
 
-          <InfoCard title="Vận chuyển" data={transportationData} />
+          <InfoCard title="Vận chuyển" data={transportationData} icon={<PngIcon imageUrl={TransportIcon} />} />
         </div>
       </div>
     </main>
