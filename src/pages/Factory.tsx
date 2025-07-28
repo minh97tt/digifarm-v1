@@ -1,5 +1,4 @@
 
-import { useParams } from 'react-router-dom'
 import CoverImage from '../assets/DigiFactoryCover.png'
 import Hero from '../components/Hero'
 import InfoCard from '../components/InfoCard'
@@ -15,9 +14,6 @@ import ProductWarehouseIcon from '../assets/factory/product-warehouse.png'
 
 
 export default function Factory() {
-  const { id } = useParams();
-  // You can use the id parameter to fetch specific factory data
-  console.log('Factory ID:', id);
   const rawMaterialWarehouseData = [
     { label: 'Kho', value: 'Nhà kho TTCS' },
     { label: 'Địa chỉ', value: 'Xã Tân Hưng, Huyện Tân Châu, Tỉnh Tây Ninh, Việt Nam' },
