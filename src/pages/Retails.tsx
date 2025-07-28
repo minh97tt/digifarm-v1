@@ -1,3 +1,4 @@
+import { useParams } from 'react-router-dom'
 import CoverImage from '../assets/DigiRetailsCover.png'
 import { DigiRetailsIcon } from '../components/icons/DigiRetailsIcon'
 import Hero from '../components/Hero'
@@ -9,7 +10,10 @@ import ProductIcon from '../assets/retails/product.png'
 import StoreLocationIcon from '../assets/retails/store-location.png'
 
 
-export default function Home() {
+export default function Retails() {
+  const { id } = useParams();
+  // You can use the id parameter to fetch specific retail data
+  console.log('Retail ID:', id);
   const productData = [
     { label: 'Thành phẩm', value: 'Đường Mía Thiên Nhiên 1kg' },
     { label: 'Thương hiệu', value: 'Biên Hoà' },

@@ -13,7 +13,9 @@ export default function App() {
         <Route path="farm" element={<DigiFarm />} />
         <Route path="farm/:id" element={<DigiFarm />} />
         <Route path="factory" element={<Factory />} />
+        <Route path="factory/:id" element={<Factory />} />
         <Route path="retails" element={<Retails />} />
+        <Route path="retails/:id" element={<Retails />} />
       </Route>
     </Routes>
   )
