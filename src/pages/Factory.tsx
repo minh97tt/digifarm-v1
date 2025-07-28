@@ -17,8 +17,8 @@ export default function Factory() {
   const rawMaterialWarehouseData = [
     { label: 'Kho', value: 'Nhà kho TTCS' },
     { label: 'Địa chỉ', value: 'Xã Tân Hưng, Huyện Tân Châu, Tỉnh Tây Ninh, Việt Nam' },
-    { label: 'Ngày nhập kho', value: '9/22/2024' },
-    { label: 'Ngày xuất kho', value: '9/23/2024' },
+    { label: 'Ngày nhập kho', value: '09/22/2024' },
+    { label: 'Ngày xuất kho', value: '09/23/2024' },
   ]
 
   const factoryData = [
@@ -38,14 +38,14 @@ export default function Factory() {
     { label: 'Thành phẩm', value: 'Đường Mía Thiên Nhiên 1kg' },
     { label: 'Mã sản phẩm', value: '20100042' },
     { label: 'Lô hàng', value: '0000064873' },
-    { label: 'Ngày sản xuất', value: '9/24/2024' },
-    { label: 'Ngày hết hạn', value: '9/24/2025' },
+    { label: 'Ngày sản xuất', value: '09/24/2024' },
+    { label: 'Ngày hết hạn', value: '09/24/2025' },
   ]
 
   const finishedGoodsWarehouseData = [
     { label: 'Kho', value: 'Kho thành phẩm TTCS' },
-    { label: 'Ngày nhập kho', value: '9/25/2024' },
-    { label: 'Ngày xuất kho', value: '9/30/2024' },
+    { label: 'Ngày nhập kho', value: '09/25/2024' },
+    { label: 'Ngày xuất kho', value: '09/30/2024' },
   ]
 
   const transportationData = [

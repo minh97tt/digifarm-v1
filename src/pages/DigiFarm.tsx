@@ -20,7 +20,7 @@ export default function DigiFarm() {
   const cropData = [
     { label: 'Giống cây trồng', value: 'KK3' },
     { label: 'Nguồn gốc giống', value: 'Viện Nghiên cứu Mía đường, Trung tâm Nông nghiệp địa phương' },
-    { label: 'Thời gian chọn giống', value: '11/1/2023' },
+    { label: 'Thời gian chọn giống', value: '01/11/2023' },
     { label: 'Tiêu chí chọn', value: 'Năng suất cao, chịu hạn tốt, kháng sâu bệnh' },
     { label: 'Hàm lượng đường ước tính', value: '12.5 Brix' },
     { label: 'Vòng đời', value: '10 - 12 tháng' },
@@ -28,7 +28,7 @@ export default function DigiFarm() {
 
   // Data for planting card
   const plantingData = [
-    { label: 'Ngày trồng', value: '15/11/2023' },
+    { label: 'Ngày trồng', value: '11/15/2023' },
     { label: 'Diện tích trồng', value: '5 ha' },
     { label: 'Mật độ trồng', value: '12.000 hom/ha' },
     { label: 'Giống sử dụng', value: 'KK3' },
@@ -38,10 +38,10 @@ export default function DigiFarm() {
 
   // Data for farming activities card
   const farmingData = [
-    { label: 'Bón phân lần 1', value: '12/10/2023' },
+    { label: 'Bón phân lần 1', value: '10/12/2023' },
     { label: 'Loại', value: '(NPK 16-16-8, 500kg/ha)' },
-    { label: 'Làm cỏ', value: '15/1/2024' },
-    { label: 'Bón phân lần 2', value: '15/3/2024' },
+    { label: 'Làm cỏ', value: '01/15/2024' },
+    { label: 'Bón phân lần 2', value: '03/15/2024' },
     { label: 'Loại', value: '(Ure + Kali, 400kg/ha)' },
     { label: 'Tưới tiêu', value: 'Mỗi 10 ngày/lần' },
     { label: 'Kiểm tra sâu bệnh', value: 'Định kỳ 2 tuần/lần' },
@@ -52,7 +52,7 @@ export default function DigiFarm() {
 
   // Data for harvest planning card
   const harvestData = [
-    { label: 'Ngày thu hoạch', value: '20/9/2024' },
+    { label: 'Ngày thu hoạch', value: '09/20/2024' },
     { label: 'Năng suất thực tế', value: '95 tấn/ha' },
     { label: 'Độ đường (Pol)', value: '13.20%' },
     { label: 'Phương thức thu hoạch', value: 'Cơ giới hóa 70%, thu công 30%' },

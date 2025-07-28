@@ -14,8 +14,8 @@ export default function Home() {
     { label: 'Thành phẩm', value: 'Đường Mía Thiên Nhiên 1kg' },
     { label: 'Thương hiệu', value: 'Biên Hoà' },
     { label: 'Mã sản phẩm', value: '0000064873' },
-    { label: 'Ngày sản xuất', value: '9/24/2024' },
-    { label: 'Ngày hết hạn', value: '9/24/2025' },
+    { label: 'Ngày sản xuất', value: '09/24/2024' },
+    { label: 'Ngày hết hạn', value: '09/24/2025' },
   ]
 
   const distributorData = [
@@ -27,7 +27,7 @@ export default function Home() {
     { label: 'Cửa hàng', value: 'Tạp hoá Dì Ba' },
     { label: 'Địa chỉ', value: 'Cộng Hoà, Phường 13, Quận Tân Bình, TPHCM, Việt Nam' },
     { label: 'Đơn đặt hàng', value: '#OYMXOSZE' },
-    { label: 'Ngày đặt hàng', value: '10/1/2024' },
+    { label: 'Ngày đặt hàng', value: '01/10/2024' },
   ]
 
   return (
