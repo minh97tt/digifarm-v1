@@ -59,7 +59,7 @@ const MapWithPolygon = () => {
 
   return (
     <div className='mt-6'>
-      <div className='text-text-primary font-bold  text-xl mb-4'>Toạ độ</div>
+      <div className='text-text-primary font-bold  text-xl mb-4'>Vị trí vùng trồng</div> 
       <GoogleMap
         // mapTypeId="satellite"
         mapContainerStyle={containerStyle}

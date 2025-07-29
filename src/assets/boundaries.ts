@@ -12,7 +12,7 @@ export default {
       ]
     },
     "properties": {
-      "Time": "5/23/2025 1:30:24 AM",
+      "Time": "23/05/2025",
       "Crop": 133,
       "AppliedRate": 0,
       "SWATHWIDTH": 1.8,
