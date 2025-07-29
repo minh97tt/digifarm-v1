@@ -63,7 +63,7 @@ const FarmChart = () => {
               <div className="font-bold text-[20px]">Dự đoán năng suất</div>
               <div className="flex gap-2 items-center">
                 <span className="font-bold text-[40px] text-text-primary">
-                  96 tấn/ha
+                  86.44 tấn/ha
                 </span>
                 <span className="border rounded-[10px] flex items-center gap-1 bg-[#F6FFED] px-2 border-[0.75px] border-[#B7EB8F] mt-[5px]">
                   <img

@@ -28,7 +28,7 @@ export default function Home() {
     { label: 'Cửa hàng', value: 'Tạp hoá Dì Ba' },
     { label: 'Địa chỉ', value: 'Cộng Hoà, Phường 13, Quận Tân Bình, TPHCM, Việt Nam' },
     { label: 'Đơn đặt hàng', value: '#OYMXOSZE' },
-    { label: 'Ngày đặt hàng', value: '10/01/2024' },
+    { label: 'Ngày đặt hàng', value: '01/10/2024' },
   ]
 
   return (

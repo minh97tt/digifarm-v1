@@ -30,7 +30,7 @@ const ProductivityChart = () => {
       xAxis: [
         {
           type: "category",
-          data: ["10", "11", "12", "13", "14", "15", "16"],
+          data: ["Lô A01", "Lô A02", "Lô A03", "Lô A04", "Lô A05", "Lô A06", "Lô A07"],
           axisTick: {
             show: false,
           },
@@ -63,7 +63,7 @@ const ProductivityChart = () => {
           name: "",
           type: "bar",
           barMaxWidth: "40px",
-          data: [80, 24, 42, 96, 72, 11, 46],
+          data: [68.38, 77.93, 90.88, 90.65, 91.61, 62.13, 92.22],
           itemStyle: {
             color: "#3ED094",
             borderRadius: [10, 10, 0, 0],
