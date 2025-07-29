@@ -8,10 +8,10 @@ import { useParams } from 'react-router-dom'
 
 import fertilizerIcon from '../assets/farm/fertilizer.png'
 import sugarIcon from '../assets/farm/sugar.png'
-import deliveryIcon from '../assets/farm/delivery.png'
 import treeIcon from '../assets/farm/trees.png'
 import truckIcon from '../assets/farm/truck.png'
 import FarmChart from '../components/FarmChart'
+import { BreadCrumb } from '../components/BreadCrumb'
 
 
 export default function DigiFarm() {
@@ -72,11 +72,12 @@ export default function DigiFarm() {
 
   return (
     <main>
+      <BreadCrumb breadCrumbList={[{ title: 'Trang chủ', link: '/' }, { title: 'Digifarm', active: true }]} />
       <Hero
         icon={DigiFarmIcon}
         coverImage={digiFarmCover}
       />
-     
+
       <div className='layout-container'>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Crop Variety Information Card */}

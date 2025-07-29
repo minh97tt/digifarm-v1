@@ -1,5 +1,5 @@
 import ProductCard from '../components/ProductCard';
-import HomeCover from '../assets/HomeBanner.jpeg';
+import HomeCover from '../assets/HomeCoverNew.png';
 import Navigation from '../components/Navigation';
 
 // Danh sách sản phẩm mía, dừa, điều
@@ -49,17 +49,17 @@ export default function Home() {
         <img
           src={HomeCover}
           alt="DigiFarm Cover"
-          className="mask-b-from-50% w-full h-full object-cover min-h-30"
+          className="mask-auto w-full h-full object-cover min-h-30"
         />
-        <div className="absolute inset-0 bg-black/10 bg-opacity-40 flex flex-col justify-center items-center text-white md:px-6 md:pt-2 md:pb-19 pb-4">
-          <h1 className="md:text-4xl text-xl font-bold md:mb-2 text-center">Giống cây trồng</h1>
+        <div className="absolute inset-0 bg-black/30 bg-opacity-40 flex flex-col justify-center items-center text-white md:px-6 md:pt-2 md:pb-19 pb-22">
+          <h1 className="md:text-4xl text-xl font-bold md:mb-2 text-center">Hệ sinh thái sản phẩm Agris</h1>
           <p className="md:text-xl text-base text-center max-w-2xl">Các giống mía, dừa, điều chất lượng cao cho nông nghiệp bền vững</p>
         </div>
-        <div className='absolute -bottom-18 w-full'>
+        <div className='absolute md:-bottom-18 -bottom-40 w-full'>
           <Navigation />
         </div>
       </div>
-      <div className="layout-container !mt-18">
+      <div className="layout-container md:!mt-18 !mt-40">
         <div className="mb-6">
           <h2 className="md:text-2xl text-xl font-bold text-text-primary">Danh mục giống cây trồng</h2>
         </div>

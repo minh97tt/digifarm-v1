@@ -7,6 +7,7 @@ import { PngIcon } from '../components/PngIcon'
 import DistributorIcon from '../assets/retails/distributor.png'
 import ProductIcon from '../assets/retails/product.png'
 import StoreLocationIcon from '../assets/retails/store-location.png'
+import { BreadCrumb } from '../components/BreadCrumb'
 
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
 
   return (
     <main>
+      <BreadCrumb breadCrumbList={[{ title: 'Trang chủ', link: '/' }, { title: 'Digiretail', active: true }]} />
       <Hero
         icon={DigiRetailsIcon}
         coverImage={CoverImage}

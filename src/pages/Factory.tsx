@@ -11,6 +11,7 @@ import WarehouseIcon from '../assets/factory/warehouse.png'
 import TransportIcon from '../assets/factory/transport.png'
 import ProductIcon from '../assets/factory/product.png'
 import ProductWarehouseIcon from '../assets/factory/product-warehouse.png'
+import { BreadCrumb } from '../components/BreadCrumb'
 
 
 export default function Factory() {
@@ -58,6 +59,7 @@ export default function Factory() {
 
   return (
     <main>
+      <BreadCrumb breadCrumbList={[{ title: 'Trang chủ', link: '/' }, { title: 'Digifact', active: true }]} />
       <Hero
         coverImage={CoverImage}
         icon={DigiFactIcon}

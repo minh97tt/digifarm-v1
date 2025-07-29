@@ -12,8 +12,7 @@ export default function ProductCard({ id, name, image, description }: ProductCar
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-card-border group relative"
       onClick={() => {
-        scrollTo(0, 0);
-        navigate(`/farm?id=${id}`);
+        navigate(`/farm?id=${id}`, { viewTransition: true })
       }}
     >
       <div className="h-48 overflow-hidden">
