@@ -24,7 +24,7 @@ export default function Navigation() {
 
   return (
     <nav className="w-full z-1 md:px-10 sm:px-6">
-      <div className="max-w-7xl !m-auto md:w-auto w-80 shadow-md lg:mx-10 md:rounded-[20px] rounded-2xl bg-gradient-to-tr from-[rgba(244,250,245,1)] to-[rgba(172,221,187,1)]">
+      <div className="max-w-7xl !mx-8 shadow-md lg:mx-10 md:rounded-[20px] rounded-2xl bg-gradient-to-tr from-[rgba(244,250,245,1)] to-[rgba(172,221,187,1)]">
         <div className="md:pt-1 md:pb-6 py-2">
           <h2 className="text-center md:text-2xl md:my-4 my-1 text-lg font-bold text-text-primary">Hệ thống chuỗi cung ứng</h2>
 
