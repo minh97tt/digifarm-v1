@@ -30,7 +30,15 @@ const ProductivityChart = () => {
       xAxis: [
         {
           type: "category",
-          data: ["Lô A01", "Lô A02", "Lô A03", "Lô A04", "Lô A05", "Lô A06", "Lô A07"],
+          data: [
+            "Lô A01",
+            "Lô A02",
+            "Lô A03",
+            "Lô A04",
+            "Lô A05",
+            "Lô A06",
+            "Lô A07",
+          ],
           axisTick: {
             show: false,
           },
@@ -47,7 +55,7 @@ const ProductivityChart = () => {
       yAxis: [
         {
           type: "value",
-          splitNumber: 2,
+          splitNumber: 5,
           axisLabel: {
             formatter: function (value: number) {
               return value ? value + " tấn/ha" : "0"
@@ -56,6 +64,7 @@ const ProductivityChart = () => {
             fontSize: 14,
             color: "#00000040",
           },
+          // name: "Năng suất (tán)",
         },
       ],
       series: [
@@ -73,6 +82,20 @@ const ProductivityChart = () => {
               // fixed at top
               return [point[0], "10%"]
             },
+          },
+          label: {
+            show: true,
+            position: "top",
+            formatter: "{c}",
+            backgroundColor: "#fff",
+            borderColor: "#00000040",
+            borderWidth: 1,
+            borderRadius: 4,
+            padding: [4, 6], // top, right/left
+            color: "#00000040",
+            fontWeight: "bold",
+            shadowColor: "rgba(0,0,0,0.2)",
+            shadowBlur: 3,
           },
         },
       ],

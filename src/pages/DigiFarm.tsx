@@ -54,7 +54,7 @@ export default function DigiFarm() {
   // Data for harvest planning card
   const harvestData = [
     { label: 'Ngày thu hoạch', value: '20/9/2024' },
-    { label: 'Năng suất thực tế', value: '95 tấn/ha' },
+    { label: 'Năng suất thực tế', value: '87 tấn/ha' },
     { label: 'Độ đường (Pol)', value: '13.20%' },
     { label: 'Phương thức thu hoạch', value: 'Cơ giới hóa 70%, thu công 30%' },
     { label: 'Thời gian thu hoạch', value: '5 ngày' },
