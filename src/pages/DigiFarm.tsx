@@ -11,6 +11,7 @@ import sugarIcon from '../assets/farm/sugar.png'
 import deliveryIcon from '../assets/farm/delivery.png'
 import treeIcon from '../assets/farm/trees.png'
 import truckIcon from '../assets/farm/truck.png'
+import FarmChart from '../components/FarmChart'
 
 
 export default function DigiFarm() {
@@ -91,8 +92,11 @@ export default function DigiFarm() {
           <InfoCard title="Thu hoạch" data={harvestData} icon={<PngIcon imageUrl={truckIcon} />} />
 
           {/* Harvest Planning Card */}
-          <InfoCard className="md:col-span-2" title="Vận chuyển" data={deliveryData} icon={<PngIcon imageUrl={deliveryIcon} />} />
+          {/* <InfoCard className="md:col-span-2" title="Vận chuyển" data={deliveryData} icon={<PngIcon imageUrl={deliveryIcon} />} /> */}
         </div>
+
+        <FarmChart />
+
         <MapWithPolygon />
       </div>
     </main>
