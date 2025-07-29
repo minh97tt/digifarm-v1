@@ -9,12 +9,12 @@ import boundaries from '../assets/boundaries';
 
 const containerStyle = {
   width: '100%',
-  height: '600px',
+  height: '480px',
   borderRadius: 20,
 };
 
 // Calculate center based on the first feature in boundaries
-const firstFeature = boundaries.features[0];
+const firstFeature = boundaries.features[6];
 const firstCoordinate = firstFeature?.geometry.coordinates[0][0];
 
 const center = {
@@ -63,7 +63,7 @@ const MapWithPolygon = () => {
       <GoogleMap
         // mapTypeId="satellite"
         mapContainerStyle={containerStyle}
-        center={center} zoom={14}
+        center={center} zoom={13}
       >
         {/* Map through each feature in the boundaries data */}
         {boundaries.features.map((feature, index) => {
@@ -72,14 +72,14 @@ const MapWithPolygon = () => {
 
           // Get color from palette based on index
           const { fillColor, strokeColor } = getColorFromPalette(index);
-          
+
           return (
             <Polygon
               key={feature.properties.FIELD_ID || index}
               paths={paths}
               options={{
                 fillColor,
-                fillOpacity: 0.8,
+                fillOpacity: 0.6,
                 strokeColor,
                 strokeOpacity: 1,
                 strokeWeight: 1,
@@ -105,14 +105,15 @@ const MapWithPolygon = () => {
         {hovered && hoverPosition && activeFeature && (
           <InfoWindow
             options={{
-              pixelOffset: new window.google.maps.Size(0, -30),
+              // pixelOffset: new window.google.maps.Size(0, -10),
               maxWidth: 400,
               headerDisabled: true,
               // You cannot set full CSS here, but some layout things can be tweaked
             }}
-            position={hoverPosition} onCloseClick={() => setHovered(false)}
+            position={hoverPosition}
+            onCloseClick={() => setHovered(false)}
           >
-            <div className='pt-2'>
+            <div>
               {/* <div>Mã ruộng: {activeFeature.properties.FIELD_NAME}</div> */}
               <div className='bg-gray-100 p-2 rounded-lg space-y-1'>
                 <h1 className='font-bold mb-2'>Thông tin canh tác:</h1>
