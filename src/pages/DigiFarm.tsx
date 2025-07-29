@@ -90,7 +90,7 @@ export default function DigiFarm() {
           <InfoCard title="Canh tác" data={farmingData} icon={<PngIcon imageUrl={fertilizerIcon} />} />
 
           {/* Harvest Planning Card */}
-          <InfoCard title="Thu hoạch" data={harvestData} icon={<PngIcon imageUrl={truckIcon} />} />
+          <InfoCard title="Thu hoạch" link={{ label: "Xem quy trình sản xuất", href: "/factory" }} data={harvestData} icon={<PngIcon imageUrl={truckIcon} />} />
 
           {/* Harvest Planning Card */}
           {/* <InfoCard className="md:col-span-2" title="Vận chuyển" data={deliveryData} icon={<PngIcon imageUrl={deliveryIcon} />} /> */}
