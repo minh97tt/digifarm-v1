@@ -44,8 +44,10 @@ const FarmChart = () => {
                 <img src={WormImg} alt="Worm" className="w-[32px]" />
               </div>
               <div>
-                <div>Rủi ro sâu đục thân</div>
-                <div>Thấp</div>
+                <div className="font-normal text-[16px] text-[#202020]">
+                  Rủi ro sâu đục thân
+                </div>
+                <div className="font-bold text-[16px] text-[#202020]">Thấp</div>
               </div>
             </div>
           </div>
