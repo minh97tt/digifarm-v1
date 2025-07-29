@@ -72,7 +72,12 @@ export default function Factory() {
 
           <InfoCard title="Dây chuyền sản xuất" data={productionLineData} icon={<PngIcon imageUrl={LineIcon} />} />
 
-          <InfoCard title="Thành phẩm" data={finishedProductData} icon={<PngIcon imageUrl={ProductIcon} />} />
+          <InfoCard
+            title="Thành phẩm"
+            data={finishedProductData}
+            icon={<PngIcon imageUrl={ProductIcon} />}
+            link={{ label: "Xem quy trình phân phối", href: "/retails" }}
+          />
 
           <InfoCard title="Kho thành phẩm" data={finishedGoodsWarehouseData} icon={<PngIcon imageUrl={ProductWarehouseIcon} />} />
 

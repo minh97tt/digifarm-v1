@@ -1,3 +1,4 @@
+import ArrowRight from '../assets/ArrowRight.svg'
 
 type InfoCardProps = {
   title: string;
@@ -6,9 +7,13 @@ type InfoCardProps = {
     label: string;
     value: string | number;
   }>;
+  link?: {
+    label: string;
+    href: string;
+  };
 } & React.ComponentProps<'div'>;
 
-export default function InfoCard({ title,icon, data, className }: InfoCardProps) {
+export default function InfoCard({ title,icon, data, link, className }: InfoCardProps) {
   return (
     <div className={`bg-white rounded-[20px] border border-card-border p-6 ${className}`}>
       <div className="flex items-center gap-2 mb-4 border-b border-card-border pb-4">
@@ -23,6 +28,17 @@ export default function InfoCard({ title,icon, data, className }: InfoCardProps)
               <td className="py-2 text-text-content text-right font-medium">{item.value}</td>
             </tr>
           ))}
+          {link && (
+            <tr>
+              <td colSpan={2} className="py-2 text-text-content text-right font-medium">
+                <a href={link.href} className="text-[#1677FF]">{link.label} <img
+                    src={ArrowRight}
+                    alt="ArrowUp"
+                    className="w-[16px] inline"
+                  /></a>
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>
