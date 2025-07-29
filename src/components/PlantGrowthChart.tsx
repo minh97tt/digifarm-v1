@@ -143,7 +143,7 @@ const PlantGrowthChart = () => {
         },
         {
           name: "Độ ngọt",
-          data: [0.5, 1.6, 2.5, 5.2, 6.5, 8, 10.1, 11.5],
+          data: [0, 1.6, 2.5, 5.2, 6.5, 8, 10.1, 11.5],
           type: "line",
           smooth: true,
           lineStyle: {
