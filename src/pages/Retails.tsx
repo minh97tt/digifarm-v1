@@ -126,14 +126,14 @@ export default function Home() {
             },
             {
               icon: DeliveryIcon,
-              content: 'Rủi ro gian hàng trễ',
+              content: 'Rủi ro giao hàng trễ',
               level: 'Thấp',
             },
           ]}
           outputPrediction={{
             icon: MarketChartIcon,
             title: 'Dự đoán nhu cầu tiêu thụ',
-            value: '320 sp/tuần',
+            value: '541 túi/tuần',
             percent: '32%',
             description: 'Nếu giữ được điều kiện hiện tại',
           }}
@@ -144,19 +144,20 @@ export default function Home() {
             </div>
             <div className="w-full h-[400px]">
               <ProductivityChart
-                unit="sp"
-                unitLabel="sản phẩm"
+                unit="túi/ngày"
+                unitLabel="túi/ngày"
                 chartId="r-chart-1"
                 xLabels={[
-                  'CH 1',
-                  'CH 2',
-                  'CH 3',
-                  'CH 4',
-                  'CH 5',
-                  'CH 6',
-                  'CH 7',
+                  '23/06',
+                  '24/06',
+                  '25/06',
+                  '26/06',
+                  '27/06',
+                  '28/06',
+                  '29/06',
+                  '30/06',
                 ]}
-                values={[232, 350, 375, 408, 420, 396, 480]}
+                values={[648, 454, 298, 180, 184, 768, 794, 1003]}
               />
             </div>
           </div>

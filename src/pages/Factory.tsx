@@ -99,14 +99,12 @@ export default function Factory() {
             title="Dây chuyền sản xuất"
             data={productionLineData}
             icon={<PngIcon imageUrl={LineIcon} />}
-
           />
 
           <InfoCard
             title="Thành phẩm"
             data={finishedProductData}
             icon={<PngIcon imageUrl={ProductIcon} />}
-
           />
 
           <InfoCard
@@ -145,7 +143,7 @@ export default function Factory() {
         >
           <div className="mt-7">
             <div className="text-text-primary font-bold text-md">
-              Biểu đồ công suất
+              Biểu đồ sản lượng
             </div>
             <div className="w-full h-[400px]">
               <ProductivityChart
