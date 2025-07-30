@@ -1,5 +1,5 @@
 import ProductCard from '../components/ProductCard';
-import HomeCover from '../assets/HomeCoverNew.png';
+import HomeCover from '../assets/HomeCoverNew.webp';
 import Navigation from '../components/Navigation';
 
 // Danh sách sản phẩm mía, dừa, điều

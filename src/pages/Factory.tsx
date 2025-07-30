@@ -1,5 +1,5 @@
 
-import CoverImage from '../assets/DigiFactoryCover.png'
+import CoverImage from '../assets/DigiFactoryCover.webp'
 import Hero from '../components/Hero'
 import InfoCard from '../components/InfoCard'
 import { DigiFactIcon } from '../components/icons/DigiFactIcon'

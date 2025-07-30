@@ -1,5 +1,5 @@
 import { DigiFarmIcon } from '../components/icons/DigiFarmIcon'
-import digiFarmCover from '../assets/DigiFarmCover.png'
+import digiFarmCover from '../assets/DigiFarmCover.webp'
 import Hero from '../components/Hero'
 import InfoCard from '../components/InfoCard'
 import MapWithPolygon from '../components/FarmMap'

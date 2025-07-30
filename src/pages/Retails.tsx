@@ -1,4 +1,4 @@
-import CoverImage from '../assets/DigiRetailsCover.png'
+import CoverImage from '../assets/DigiRetailsCover.webp'
 import { DigiRetailsIcon } from '../components/icons/DigiRetailsIcon'
 import Hero from '../components/Hero'
 import InfoCard from '../components/InfoCard'
