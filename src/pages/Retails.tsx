@@ -72,6 +72,7 @@ export default function Home() {
             title="Điểm bán"
             data={retailLocationData}
             icon={<PngIcon imageUrl={StoreLocationIcon} />}
+            link={{ label: 'Xem quy trình sản xuất', href: '/factory' }}
           />
         </div>
 

@@ -16,7 +16,7 @@ export default function ProductCard({ id, name, image, description, clickable }:
         }`}
       onClick={() => {
         if (clickable) {
-          navigate(`/farm?id=${id}`, { viewTransition: true });
+          navigate(`/retails?id=${id}`, { viewTransition: true });
         }
       }}
     >
@@ -27,12 +27,8 @@ export default function ProductCard({ id, name, image, description, clickable }:
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         {/* Overlay with View button */}
-        <div className={`absolute inset-0 bg-black/20 bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
-          <button
-            className={`bg-white text-text-primary px-4 py-2 rounded-xl font-medium text-sm hover:bg-green-50 transition-colors duration-300 transform hover:scale-105 ${clickable ? 'cursor-pointer' : 'hidden'}`}
-          >
-            Xem chuỗi cung ứng
-          </button>
+        <div className={`absolute inset-0 bg-black/10 bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
+
         </div>
       </div>
       <div className="p-4">
@@ -40,6 +36,12 @@ export default function ProductCard({ id, name, image, description, clickable }:
         {description && (
           <p className="text-text-label-secondary text-sm mt-1 line-clamp-2">{description}</p>
         )}
+
+        <button
+          className={`bg-white border mt-2 border-card-border text-text-primary px-4 py-2 rounded-xl font-medium text-sm hover:bg-green-50 transition-colors duration-300 transform hover:scale-105 ${clickable ? 'cursor-pointer' : 'hidden'}`}
+        >
+          Xem chuỗi cung ứng
+        </button>
       </div>
     </div>
   );

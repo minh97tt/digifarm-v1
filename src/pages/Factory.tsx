@@ -104,7 +104,7 @@ export default function Factory() {
             title="Thành phẩm"
             data={finishedProductData}
             icon={<PngIcon imageUrl={ProductIcon} />}
-            link={{ label: 'Xem quy trình phân phối', href: '/retails' }}
+            link={{ label: 'Xem thông tin giống cây trồng', href: '/farm' }}
           />
 
           <InfoCard

@@ -101,20 +101,20 @@ export default function Home() {
           <h1 className="md:text-4xl text-xl font-bold md:mb-2 text-center">Hệ sinh thái sản phẩm Agris</h1>
           <p className="md:text-xl text-base text-center max-w-2xl">Các giống mía, dừa, điều chất lượng cao cho nông nghiệp bền vững</p>
         </div>
-        <div className='absolute md:-bottom-18 -bottom-40 w-full'>
+        <div className='absolute md:-bottom-18 -bottom-44 w-full'>
           <Navigation />
         </div>
       </div>
-      <div className="layout-container md:!mt-18 !mt-40">
+      <div className="layout-container md:!mt-18 !mt-44">
         <div className="mb-6">
-          <h2 className="md:text-2xl text-xl font-bold text-text-primary">Danh mục giống cây trồng</h2>
+          <h2 className="md:text-2xl text-xl font-bold text-text-primary">Danh mục sản phẩm</h2>
         </div>
 
         {/* Products grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product, id) => (
             <ProductCard
-              clickable={id < 2}
+              clickable={id < 4}
               key={product.id}
               id={product.id}
               name={product.name}
