@@ -20,7 +20,7 @@ const ProductivityChart = ({
     const option: echarts.EChartsOption = {
       grid: {
         top: 30,
-        left: 0,
+        left: 5,
         right: 0,
         bottom: 0,
         containLabel: true,
