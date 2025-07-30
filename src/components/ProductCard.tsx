@@ -16,7 +16,7 @@ export default function ProductCard({ id, name, image, description, clickable }:
         }`}
       onClick={() => {
         if (clickable) {
-          navigate(`/retails?id=${id}`, { viewTransition: true });
+          navigate(`/retails`, { viewTransition: true });
         }
       }}
     >

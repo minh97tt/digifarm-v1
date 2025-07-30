@@ -86,6 +86,7 @@ export default function Factory() {
             title="Kho nguyên liệu"
             data={rawMaterialWarehouseData}
             icon={<PngIcon imageUrl={WarehouseIcon} />}
+            link={{ label: 'Xem quy trình trồng trọt', href: '/farm' }}
           />
 
           <InfoCard
@@ -98,14 +99,14 @@ export default function Factory() {
             title="Dây chuyền sản xuất"
             data={productionLineData}
             icon={<PngIcon imageUrl={LineIcon} />}
-            link={{ label: 'Xem quy trình trồng trọt', href: '/farm' }}
+
           />
 
           <InfoCard
             title="Thành phẩm"
             data={finishedProductData}
             icon={<PngIcon imageUrl={ProductIcon} />}
-            
+
           />
 
           <InfoCard

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import ArrowRight from '../assets/ArrowRight.svg'
 
 type InfoCardProps = {
@@ -13,9 +14,15 @@ type InfoCardProps = {
   };
 } & React.ComponentProps<'div'>;
 
-export default function InfoCard({ title,icon, data, link, className }: InfoCardProps) {
+export default function InfoCard({ title, icon, data, link, className }: InfoCardProps) {
+  const navigate = useNavigate()
   return (
-    <div className={`bg-white rounded-[20px] border border-card-border p-6 ${className}`}>
+    <div
+      onClick={() => {
+        if (link) navigate(link.href)
+      }}
+      className={`bg-white rounded-[20px] border border-card-border p-6 ${className} ${link ? 'cursor-pointer' : ''}`}
+    >
       <div className="flex items-center gap-2 mb-4 border-b border-card-border pb-4">
         {icon}
         <h3 className="text-xl font-bold text-text-primary m-0 ml-2">{title}</h3>
@@ -31,11 +38,14 @@ export default function InfoCard({ title,icon, data, link, className }: InfoCard
           {link && (
             <tr>
               <td colSpan={2} className="py-2 text-text-content text-right font-medium">
-                <a href={link.href} className="text-[#1677FF]">{link.label} <img
+                <div className="text-[#1677FF]">
+                  {link.label}
+                  <img
                     src={ArrowRight}
                     alt="ArrowUp"
-                    className="w-[16px] inline"
-                  /></a>
+                    className="w-[16px] ml-3 inline"
+                  />
+                </div>
               </td>
             </tr>
           )}
