@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import * as echarts from 'echarts'
 
+const isWindows = navigator.userAgent.includes('Windows')
+
 const PlantGrowthChart = () => {
   useEffect(() => {
     const chartDom = document.getElementById('chart-2')
@@ -8,7 +10,7 @@ const PlantGrowthChart = () => {
     const option: echarts.EChartsOption = {
       grid: {
         top: 50,
-        left: 12,
+        left: isWindows ? 12 : 0,
         right: 0,
         bottom: 0,
         containLabel: true,
