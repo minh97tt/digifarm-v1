@@ -123,7 +123,6 @@ export default function DigiFarm() {
           {/* Harvest Planning Card */}
           <InfoCard
             title="Thu hoạch"
-           
             data={harvestData}
             icon={<PngIcon imageUrl={truckIcon} />}
           />
