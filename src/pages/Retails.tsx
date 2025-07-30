@@ -14,6 +14,9 @@ import ProductivityChart from '../components/ProductivityChart'
 import StockIcon from '../assets/retails/stock.png'
 import DeliveryIcon from '../assets/retails/delivery.png'
 import MarketChartIcon from '../assets/retails/market-chart.png'
+import InfoGroupCard from '../components/InfoGroupCard'
+import ShopeeIcon from '../assets/retails/shopee.svg'
+import TiktokIcon from '../assets/retails/tiktok.svg'
 
 export default function Home() {
   const productData = [
@@ -34,13 +37,47 @@ export default function Home() {
   ]
 
   const retailLocationData = [
-    { label: 'Cửa hàng', value: 'Tạp hoá Dì Ba' },
     {
-      label: 'Địa chỉ',
-      value: 'Cộng Hoà, Phường 13, Quận Tân Bình, TPHCM, Việt Nam',
+      title: 'Kênh tuỳ chỉnh',
+      items: [
+        { label: 'Cửa hàng', value: 'Tạp hoá Dì Ba' },
+        {
+          label: 'Địa chỉ',
+          value: 'Cộng Hoà, Phường 13, Quận Tân Bình, TPHCM, Việt Nam',
+        },
+        { label: 'Đơn đặt hàng', value: '#OYMXOSZE' },
+        { label: 'Ngày đặt hàng', value: '01/10/2024' },
+      ],
     },
-    { label: 'Đơn đặt hàng', value: '#OYMXOSZE' },
-    { label: 'Ngày đặt hàng', value: '01/10/2024' },
+    {
+      title: 'Kênh thương mại điện tử',
+      items: [
+        {
+          label: 'Cửa hàng',
+          value: (
+            <span>
+              <img className="inline" src={ShopeeIcon} alt="Shopee" /> Shopee
+            </span>
+          ),
+        },
+        { label: 'Đơn đặt hàng', value: '#SYMXOSZE' },
+        { label: 'Ngày đặt hàng', value: '13/05/2024' },
+      ],
+    },
+    {
+      items: [
+        {
+          label: 'Cửa hàng',
+          value: (
+            <span>
+              <img className="inline" src={TiktokIcon} alt="Tiktok" /> Tiktok
+            </span>
+          ),
+        },
+        { label: 'Đơn đặt hàng', value: '#TYMXOSZE' },
+        { label: 'Ngày đặt hàng', value: '16/04/2024' },
+      ],
+    },
   ]
 
   return (
@@ -67,12 +104,11 @@ export default function Home() {
             icon={<PngIcon imageUrl={DistributorIcon} />}
           />
 
-          <InfoCard
+          <InfoGroupCard
             className="md:col-span-2"
             title="Điểm bán"
             data={retailLocationData}
             icon={<PngIcon imageUrl={StoreLocationIcon} />}
-            link={{ label: 'Xem quy trình sản xuất', href: '/factory' }}
           />
         </div>
 
