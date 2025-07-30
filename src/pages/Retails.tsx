@@ -60,8 +60,10 @@ export default function Home() {
             </span>
           ),
         },
-        { label: 'Đơn đặt hàng', value: '#SYMXOSZE' },
-        { label: 'Ngày đặt hàng', value: '13/05/2024' },
+        { label: 'Tên sản phẩm', value: 'Đường mía thiên nhiên 1kg' },
+        { label: 'Thương hiệu', value: 'Biên Hoà' },
+        { label: 'Mã sản phẩm', value: '20100042' },
+        { label: 'Giá', value: '185.000đ' },
       ],
     },
     {
@@ -74,8 +76,10 @@ export default function Home() {
             </span>
           ),
         },
-        { label: 'Đơn đặt hàng', value: '#TYMXOSZE' },
-        { label: 'Ngày đặt hàng', value: '16/04/2024' },
+        { label: 'Tên sản phẩm', value: 'Đường mía thiên nhiên 1kg' },
+        { label: 'Thương hiệu', value: 'Biên Hoà' },
+        { label: 'Mã sản phẩm', value: '20100042' },
+        { label: 'Giá', value: '185.000đ' },
       ],
     },
   ]
