@@ -11,7 +11,7 @@ const PlantGrowthChart = () => {
       grid: {
         top: 50,
         left: isWindows ? 12 : 0,
-        right: 0,
+        right: 10,
         bottom: 0,
         containLabel: true,
       },
