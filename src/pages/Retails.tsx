@@ -8,7 +8,12 @@ import DistributorIcon from '../assets/retails/distributor.png'
 import ProductIcon from '../assets/retails/product.png'
 import StoreLocationIcon from '../assets/retails/store-location.png'
 import { BreadCrumb } from '../components/BreadCrumb'
+import Chart from '../components/Chart'
 
+import ProductivityChart from '../components/ProductivityChart'
+import StockIcon from '../assets/retails/stock.png'
+import DeliveryIcon from '../assets/retails/delivery.png'
+import MarketChartIcon from '../assets/retails/market-chart.png'
 
 export default function Home() {
   const productData = [
@@ -21,32 +26,99 @@ export default function Home() {
 
   const distributorData = [
     { label: 'Nhà phân phối', value: 'Hùng Tín LTD Company' },
-    { label: 'Địa chỉ', value: 'Phạm Đăng Giảng, Phường Bình Hưng Hoà, Quận Bình Tân, TPHCM, Việt Nam' },
+    {
+      label: 'Địa chỉ',
+      value:
+        'Phạm Đăng Giảng, Phường Bình Hưng Hoà, Quận Bình Tân, TPHCM, Việt Nam',
+    },
   ]
 
   const retailLocationData = [
     { label: 'Cửa hàng', value: 'Tạp hoá Dì Ba' },
-    { label: 'Địa chỉ', value: 'Cộng Hoà, Phường 13, Quận Tân Bình, TPHCM, Việt Nam' },
+    {
+      label: 'Địa chỉ',
+      value: 'Cộng Hoà, Phường 13, Quận Tân Bình, TPHCM, Việt Nam',
+    },
     { label: 'Đơn đặt hàng', value: '#OYMXOSZE' },
     { label: 'Ngày đặt hàng', value: '01/10/2024' },
   ]
 
   return (
     <main>
-      <BreadCrumb breadCrumbList={[{ title: 'Trang chủ', link: '/' }, { title: 'Digiretail', active: true }]} />
-      <Hero
-        icon={DigiRetailsIcon}
-        coverImage={CoverImage}
+      <BreadCrumb
+        breadCrumbList={[
+          { title: 'Trang chủ', link: '/' },
+          { title: 'Digiretail', active: true },
+        ]}
       />
+      <Hero icon={DigiRetailsIcon} coverImage={CoverImage} />
 
-      <div className='layout-container'>
+      <div className="layout-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <InfoCard title="Sản phẩm" data={productData} icon={<PngIcon imageUrl={ProductIcon} />} />
+          <InfoCard
+            title="Sản phẩm"
+            data={productData}
+            icon={<PngIcon imageUrl={ProductIcon} />}
+          />
 
-        <InfoCard title="Nhà phân phối" data={distributorData} icon={<PngIcon imageUrl={DistributorIcon} />} />
+          <InfoCard
+            title="Nhà phân phối"
+            data={distributorData}
+            icon={<PngIcon imageUrl={DistributorIcon} />}
+          />
 
-        <InfoCard className="md:col-span-2" title="Điểm bán" data={retailLocationData} icon={<PngIcon imageUrl={StoreLocationIcon} />} />
+          <InfoCard
+            className="md:col-span-2"
+            title="Điểm bán"
+            data={retailLocationData}
+            icon={<PngIcon imageUrl={StoreLocationIcon} />}
+          />
         </div>
+
+        <Chart
+          riskPredictions={[
+            {
+              icon: StockIcon,
+              content: 'Rủi ro hết hàng',
+              level: 'Trung bình',
+            },
+            {
+              icon: DeliveryIcon,
+              content: 'Rủi ro gian hàng trễ',
+              level: 'Thấp',
+            },
+          ]}
+          outputPrediction={{
+            icon: MarketChartIcon,
+            title: 'Dự đoán nhu cầu tiêu thụ',
+            value: '320 sp/tuần',
+            percent: '32%',
+            description: 'Nếu giữ được điều kiện hiện tại',
+          }}
+        >
+          <div className="mt-7">
+            <div className="text-text-primary font-bold text-md">
+              Biểu đồ tiêu thụ
+            </div>
+            <div className="w-full h-[400px]">
+              <ProductivityChart
+                unit="sp"
+                unitLabel="sản phẩm"
+                chartId="r-chart-1"
+                xLabels={[
+                  'CH 1',
+                  'CH 2',
+                  'CH 3',
+                  'CH 4',
+                  'CH 5',
+                  'CH 6',
+                  'CH 7',
+                ]}
+                values={[232, 350, 375, 408, 420, 396, 480]}
+              />
+            </div>
+          </div>
+        </Chart>
       </div>
     </main>
   )

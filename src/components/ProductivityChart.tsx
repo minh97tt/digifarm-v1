@@ -1,9 +1,21 @@
-import { useEffect } from "react"
-import * as echarts from "echarts"
+import { useEffect } from 'react'
+import * as echarts from 'echarts'
 
-const ProductivityChart = () => {
+const ProductivityChart = ({
+  unit,
+  unitLabel,
+  chartId,
+  xLabels,
+  values,
+}: {
+  unit: string
+  unitLabel: string
+  chartId: string
+  xLabels: string[]
+  values: any[]
+}) => {
   useEffect(() => {
-    const chartDom = document.getElementById("chart-1")
+    const chartDom = document.getElementById(chartId)
     const myChart = echarts.init(chartDom)
     const option: echarts.EChartsOption = {
       grid: {
@@ -14,31 +26,23 @@ const ProductivityChart = () => {
         containLabel: true,
       },
       tooltip: {
-        trigger: "axis",
+        trigger: 'axis',
         axisPointer: {
-          type: "shadow",
+          type: 'shadow',
         },
         textStyle: {
-          fontWeight: "bold",
+          fontWeight: 'bold',
           fontSize: 14,
-          color: "#000",
+          color: '#000',
         },
         formatter: function (params: any) {
-          return `${params[0].value} tấn/ha`
+          return `${params[0].value} ${unitLabel}`
         },
       },
       xAxis: [
         {
-          type: "category",
-          data: [
-            "Lô A01",
-            "Lô A02",
-            "Lô A03",
-            "Lô A04",
-            "Lô A05",
-            "Lô A06",
-            "Lô A07",
-          ],
+          type: 'category',
+          data: xLabels,
           axisTick: {
             show: false,
           },
@@ -46,55 +50,48 @@ const ProductivityChart = () => {
             show: false,
           },
           axisLabel: {
-            fontWeight: "bold",
+            fontWeight: 'bold',
             fontSize: 14,
-            color: "#00000040",
+            color: '#00000040',
           },
         },
       ],
       yAxis: [
         {
-          type: "value",
+          type: 'value',
           splitNumber: 5,
           axisLabel: {
             formatter: function (value: number) {
-              return value ? value + " tấn/ha" : "0"
+              return value ? value + ' ' + unit : '0'
             },
-            fontWeight: "bold",
+            fontWeight: 'bold',
             fontSize: 14,
-            color: "#00000040",
+            color: '#00000040',
           },
-          // name: "Năng suất (tán)",
         },
       ],
       series: [
         {
-          name: "",
-          type: "bar",
-          barMaxWidth: "40px",
-          data: [68.38, 77.93, 90.88, 90.65, 91.61, 62.13, 92.22],
+          name: '',
+          type: 'bar',
+          barMaxWidth: '40px',
+          data: values,
           itemStyle: {
-            color: "#3ED094",
+            color: '#3ED094',
             borderRadius: [10, 10, 0, 0],
-          },
-          tooltip: {
-            position: function (point, params, dom, rect, size) {
-              // fixed at top
-              return [point[0], "10%"]
-            },
           },
           label: {
             show: true,
-            position: "top",
-            formatter: "{c}",
-            backgroundColor: "#fff",
-            borderColor: "#00000040",
+            position: 'top',
+            formatter: '{c}',
+            backgroundColor: '#fff',
+            borderColor: '#00000040',
             borderWidth: 1,
             borderRadius: 4,
-            padding: [4, 6], // top, right/left
-            color: "#00000040",
-            fontWeight: "bold",
-            shadowColor: "rgba(0,0,0,0.2)",
+            padding: [4, 6],
+            color: '#00000040',
+            fontWeight: 'bold',
+            shadowColor: 'rgba(0,0,0,0.2)',
             shadowBlur: 3,
           },
         },
@@ -104,15 +101,15 @@ const ProductivityChart = () => {
     option && myChart.setOption(option)
 
     const resize = () => myChart.resize()
-    window.addEventListener("resize", resize)
+    window.addEventListener('resize', resize)
 
     return () => {
-      window.removeEventListener("resize", resize)
+      window.removeEventListener('resize', resize)
       myChart.dispose()
     }
   }, [])
 
-  return <div id="chart-1" style={{ width: "100%", height: "100%" }}></div>
+  return <div id={chartId} style={{ width: '100%', height: '100%' }}></div>
 }
 
 export default ProductivityChart
