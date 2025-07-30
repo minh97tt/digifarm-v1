@@ -5,14 +5,19 @@ type ProductCardProps = {
   name: string;
   image: string;
   description?: string;
+  clickable?: boolean;
 };
 
-export default function ProductCard({ id, name, image, description }: ProductCardProps) {
+export default function ProductCard({ id, name, image, description, clickable }: ProductCardProps) {
   const navigate = useNavigate();
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-card-border group relative"
+    <div
+      className={`bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-card-border group relative ${clickable ? 'cursor-pointer' : 'cursor-default'
+        }`}
       onClick={() => {
-        navigate(`/farm?id=${id}`, { viewTransition: true })
+        if (clickable) {
+          navigate(`/farm?id=${id}`, { viewTransition: true });
+        }
       }}
     >
       <div className="h-48 overflow-hidden">
@@ -22,9 +27,9 @@ export default function ProductCard({ id, name, image, description }: ProductCar
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         {/* Overlay with View button */}
-        <div className="absolute inset-0 bg-black/20 bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className={`absolute inset-0 bg-black/20 bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
           <button
-            className="bg-white text-text-primary px-4 py-2 rounded-xl font-medium text-sm hover:bg-green-50 transition-colors duration-300 transform hover:scale-105"
+            className={`bg-white text-text-primary px-4 py-2 rounded-xl font-medium text-sm hover:bg-green-50 transition-colors duration-300 transform hover:scale-105 ${clickable ? 'cursor-pointer' : 'hidden'}`}
           >
             Xem chuỗi cung ứng
           </button>
