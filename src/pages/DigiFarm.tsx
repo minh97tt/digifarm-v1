@@ -125,6 +125,8 @@ export default function DigiFarm() {
             title="Thu hoạch"
             data={harvestData}
             icon={<PngIcon imageUrl={truckIcon} />}
+            link={{ label: 'Xem thông tin thành phẩm', href: '/retails' }}
+          
           />
 
           {/* Harvest Planning Card */}

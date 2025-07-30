@@ -98,13 +98,14 @@ export default function Factory() {
             title="Dây chuyền sản xuất"
             data={productionLineData}
             icon={<PngIcon imageUrl={LineIcon} />}
+            link={{ label: 'Xem quy trình trồng trọt', href: '/farm' }}
           />
 
           <InfoCard
             title="Thành phẩm"
             data={finishedProductData}
             icon={<PngIcon imageUrl={ProductIcon} />}
-            link={{ label: 'Xem thông tin giống cây trồng', href: '/farm' }}
+            
           />
 
           <InfoCard
