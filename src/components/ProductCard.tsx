@@ -4,11 +4,12 @@ type ProductCardProps = {
   id: string;
   name: string;
   image: string;
+  code?: string;
   description?: string;
   clickable?: boolean;
 };
 
-export default function ProductCard({ id, name, image, description, clickable }: ProductCardProps) {
+export default function ProductCard({ name, code, image, description, clickable }: ProductCardProps) {
   const navigate = useNavigate();
   return (
     <div
@@ -16,7 +17,7 @@ export default function ProductCard({ id, name, image, description, clickable }:
         }`}
       onClick={() => {
         if (clickable) {
-          navigate(`/retails`, { viewTransition: true });
+          navigate(`/retails/${code}`, { viewTransition: true });
         }
       }}
     >

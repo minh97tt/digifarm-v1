@@ -75,17 +75,6 @@ export default function DigiFarm() {
     { label: 'Số nhân công', value: '15 người' },
   ]
 
-  // Data for delivery planning card
-  const deliveryData = [
-    { label: 'Đơn vị vận chuyển', value: 'Tự vận chuyển' },
-    { label: 'Tài xế', value: 'Lê Văn Việt' },
-    { label: 'Biển số xe', value: '70A1 - 123.45' },
-    { label: 'Điểm đến', value: 'Nhà kho TTCS' },
-    {
-      label: 'Địa chỉ',
-      value: 'Xã Tân Hưng, Huyện Tân Châu, Tỉnh Tây Ninh, Việt Nam',
-    },
-  ]
 
   return (
     <main>
@@ -125,8 +114,8 @@ export default function DigiFarm() {
             title="Thu hoạch"
             data={harvestData}
             icon={<PngIcon imageUrl={truckIcon} />}
-            link={{ label: 'Xem thông tin thành phẩm', href: '/retails' }}
-          
+            link={{ label: 'Xem thông tin thành phẩm', href: `/retails/${id}` }}
+
           />
 
           {/* Harvest Planning Card */}

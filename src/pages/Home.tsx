@@ -6,30 +6,28 @@ import Navigation from '../components/Navigation';
 const products = [
   {
     id: '1',
+    code: '20100054',
     name: 'Đường Biên Hoà Organic túi 400g/túi',
     image: 'https://product.hstatic.net/200000721249/product/d3af47b48462223c7b73_2e0b5ccf651a464590c27017ff94d612_master.jpg',
     description: 'Sản phẩm được chế biến từ mía hữu cơ 100%, không sử dụng phân bón hóa học, thuốc trừ sâu hay hóa chất trong suốt quá trình canh tác, mang đến sự an toàn tuyệt đối cho sức khỏe.'
   },
-  // {
-  //   id: '2',
-  //   name: 'Đường Biên Hoà Organic Hủ 800gr/hủ',
-  //   image: 'https://product.hstatic.net/200000721249/product/banner_organic_800g_lazada-03-min_bff1ea9e64e943248eaca7d9a720947e_master.jpg',
-  //   description: 'Sản phẩm được chế biến từ mía hữu cơ 100%, không sử dụng phân bón hóa học, thuốc trừ sâu hay hóa chất trong suốt quá trình canh tác, mang đến sự an toàn tuyệt đối cho sức khỏe.'
-  // },
   {
     id: '6',
+    code: '20100042',
     name: 'Đường Mía Thiên Nhiên 1kg',
     image: 'https://product.hstatic.net/200000721249/product/sp_1x1-20_c264c2dcfc234c7b9e8ab18926bd8946_master.jpg',
     description: 'Đường mía thiên nhiên Biên Hòa 1kg được làm từ 100% mía tự nhiên, mang lại vị ngọt dịu nhẹ. Sản phẩm này không chỉ giúp món ăn thêm phần hấp dẫn với màu sắc và hương vị đặc trưng mà còn đảm bảo an toàn với phương pháp sản xuất hiện đại, không sử dụng chất tạo màu.'
   },
   {
     id: '10',
+    code: '20100020',
     name: 'Đường đen Nữ Hoàng 1kg',
     image: 'https://product.hstatic.net/200000721249/product/duong_den-01_c1daf36f089b4bf6a8d3858b3717b523_master.png',
     description: 'Đường đen là loại đường chưa được tinh luyện kỹ, có màu nâu đậm và giữ được hương vị ngọt tự nhiên từ mía đường. Kích thước hạt to hơn đường trắng, dễ hòa tan trong nước và mang lại hương vị thanh đạm. Đường đen còn được gọi với nhiều tên khác như đường vàng, đường đỏ. Đây là nguyên liệu lý tưởng để chế biến các món ăn và đồ uống yêu thích như trà sữa, bánh ngọt, hoặc món tráng miệng khác.'
   },
   {
     id: '7',
+    code: '20100075',
     name: 'Đường phèn Biên Hoà Pro 500g',
     image: 'https://product.hstatic.net/200000721249/product/dg_phen_pro_19d0f25959d54dff87fa728d06ddbdac_master.jpg',
     description: 'Sản phẩm chất lượng cao, ngọt thanh tự nhiên, không thể thiếu trong gian bếp của bạn.'
@@ -115,8 +113,8 @@ export default function Home() {
           {products.map((product, id) => (
             <ProductCard
               clickable={id < 4}
-              key={product.id}
               id={product.id}
+              code={product.code}
               name={product.name}
               image={product.image}
               description={product.description}

@@ -17,58 +17,65 @@ import ProductivityChart from '../components/ProductivityChart'
 import MaterialIcon from '../assets/factory/material.png'
 import MachineIcon from '../assets/factory/machine.png'
 import FinishedProductIcon from '../assets/factory/finished-product.png'
+import { useParams } from 'react-router-dom'
+import { PRODUCT_ITEMS } from '../components/consts'
+
+const rawMaterialWarehouseData = [
+  { label: 'Kho', value: 'Nhà kho TTCS' },
+  {
+    label: 'Địa chỉ',
+    value: 'Xã Tân Hưng, Huyện Tân Châu, Tỉnh Tây Ninh, Việt Nam',
+  },
+  { label: 'Ngày nhập kho', value: '22/09/2024' },
+  { label: 'Ngày xuất kho', value: '23/09/2024' },
+]
+
+const factoryData = [
+  { label: 'Nhà máy', value: 'Nhà máy TTCS' },
+  {
+    label: 'Địa chỉ',
+    value: 'Xã Tân Hưng, Huyện Tân Châu, Tỉnh Tây Ninh, Việt Nam',
+  },
+]
+
+const productionLineData = [
+  { label: 'Định mức nguyên vật liệu', value: '20000000_01' },
+  { label: 'Công thức', value: 'UHT03_04' },
+  { label: 'Phiên bản sản xuất', value: 'PV00002788' },
+  { label: 'Lệnh sản xuất', value: '3013861' },
+  { label: 'Dây chuyền sản xuất', value: 'CH33002 - Line 5' },
+]
+
+const finishedGoodsWarehouseData = [
+  { label: 'Kho', value: 'Kho thành phẩm TTCS' },
+  { label: 'Ngày nhập kho', value: '25/09/2024' },
+  { label: 'Ngày xuất kho', value: '30/09/2024' },
+]
+
+const transportationData = [
+  { label: 'Đơn vị vận chuyển', value: 'Nhất Tín' },
+  { label: 'Tài xế', value: 'Nguyễn Quốc Sinh' },
+  { label: 'Biển số xe', value: '70H7-606.45' },
+  { label: 'Điểm đến', value: 'Hùng Tín LTD Company' },
+  {
+    label: 'Địa chỉ',
+    value:
+      'Phạm Đăng Giảng, Phường Bình Hưng Hoà, Quận Bình Tân, TPHCM, Việt Nam',
+  },
+]
 
 export default function Factory() {
-  const rawMaterialWarehouseData = [
-    { label: 'Kho', value: 'Nhà kho TTCS' },
-    {
-      label: 'Địa chỉ',
-      value: 'Xã Tân Hưng, Huyện Tân Châu, Tỉnh Tây Ninh, Việt Nam',
-    },
-    { label: 'Ngày nhập kho', value: '22/09/2024' },
-    { label: 'Ngày xuất kho', value: '23/09/2024' },
-  ]
 
-  const factoryData = [
-    { label: 'Nhà máy', value: 'Nhà máy TTCS' },
-    {
-      label: 'Địa chỉ',
-      value: 'Xã Tân Hưng, Huyện Tân Châu, Tỉnh Tây Ninh, Việt Nam',
-    },
-  ]
+  const { id } = useParams();
 
-  const productionLineData = [
-    { label: 'Định mức nguyên vật liệu', value: '20000000_01' },
-    { label: 'Công thức', value: 'UHT03_04' },
-    { label: 'Phiên bản sản xuất', value: 'PV00002788' },
-    { label: 'Lệnh sản xuất', value: '3013861' },
-    { label: 'Dây chuyền sản xuất', value: 'CH33002 - Line 5' },
-  ]
+  const dbProduct = PRODUCT_ITEMS.find((item) => item.code === id);
 
   const finishedProductData = [
-    { label: 'Thành phẩm', value: 'Đường Mía Thiên Nhiên 1kg' },
-    { label: 'Mã sản phẩm', value: '20100042' },
+    { label: 'Thành phẩm', value: dbProduct?.name || 'Đường Mía Thiên Nhiên 1kg' },
+    { label: 'Mã sản phẩm', value: dbProduct?.code || '20100042' },
     { label: 'Lô hàng', value: '0000064873' },
     { label: 'Ngày sản xuất', value: '24/09/2024' },
     { label: 'Ngày hết hạn', value: '24/09/2025' },
-  ]
-
-  const finishedGoodsWarehouseData = [
-    { label: 'Kho', value: 'Kho thành phẩm TTCS' },
-    { label: 'Ngày nhập kho', value: '25/09/2024' },
-    { label: 'Ngày xuất kho', value: '30/09/2024' },
-  ]
-
-  const transportationData = [
-    { label: 'Đơn vị vận chuyển', value: 'Nhất Tín' },
-    { label: 'Tài xế', value: 'Nguyễn Quốc Sinh' },
-    { label: 'Biển số xe', value: '70H7-606.45' },
-    { label: 'Điểm đến', value: 'Hùng Tín LTD Company' },
-    {
-      label: 'Địa chỉ',
-      value:
-        'Phạm Đăng Giảng, Phường Bình Hưng Hoà, Quận Bình Tân, TPHCM, Việt Nam',
-    },
   ]
 
   return (
@@ -86,7 +93,7 @@ export default function Factory() {
             title="Kho nguyên liệu"
             data={rawMaterialWarehouseData}
             icon={<PngIcon imageUrl={WarehouseIcon} />}
-            link={{ label: 'Xem quy trình trồng trọt', href: '/farm' }}
+            link={{ label: 'Xem quy trình trồng trọt', href: `/farm/${id}` }}
           />
 
           <InfoCard
