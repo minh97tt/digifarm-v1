@@ -2,6 +2,15 @@ import ProductCard from '../components/ProductCard';
 import HomeCover from '../assets/HomeCoverNew.webp';
 import Navigation from '../components/Navigation';
 
+import af from '../assets/plants/af.avif'
+import gk from '../assets/plants/gk.avif';
+import ja from '../assets/plants/ja.avif'
+import ua from '../assets/plants/ua.avif';
+import sc from '../assets/plants/sc.avif';
+import lo from '../assets/plants/lo.avif';
+import qs from '../assets/plants/qs.avif';
+import lk from '../assets/plants/lk.avif'
+
 // Danh sách sản phẩm mía, dừa, điều
 const products = [
   {
@@ -90,49 +99,49 @@ const plants = [
   {
     id: '1',
     name: 'Mía giống KK3',
-    image: 'https://images.unsplash.com/photo-1679543321530-4378c81af100?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: ja,
     description: 'Giống mía KK3 chất lượng cao, năng suất lớn, chống chịu sâu bệnh tốt.'
   },
   {
     id: '2',
     name: 'Mía giống LK92-11',
-    image: 'https://images.unsplash.com/photo-1585155113372-6c1808141bf3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: sc,
     description: 'Giống mía LK92-11 có hàm lượng đường cao, thích hợp cho sản xuất đường.'
   },
   {
     id: '3',
     name: 'Dừa giống Xiêm Xanh',
-    image: 'https://images.unsplash.com/photo-1603779046675-2eccbab9b982?q=80&w=1033&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: gk,
     description: 'Dừa Xiêm Xanh cho trái sớm, nước ngọt, thích hợp cho vùng đất phèn.'
   },
   {
     id: '4',
     name: 'Dừa giống Dứa',
-    image: 'https://images.unsplash.com/photo-1580984969071-a8da5656c2fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
+    image: lk,
     description: 'Dừa giống Dứa có cơm dày, thơm ngon, thích hợp cho chế biến các sản phẩm từ cơm dừa.'
   },
   {
     id: '5',
     name: 'Điều giống PN1',
-    image: 'https://images.unsplash.com/photo-1744818138313-5ac435a4cd35?q=80&w=1036&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: af,
     description: 'Điều giống PN1 cho năng suất cao, hạt to đều, tỷ lệ nhân cao.'
   },
   {
     id: '6',
     name: 'Điều giống AB29',
-    image: 'https://plus.unsplash.com/premium_photo-1725384940666-8c04394eda4d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: ua,
     description: 'Điều giống AB29 chống chịu bệnh tốt, thích nghi với nhiều loại đất.'
   },
   {
     id: '7',
     name: 'Lúa giống ST25',
-    image: 'https://msm-digiretail-qc-s3-data-001.s3.ap-southeast-1.amazonaws.com/customer/7f279425-705b-4e29-8d44-7c3413f30601.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDIaDmFwLXNvdXRoZWFzdC0xIkgwRgIhAJWuYALld94uNJjAPEVQETK%2BsZvkqmH%2Fjci%2FIFXYeUyiAiEA5D%2FgNxKrKft%2FqkxoPPpJPO2dGdURcuRcj2vt4NFHGH8qlgQIaxAAGgwwNzE0MTgwMTkwNzAiDOz82gMxK7nejZprhSrzAxzOFZDaKuD52%2BUnxndtRSY0J00giVj2y19l85%2BpHsoqErfTzCa1%2FSmrz0S0cgvLvTMpNGTevlDU9hHMQ221axn0VP7UExD2Qh6qdjxy9YWRKdvZrHeySZJbqkABxZT%2BSTPnpbBEuEsC8nbqiDuw%2F5%2FPSau6jHl%2FQQ94f2qA2Z2DAlGGh73CRL%2Bpi0Fv9uZmdnI0%2B%2FsJ64KNFxMm9jt1apV68ulWgXI2dTA4X7usRIPJyTqbA5i7390zjFz3CoWYqi4rcYhaQDZ0k51HP2wLpzMpfg%2FOC%2BfNp29LPm1VofX4QYtGyRNopra%2FIWmaxAKf55fDn%2FB8mKE%2FGndo7Jq4YiUWUu1Nl%2B1CSCshsxHjCVVFqwCCYQxImPQw0yyNM1%2FiAoNUMHLMeECgeYUwe%2Brn3OCfuctAUPkyRCvlvQBp7cXhR8aR3hwtiNFkDfr%2Fd5GAufxdueeuC%2F2zXzPuN2ZXzG6rls0aLGqpbflMr3HxuWjjsdC33eh%2F6AevZ77d2g2sCi9XFy6KbzU6wexvv8auAmWuYAvKvoNmq1yFKYMC%2F33Y1JiDwPj2PsafznEFLI4uJpGWFDuTcG2zRQRuKjvHB0PXnc6%2FEc4slmlkckDsaI2EVzWx6mmdx0lJP72m7rIRW06w95zHMNQwBBFGjG8e5E50kPIwzO3KxAY6pQHgkcE8nKqdw1%2Fw6g8U14GxLtLxZXWxE8AAJTx0Z803vaD%2BCis6iaAYZF6QKsZi7XWS9lI0T5CxpElfuyynZJOsR9i2tKEMNp659B0aOIp2kTNOrGlttpsk18MfIECViDrXTP9iXKZ3fyU%2B7m8fhANPZT0LSor7px127IKZOeziXDVdvTEIXBFP4FaEnFB%2BTI16QzBsGqhXFP%2BcbgpX%2FbgqJtz1Phg%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250806T030405Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIARBIGYPT7AI2V5SHY%2F20250806%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Expires=3600&X-Amz-Signature=910f5c3405fcefee729049cddba15461566472b961a07c0d2e87aaa11822d814',
+    image: qs,
     description: 'Lúa thích nghi rộng, năng suất cao và chất lượng gạo thượng hạng'
   },
   {
     id: '11',
     name: 'Chuối giống GL3‑5',
-    image: 'https://msm-digiretail-qc-s3-data-001.s3.ap-southeast-1.amazonaws.com/customer/895bedc0-1fee-4c5d-8b8c-e6c84468c40e.png?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDIaDmFwLXNvdXRoZWFzdC0xIkgwRgIhAJWuYALld94uNJjAPEVQETK%2BsZvkqmH%2Fjci%2FIFXYeUyiAiEA5D%2FgNxKrKft%2FqkxoPPpJPO2dGdURcuRcj2vt4NFHGH8qlgQIaxAAGgwwNzE0MTgwMTkwNzAiDOz82gMxK7nejZprhSrzAxzOFZDaKuD52%2BUnxndtRSY0J00giVj2y19l85%2BpHsoqErfTzCa1%2FSmrz0S0cgvLvTMpNGTevlDU9hHMQ221axn0VP7UExD2Qh6qdjxy9YWRKdvZrHeySZJbqkABxZT%2BSTPnpbBEuEsC8nbqiDuw%2F5%2FPSau6jHl%2FQQ94f2qA2Z2DAlGGh73CRL%2Bpi0Fv9uZmdnI0%2B%2FsJ64KNFxMm9jt1apV68ulWgXI2dTA4X7usRIPJyTqbA5i7390zjFz3CoWYqi4rcYhaQDZ0k51HP2wLpzMpfg%2FOC%2BfNp29LPm1VofX4QYtGyRNopra%2FIWmaxAKf55fDn%2FB8mKE%2FGndo7Jq4YiUWUu1Nl%2B1CSCshsxHjCVVFqwCCYQxImPQw0yyNM1%2FiAoNUMHLMeECgeYUwe%2Brn3OCfuctAUPkyRCvlvQBp7cXhR8aR3hwtiNFkDfr%2Fd5GAufxdueeuC%2F2zXzPuN2ZXzG6rls0aLGqpbflMr3HxuWjjsdC33eh%2F6AevZ77d2g2sCi9XFy6KbzU6wexvv8auAmWuYAvKvoNmq1yFKYMC%2F33Y1JiDwPj2PsafznEFLI4uJpGWFDuTcG2zRQRuKjvHB0PXnc6%2FEc4slmlkckDsaI2EVzWx6mmdx0lJP72m7rIRW06w95zHMNQwBBFGjG8e5E50kPIwzO3KxAY6pQHgkcE8nKqdw1%2Fw6g8U14GxLtLxZXWxE8AAJTx0Z803vaD%2BCis6iaAYZF6QKsZi7XWS9lI0T5CxpElfuyynZJOsR9i2tKEMNp659B0aOIp2kTNOrGlttpsk18MfIECViDrXTP9iXKZ3fyU%2B7m8fhANPZT0LSor7px127IKZOeziXDVdvTEIXBFP4FaEnFB%2BTI16QzBsGqhXFP%2BcbgpX%2FbgqJtz1Phg%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250806T031007Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIARBIGYPT7AI2V5SHY%2F20250806%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Expires=3600&X-Amz-Signature=3ebf35b73ee95d795fc20904cc578ed9107fb2966c238b7e6e82cd5ac9af170b',
+    image: lo,
     description: 'Chuối có khả năng kháng bệnh héo vàng rất tốt, năng suất cao'
   },
 ];
