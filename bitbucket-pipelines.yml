@@ -17,7 +17,7 @@ pipelines:
           - pnpm install --frozen-lockfile
           - pnpm run build:versioned
           # - DEPLOY_DATE=$(TZ='Asia/Bangkok' date +'%d-%m-%Y')
-          - aws s3 sync dist/ s3://$S3_BUCKET_NAME/
+          - aws s3 sync dist/ s3://$S3_BUCKET_NAME
           - echo "Clear cache on CloudFront"
           - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths /index.html
           - echo "Clean up"
