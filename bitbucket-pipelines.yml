@@ -12,7 +12,9 @@ pipelines:
           - self.hosted
           - linux
         script:
+          - rm -rf ~/.cache/corepack
           - corepack enable
+          - corepack prepare pnpm@$(node -p "require('./package.json').packageManager.split('@')[1]") --activate
           - pnpm install --frozen-lockfile
           - pnpm run build:versioned
           - aws s3 sync dist/ s3://$S3_BUCKET_NAME/$DEPLOY_DATE/
