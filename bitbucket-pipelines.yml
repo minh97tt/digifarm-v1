@@ -1,0 +1,4 @@
+pipelines:
+  branches:
+    dev:
+      import: pipeline-templates:dev:dev-static-web-pipeline
