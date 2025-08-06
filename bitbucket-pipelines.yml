@@ -1,8 +1,5 @@
 image:
-  name: 739275479836.dkr.ecr.ap-southeast-1.amazonaws.com/msm-devops-nonprod-runner-image:ubuntu-build
-  aws:
-    access-key: $AWS_ACCESS_KEY_ID
-    secret-key: $AWS_SECRET_ACCESS_KEY
+  name: node:20
 
 pipelines:
   default:
