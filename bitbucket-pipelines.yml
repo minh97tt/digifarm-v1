@@ -17,6 +17,7 @@ pipelines:
           - corepack prepare pnpm@$(node -p "require('./package.json').packageManager.split('@')[1]") --activate
           - pnpm install --frozen-lockfile
           - pnpm run build:versioned
+          - DEPLOY_DATE=$(TZ='Asia/Bangkok' date +'%d-%m-%Y')
           - aws s3 sync dist/ s3://$S3_BUCKET_NAME/$DEPLOY_DATE/
           - aws s3 cp dist/index.html s3://$S3_BUCKET_NAME/index.html
           - echo "Clear cache on CloudFront"
