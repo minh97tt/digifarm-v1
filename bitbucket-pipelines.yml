@@ -1,4 +1,20 @@
+image:
+  name: 739275479836.dkr.ecr.ap-southeast-1.amazonaws.com/msm-devops-nonprod-runner-image:ubuntu-build
+  aws:
+    access-key: $AWS_ACCESS_KEY_ID
+    secret-key: $AWS_SECRET_ACCESS_KEY
+
 pipelines:
-  branches:
-    dev:
-      import: pipeline-templates:dev:dev-static-web-pipeline
+  default:
+    - step:
+        name: Build & deploy static web
+        runs-on:
+          - self.hosted
+          - linux
+        script:
+          - corepack enable
+          - pnpm install --frozen-lockfile
+          - aws s3 sync dist/ s3://$S3_BUCKET_NAME/$DEPLOY_DATE/
+          - aws s3 cp dist/index.html s3://$S3_BUCKET_NAME/index.html
+          - echo "Clear cache on CloudFront"
+          - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DIST_ID --paths /index.html
