@@ -12,9 +12,7 @@ pipelines:
           - self.hosted
           - linux
         script:
-          - rm -rf ~/.cache/corepack
-          - corepack enable
-          - corepack prepare pnpm@$(node -p "require('./package.json').packageManager.split('@')[1]") --activate
+          - npm install -g pnpm@10.5.2
           - pnpm install --frozen-lockfile
           - pnpm run build:versioned
           - DEPLOY_DATE=$(TZ='Asia/Bangkok' date +'%d-%m-%Y')
