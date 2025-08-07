@@ -75,7 +75,6 @@ export default function DigiFarm() {
     { label: 'Số nhân công', value: '15 người' },
   ]
 
-
   return (
     <main>
       <BreadCrumb
@@ -88,6 +87,8 @@ export default function DigiFarm() {
 
       <div className="layout-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <MapWithPolygon />
+
           {/* Crop Variety Information Card */}
           <InfoCard
             title="Giống cây trồng"
@@ -115,7 +116,6 @@ export default function DigiFarm() {
             data={harvestData}
             icon={<PngIcon imageUrl={truckIcon} />}
             link={{ label: 'Xem thông tin thành phẩm', href: `/retails/${id}` }}
-
           />
 
           {/* Harvest Planning Card */}
@@ -175,8 +175,6 @@ export default function DigiFarm() {
             </div>
           </div>
         </Chart>
-
-        <MapWithPolygon />
       </div>
     </main>
   )

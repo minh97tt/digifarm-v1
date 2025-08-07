@@ -5,7 +5,10 @@ import {
   InfoWindow,
 } from '@react-google-maps/api';
 
+
 import boundaries from '../assets/boundaries';
+import RedAlertIcon from '../assets/farm/red-alert.gif'
+import WanringIcon from '../assets/farm/warning.png'
 
 const containerStyle = {
   width: '100%',
@@ -58,7 +61,7 @@ const MapWithPolygon = () => {
   // const applicationData = boundaries.sample_data;
 
   return (
-    <div className='mt-6'>
+    <div className='mt-6 col-span-1 md:col-span-2'>
       <div className='text-text-primary font-bold  text-xl mb-4'>Vị trí vùng trồng</div> 
       <GoogleMap
         // mapTypeId="satellite"
@@ -113,7 +116,7 @@ const MapWithPolygon = () => {
             position={hoverPosition}
             onCloseClick={() => setHovered(false)}
           >
-            <div>
+            <div className="w-[360px]">
               {/* <div>Mã ruộng: {activeFeature.properties.FIELD_NAME}</div> */}
               <div className='bg-gray-100 p-2 rounded-lg space-y-1'>
                 <h1 className='font-bold mb-2'>Thông tin canh tác:</h1>
@@ -122,8 +125,29 @@ const MapWithPolygon = () => {
                 <div>📅 <b>Ngày gieo:</b> {seedingData.properties.Time}</div>
                 <div>🏔️ <b>Độ cao:</b> {seedingData.properties.Elevation} m</div>
                 <div>💨 <b>Tốc độ gió:</b> {tillageData.properties.WINDSPEED} km/h</div>
-                <div>🌡️ <b>Nhiệt độ:</b> {tillageData.properties.AIRTEMP} độ C</div>
-                <div>💧 <b>Độ ẩm:</b> {tillageData.properties.HUMIDITY}%</div>
+                <div className="flex items-center gap-1">
+                  <span>🌡️ <b>Nhiệt độ:</b> {tillageData.properties.AIRTEMP} độ C</span>
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[10px] text-[#F5222D] px-1 leading-[15px]">
+                    <img
+                      className="w-[14px] h-[14px] inline"
+                      src={RedAlertIcon}
+                      alt="Alert"
+                    />
+                    <span>Nhiệt độ quá thấp, ảnh hưởng vùng trồng</span>
+                  </span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span>💧 <b>Độ ẩm:</b> {tillageData.properties.HUMIDITY}%</span>
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[10px] text-[#F5222D] px-1 leading-[15px]">
+                    {' '}
+                    <img
+                      className="w-[10px] inline-block"
+                      src={WanringIcon}
+                      alt="Wanring"
+                    />
+                    <span>Độ ẩm cao, không tốt cho vùng trồng</span>
+                  </span>
+                </div>
                 <div>🧭 <b>Hướng gió:</b> {tillageData.properties.WINDDRCTN}</div>
                 <div>☁️ <b>Điều kiện thời tiết:</b> Có mây rải rác</div>
                 <div>🚜 <b>Tốc độ máy:</b> {seedingData.properties.VEHICLSPEED} km/h</div>
