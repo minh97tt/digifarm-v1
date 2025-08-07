@@ -159,11 +159,11 @@ export default function Home() {
           <h1 className="md:text-4xl text-xl font-bold md:mb-2 text-center">Hệ sinh thái sản phẩm Agris</h1>
           <p className="md:text-xl text-base text-center max-w-2xl">Các giống mía, dừa, điều chất lượng cao cho nông nghiệp bền vững</p>
         </div>
-        <div className='absolute md:-bottom-18 -bottom-44 w-full'>
+        <div className='absolute md:-bottom-18 top-[calc(100%-80px)] w-full'>
           <Navigation />
         </div>
       </div>
-      <div className="layout-container md:!mt-18 !mt-44">
+      <div className="layout-container">
         <div className="mb-6">
           <h2 className="md:text-2xl text-xl font-bold text-text-primary">Danh mục sản phẩm</h2>
         </div>

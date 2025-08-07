@@ -66,7 +66,7 @@ const MapWithPolygon = () => {
       <GoogleMap
         // mapTypeId="satellite"
         mapContainerStyle={containerStyle}
-        center={center} zoom={13}
+        center={center} zoom={14}
       >
         {/* Map through each feature in the boundaries data */}
         {boundaries.features.map((feature, index) => {
@@ -94,6 +94,10 @@ const MapWithPolygon = () => {
                   lat: e.latLng?.lat() ?? 0,
                   lng: e.latLng?.lng() ?? 0,
                 });
+                console.log({
+                  lat: e.latLng?.lat() ?? 0,
+                  lng: e.latLng?.lng() ?? 0,
+                })
               }}
               onMouseOut={() => {
                 setHovered(false);
@@ -105,20 +109,23 @@ const MapWithPolygon = () => {
         })}
 
 
-        {hovered && hoverPosition && activeFeature && (
+        {(
           <InfoWindow
             options={{
               // pixelOffset: new window.google.maps.Size(0, -10),
-              maxWidth: 400,
+              maxWidth: 500,
               headerDisabled: true,
               // You cannot set full CSS here, but some layout things can be tweaked
             }}
-            position={hoverPosition}
+            position={{
+              "lat": 11.20731339660344,
+              "lng": 106.02338711540526
+          }}
             onCloseClick={() => setHovered(false)}
           >
-            <div className="w-[360px]">
+            <div className="w-[400px]">
               {/* <div>Mã ruộng: {activeFeature.properties.FIELD_NAME}</div> */}
-              <div className='bg-gray-100 p-2 rounded-lg space-y-1'>
+              <div className='bg-gray-100 p-2 rounded-lg space-y-1 text-[14px]'>
                 <h1 className='font-bold mb-2'>Thông tin canh tác:</h1>
 
                 <div>🌱 <b>Giống cây trồng:</b> Mía K{seedingData.properties.Variety}</div>
@@ -127,25 +134,25 @@ const MapWithPolygon = () => {
                 <div>💨 <b>Tốc độ gió:</b> {tillageData.properties.WINDSPEED} km/h</div>
                 <div className="flex items-center gap-1">
                   <span>🌡️ <b>Nhiệt độ:</b> {tillageData.properties.AIRTEMP} độ C</span>
-                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[10px] text-[#F5222D] px-1 leading-[15px]">
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[12px] text-[#F5222D] px-1 leading-[15px]">
                     <img
-                      className="w-[14px] h-[14px] inline"
+                      className="h-[15px] inline"
                       src={RedAlertIcon}
                       alt="Alert"
                     />
-                    <span>Nhiệt độ quá thấp, ảnh hưởng vùng trồng</span>
+                    <span className="py-[2px]">Nhiệt độ quá thấp, ảnh hưởng vùng trồng</span>
                   </span>
                 </div>
                 <div className="flex items-center gap-1">
                   <span>💧 <b>Độ ẩm:</b> {tillageData.properties.HUMIDITY}%</span>
-                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[10px] text-[#F5222D] px-1 leading-[15px]">
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[12px] text-[#F5222D] px-1 leading-[15px]">
                     {' '}
                     <img
-                      className="w-[10px] inline-block"
+                      className="h-[12px] inline-block"
                       src={WanringIcon}
                       alt="Wanring"
                     />
-                    <span>Độ ẩm cao, không tốt cho vùng trồng</span>
+                    <span className="py-[2px]">Độ ẩm cao, không tốt cho vùng trồng</span>
                   </span>
                 </div>
                 <div>🧭 <b>Hướng gió:</b> {tillageData.properties.WINDDRCTN}</div>

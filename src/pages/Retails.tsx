@@ -101,7 +101,7 @@ export default function Home() {
       />
       <Hero icon={DigiRetailsIcon} coverImage={CoverImage} />
 
-      <div className="layout-container">
+      <div className="layout-container no-nav">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <InfoCard
             title="Sản phẩm"

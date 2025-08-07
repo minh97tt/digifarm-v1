@@ -87,7 +87,7 @@ export default function Factory() {
         ]}
       />
       <Hero coverImage={CoverImage} icon={DigiFactIcon} />
-      <div className="layout-container">
+      <div className="layout-container no-nav">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <InfoCard
             title="Kho nguyên liệu"
