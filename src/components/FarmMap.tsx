@@ -116,7 +116,7 @@ const MapWithPolygon = () => {
             position={hoverPosition}
             onCloseClick={() => setHovered(false)}
           >
-            <div className="w-[390px] bg-gray-100 p-2 rounded-lg space-y-1 text-[14px]">
+            <div className="max-w-130 !text-lg bg-gray-100 p-2 rounded-lg space-y-1 text-[14px]">
               {/* <div>Mã ruộng: {activeFeature.properties.FIELD_NAME}</div> */}
               <div className='flex flex-col gap-1'>
                 <h1 className='font-bold mb-2'>Thông tin canh tác:</h1>
@@ -134,7 +134,7 @@ const MapWithPolygon = () => {
 
                 <div className="flex items-center gap-1">
                   <span>🌡️ <b>Nhiệt độ:</b></span>
-                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#ffff34] bg-[#ffffeb] rounded-[12px] text-[12px] text-[#373700] px-2 leading-[15px]">
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#ffff34] bg-[#ffffeb] text-[14px] rounded-[12px] text-[#373700] px-2 leading-[15px]">
                     <img
                       className="h-[13px] inline"
                       src={WanringIcon}
@@ -145,7 +145,7 @@ const MapWithPolygon = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <span>🦠 <b>Tình hình dịch bệnh:</b></span>
-                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[12px] text-[#F5222D] px-2 leading-[15px]">
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[14px] text-[#F5222D] px-2 leading-[15px]">
                     {' '}
                     <div className='flex items-center justify-center w-[14px] h-[14px]'>
                       <Lottie animationData={RedAlertLottie} loop={true} className='w-[40px] flex-shrink-0' />
@@ -155,7 +155,7 @@ const MapWithPolygon = () => {
                 </div>
                 <div className="flex items-center gap-1">
                   <span>💧 <b>Tưới tiêu:</b></span>
-                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#00ae00] bg-[#f0ffec] rounded-[12px] text-[12px] text-[#006300] px-2 leading-[15px]">
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#00ae00] bg-[#f0ffec] rounded-[12px] text-[14px] text-[#006300] px-2 leading-[15px]">
                     {' '}
                     💚
                     <span className="py-[2px]">Nên tưới 6 lần mỗi lần 65 đến 75 m3/ha</span>
