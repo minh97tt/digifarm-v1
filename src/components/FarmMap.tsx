@@ -125,7 +125,7 @@ const MapWithPolygon = () => {
                 <div>📅 <b>Ngày gieo:</b> {seedingData.properties.Time}</div>
                 <div>🌡️ <b>Nhiệt độ:</b> {tillageData.properties.AIRTEMP} độ C</div>
                 <div>🏔️ <b>Độ cao:</b> {seedingData.properties.Elevation} m</div>
-                <div>🌧️ <b>Lượng mưa:</b> {tillageData.properties.RAIN} mm</div>
+                <div>🌧️ <b>Lượng mưa:</b> {tillageData.properties.RAIN}</div>
                 <div>💧 <b>Độ ẩm:</b> {tillageData.properties.HUMIDITY}%</div>
               </div>
 
