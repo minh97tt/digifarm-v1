@@ -94,10 +94,6 @@ const MapWithPolygon = () => {
                   lat: e.latLng?.lat() ?? 0,
                   lng: e.latLng?.lng() ?? 0,
                 });
-                console.log({
-                  lat: e.latLng?.lat() ?? 0,
-                  lng: e.latLng?.lng() ?? 0,
-                })
               }}
               onMouseOut={() => {
                 setHovered(false);
@@ -109,7 +105,7 @@ const MapWithPolygon = () => {
         })}
 
 
-        {(
+        {hovered && hoverPosition && activeFeature && (
           <InfoWindow
             options={{
               // pixelOffset: new window.google.maps.Size(0, -10),
@@ -117,10 +113,7 @@ const MapWithPolygon = () => {
               headerDisabled: true,
               // You cannot set full CSS here, but some layout things can be tweaked
             }}
-            position={{
-              "lat": 11.20731339660344,
-              "lng": 106.02338711540526
-          }}
+            position={hoverPosition}
             onCloseClick={() => setHovered(false)}
           >
             <div className="w-[400px]">
