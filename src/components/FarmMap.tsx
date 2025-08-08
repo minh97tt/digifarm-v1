@@ -4,8 +4,11 @@ import {
   Polygon,
   InfoWindow,
 } from '@react-google-maps/api';
+import Lottie from "lottie-react";
 
 import boundaries from '../assets/boundaries';
+import WanringIcon from '../assets/farm/warning.png'
+import RedAlertLottie from '../assets/red-alert.json'
 
 const containerStyle = {
   width: '100%',
@@ -58,12 +61,12 @@ const MapWithPolygon = () => {
   // const applicationData = boundaries.sample_data;
 
   return (
-    <div className='mt-6'>
+    <div className='mt-6 col-span-1 md:col-span-2'>
       <div className='text-text-primary font-bold  text-xl mb-4'>Vị trí vùng trồng</div> 
       <GoogleMap
         // mapTypeId="satellite"
         mapContainerStyle={containerStyle}
-        center={center} zoom={13}
+        center={center} zoom={14}
       >
         {/* Map through each feature in the boundaries data */}
         {boundaries.features.map((feature, index) => {
@@ -106,28 +109,58 @@ const MapWithPolygon = () => {
           <InfoWindow
             options={{
               // pixelOffset: new window.google.maps.Size(0, -10),
-              maxWidth: 400,
+              maxWidth: 500,
               headerDisabled: true,
               // You cannot set full CSS here, but some layout things can be tweaked
             }}
             position={hoverPosition}
             onCloseClick={() => setHovered(false)}
           >
-            <div>
+            <div className="w-[390px] bg-gray-100 p-2 rounded-lg space-y-1 text-[14px]">
               {/* <div>Mã ruộng: {activeFeature.properties.FIELD_NAME}</div> */}
-              <div className='bg-gray-100 p-2 rounded-lg space-y-1'>
+              <div className='flex flex-col gap-1'>
                 <h1 className='font-bold mb-2'>Thông tin canh tác:</h1>
 
                 <div>🌱 <b>Giống cây trồng:</b> Mía K{seedingData.properties.Variety}</div>
                 <div>📅 <b>Ngày gieo:</b> {seedingData.properties.Time}</div>
-                <div>🏔️ <b>Độ cao:</b> {seedingData.properties.Elevation} m</div>
-                <div>💨 <b>Tốc độ gió:</b> {tillageData.properties.WINDSPEED} km/h</div>
                 <div>🌡️ <b>Nhiệt độ:</b> {tillageData.properties.AIRTEMP} độ C</div>
+                <div>🏔️ <b>Độ cao:</b> {seedingData.properties.Elevation} m</div>
+                <div>🌧️ <b>Lượng mưa:</b> {tillageData.properties.RAIN}</div>
                 <div>💧 <b>Độ ẩm:</b> {tillageData.properties.HUMIDITY}%</div>
-                <div>🧭 <b>Hướng gió:</b> {tillageData.properties.WINDDRCTN}</div>
-                <div>☁️ <b>Điều kiện thời tiết:</b> Có mây rải rác</div>
-                <div>🚜 <b>Tốc độ máy:</b> {seedingData.properties.VEHICLSPEED} km/h</div>
+              </div>
 
+              <div className='flex flex-col gap-1 mt-3'>
+                <h1 className='font-bold mb-2'>Các cảnh báo, khuyến nghị:</h1>
+
+                <div className="flex items-center gap-1">
+                  <span>🌡️ <b>Nhiệt độ:</b></span>
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#ffff34] bg-[#ffffeb] rounded-[12px] text-[12px] text-[#373700] px-2 leading-[15px]">
+                    <img
+                      className="h-[13px] inline"
+                      src={WanringIcon}
+                      alt="Wanring"
+                    />
+                    <span className="py-[2px]">Nhiệt độ quá thấp, ảnh hưởng vùng trồng</span>
+                  </span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span>🦠 <b>Tình hình dịch bệnh:</b></span>
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[12px] text-[#F5222D] px-2 leading-[15px]">
+                    {' '}
+                    <div className='flex items-center justify-center w-[14px] h-[14px]'>
+                      <Lottie animationData={RedAlertLottie} loop={true} className='w-[40px] flex-shrink-0' />
+                    </div>
+                    <span className="py-[2px]">Có dấu hiệu sâu đục thân hại mía</span>
+                  </span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span>💧 <b>Tưới tiêu:</b></span>
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#00ae00] bg-[#f0ffec] rounded-[12px] text-[12px] text-[#006300] px-2 leading-[15px]">
+                    {' '}
+                    💚
+                    <span className="py-[2px]">Nên tưới 6 lần mỗi lần 65 đến 75 m3/ha</span>
+                  </span>
+                </div>
               </div>
             </div>
 

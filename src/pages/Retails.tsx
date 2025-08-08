@@ -101,13 +101,12 @@ export default function Home() {
       />
       <Hero icon={DigiRetailsIcon} coverImage={CoverImage} />
 
-      <div className="layout-container">
+      <div className="layout-container no-nav">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <InfoCard
             title="Sản phẩm"
             data={productData}
             icon={<PngIcon imageUrl={ProductIcon} />}
-            link={{ label: 'Xem quy trình sản xuất', href: `/factory/${id}` }}
           />
 
           <InfoCard

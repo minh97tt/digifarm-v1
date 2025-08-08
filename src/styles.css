@@ -22,6 +22,10 @@
 
 .layout-container {
   @apply relative z-1 pt-6 pb-10 px-4 md:px-5 -mt-12 md:-mt-22;
+
+  &:not(.no-nav) {
+    @apply mt-65 md:mt-48 lg:mt-34 xl:mt-24;
+  }
 }
 
 @theme {

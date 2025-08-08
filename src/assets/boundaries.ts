@@ -1,7 +1,7 @@
 export default {
   "type": "FeatureCollection",
   "name": "boundaries",
-  'tillage': { "type": "Feature", "geometry": { "type": "Point", "coordinates": [106.01700272869343, 11.21509164297305] }, "properties": { "Time": "5/8/2025 2:04:49 AM", "Heading": 1.10118112, "DISTANCE": 1.3617655, "SWATHWIDTH": 5.4, "TillType": "Row Crop Cultivation", "SECTIONID": 2737, "ApplDepth": 0, "CtrlDepth": 0, "TrgtDepth": 10, "ApplPress": 0, "CtrlPress": 0, "TrgtPress": 0, "Elevation": 8.42893125, "IsoTime": "2025-05-08T02:04:49.670Z", "Machine": 1, "VEHICLSPEED": 4.92195683, "AIRTEMP": 23, "WINDDRCTN": "S", "WINDSPEED": 3.4992, "SKYCNDTN": "Partly Cloudy", "HUMIDITY": 89 } },
+  'tillage': { "type": "Feature", "geometry": { "type": "Point", "coordinates": [106.01700272869343, 11.21509164297305] }, "properties": { "Time": "5/8/2025 2:04:49 AM", "Heading": 1.10118112, "DISTANCE": 1.3617655, "SWATHWIDTH": 5.4, "TillType": "Row Crop Cultivation", "SECTIONID": 2737, "ApplDepth": 0, "CtrlDepth": 0, "TrgtDepth": 10, "ApplPress": 0, "CtrlPress": 0, "TrgtPress": 0, "Elevation": 8.42893125, "IsoTime": "2025-05-08T02:04:49.670Z", "Machine": 1, "VEHICLSPEED": 4.92195683, "AIRTEMP": 23, "WINDDRCTN": "S", "WINDSPEED": 3.4992, "SKYCNDTN": "Partly Cloudy", "HUMIDITY": 89, "RAIN": "120-150 mm/tháng" } },
   'seeding': {
     "type": "Feature",
     "geometry": {

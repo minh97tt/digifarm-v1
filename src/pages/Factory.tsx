@@ -87,13 +87,12 @@ export default function Factory() {
         ]}
       />
       <Hero coverImage={CoverImage} icon={DigiFactIcon} />
-      <div className="layout-container">
+      <div className="layout-container no-nav">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <InfoCard
             title="Kho nguyên liệu"
             data={rawMaterialWarehouseData}
             icon={<PngIcon imageUrl={WarehouseIcon} />}
-            link={{ label: 'Xem quy trình trồng trọt', href: `/farm/${id}` }}
           />
 
           <InfoCard
@@ -112,6 +111,7 @@ export default function Factory() {
             title="Thành phẩm"
             data={finishedProductData}
             icon={<PngIcon imageUrl={ProductIcon} />}
+            link={{ label: 'Xem quy trình phân phối', href: `/retails/${id || ''}` }}
           />
 
           <InfoCard
