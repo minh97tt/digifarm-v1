@@ -50,16 +50,16 @@ const ArrowVerticalSvg = () => {
 function DesktopNavigation() {
   const navigate = useNavigate()
   return (
-    <nav className="w-full z-1 md:px-10 sm:px-6">
+    <nav className="w-full z-1 md:px-10 sm:px-6 nav-container">
       <div className="max-w-7xl shadow-md md:rounded-[20px] rounded-2xl bg-gradient-to-tr from-[rgba(244,250,245,1)] to-[rgba(172,221,187,1)]">
         <div className="md:pt-1 md:pb-6 py-2">
           <h2 className="text-center md:text-2xl md:my-4 my-1 text-lg font-bold text-text-primary">Hệ thống chuỗi cung ứng</h2>
 
-          <div className="flex items-stretch gap-2 md:flex-row flex-col md:items-start px-4 justify-center nav-items">
+          <div className="flex items-stretch gap-2 md:flex-row flex-col px-4 justify-center nav-items">
 
             {/* DigiFarm */}
             <div className="flex-1 relative group nav-item cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/farm')}>
-              <div className='rounded-[20px] border-1 bg-white shadow-lg border-card-border p-4'>
+              <div className='rounded-[20px] border-1 bg-white shadow-lg border-card-border p-4 h-full'>
                 <div
                   className="flex flex-row rounded-xl transition-all duration-200 gap-3 items-center md:items-start"
                 >
@@ -90,7 +90,7 @@ function DesktopNavigation() {
 
             {/* DigiFactory */}
             <div className="flex-1 relative group nav-item cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/factory')}>
-              <div className='rounded-[20px] border-1 bg-white shadow-lg border-card-border p-4'>
+              <div className='rounded-[20px] border-1 bg-white shadow-lg border-card-border p-4 h-full'>
                 <div
                   className="flex flex-row rounded-xl transition-all duration-200 items-center md:items-start"
                 >
@@ -119,8 +119,8 @@ function DesktopNavigation() {
             </div>
 
             {/* DigiRetail */}
-            <div className="flex-1 h-full relative group nav-item cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/retails')}>
-              <div className='rounded-[20px] border-1 bg-white shadow-lg border-card-border p-4'>
+            <div className="flex-1 relative group nav-item cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/retails')}>
+              <div className='rounded-[20px] border-1 bg-white shadow-lg border-card-border p-4 h-full'>
                 <div
                   className="flex flex-row rounded-xl transition-all duration-200 items-center md:items-start"
                 >
@@ -222,7 +222,7 @@ function MobileNavigation() {
 
 export default function Navigation() {
   const isDesktop = () => {
-    return window.innerWidth >= 1024; // You can adjust this breakpoint
+    return window.innerWidth >= 768; // You can adjust this breakpoint
   }
 
   return (
