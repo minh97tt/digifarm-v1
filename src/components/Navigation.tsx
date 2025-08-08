@@ -71,7 +71,7 @@ function DesktopNavigation() {
                       <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiFarm</div>
                       <ArrowSvg />
                     </div>
-                    <div className="font-normal text-base text-[#468462] hidden md:block">Giải pháp quản trị nông nghiệp toàn diện công nghệ cao</div>
+                    <div className="font-normal text-base text-[#468462] hidden md:block">Nền tảng quản trị nông nghiệp toàn diện công nghệ cao</div>
                   </div>
                 </div>
               </div>
