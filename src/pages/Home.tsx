@@ -149,18 +149,18 @@ const plants = [
 export default function Home() {
   return (
     <main className='relative'>
-      <div className="relative z-1 w-full items-center h-112 bg-cover" style={{ backgroundImage: `url(${HomeCover})` }}>
-        <div className="inset-0 h-full bg-black/30 bg-opacity-40 flex flex-col justify-center items-center text-white md:px-6 md:pt-2 md:pb-19 pb-22">
+      <div className="relative z-1 w-full items-center h-120 bg-cover bg-no-repeat" style={{ backgroundImage: `url(${HomeCover})` }}>
+        <div className="inset-0 h-full bg-black/20 bg-opacity-40 flex flex-col justify-center items-center text-white md:px-6 md:pt-2 md:pb-19 pb-22">
           <h1 className="md:text-4xl text-xl font-bold md:mb-2 text-center">Hệ sinh thái sản phẩm Agris</h1>
           <p className="md:text-xl text-base text-center max-w-2xl">Các giống mía, dừa, điều chất lượng cao cho nông nghiệp bền vững</p>
         </div>
       </div>
 
-      <div className='relative -mt-40 z-9'>
+      <div className='relative -mt-16 max-md:-mt-48 z-9'>
         <Navigation />
       </div>
 
-      <div className="p-6 max-md:p-2">
+      <div className="p-6 max-md:p-2 max-md:mt-4">
         <div className="mb-6">
           <h2 className="md:text-2xl text-xl font-bold text-text-primary">Danh mục sản phẩm</h2>
         </div>
