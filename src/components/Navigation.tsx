@@ -1,11 +1,7 @@
-import { DigiFarmIcon } from './icons/DigiFarmIcon'
-import { DigiRetailsIcon } from './icons/DigiRetailsIcon'
-import { DigiFactIcon } from './icons/DigiFactIcon'
 
 import DigiFarmSvg from '../assets/home/farm.svg'
 import DigiFactSvg from '../assets/home/factory.svg'
 import DigiRetailSvg from '../assets/home/retails.svg'
-import ArrowGif from '../assets/home/arrow.gif'
 
 import Lottie from 'lottie-react';
 import arrowJson from '../assets/arrow_green.json'
@@ -154,32 +150,30 @@ function MobileNavigation() {
         <div className="md:pt-1 md:pb-6 py-2">
           <h2 className="text-center md:text-2xl md:my-4 my-1 text-lg font-bold text-text-primary">Hệ thống chuỗi cung ứng</h2>
 
-          <div className="flex md:flex-row flex-col md:items-start md:px-8 px-4 items-center justify-center nav-items">
+          <div className="flex md:flex-row flex-col md:items-start md:px-8 pb-1 px-4 items-center justify-center nav-items">
             {/* DigiFarm */}
-            <div className="relative group nav-item cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/farm')}>
+            <div className="relative group nav-item shadow-md cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/farm')}>
               <div
-                className="flex flex-row md:px-4 rounded-xl transition-all duration-200 gap-3 items-center md:items-start"
+                className="flex flex-row md:px-4 rounded-xl transition-all duration-200 gap-3 items-start"
               >
                 <div className="transition-transform logo">
                   <img src={DigiFarmSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" />
                 </div>
                 <div className="flex flex-col gap-3">
                   <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiFarm</div>
-                  <div className="font-normal text-base text-[#468462] hidden md:block">Giải pháp quản trị nông nghiệp toàn diện công nghệ cao</div>
+                  <div className="font-normal text-base text-[#468462]">Giải pháp quản trị nông nghiệp toàn diện công nghệ cao</div>
                 </div>
               </div>
             </div>
 
-            {/* <ArrowSvg className='md:flex hidden' /> */}
-            <img src={ArrowGif} alt="Arrow" className="w-[60px] max-w-[60px] self-center hidden md:block" />
-            <div className='md:hidden inline-block'>
-              <ArrowVerticalSvg />
+            <div className='inline-block transform rotate-90 -my-4'>
+              <ArrowLottie />
             </div>
 
             {/* DigiFactory */}
-            <div className="relative group nav-item cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/factory')}>
+            <div className="relative group nav-item shadow-md cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/factory')}>
               <div
-                className="flex flex-row md:px-4 rounded-xl transition-all duration-200 gap-3 items-center md:items-start"
+                className="flex flex-row md:px-4 rounded-xl transition-all duration-200 gap-3 items-start"
               >
                 <div className="transition-transform logo">
                   {/* <DigiFactIcon className='md:!h-15 md:!w-34 !h-12 !w-30' /> */}
@@ -187,18 +181,17 @@ function MobileNavigation() {
                 </div>
                 <div className="flex flex-col gap-3">
                   <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiFactory</div>
-                  <div className="font-normal text-base text-[#468462] hidden md:block">Giải pháp quản lý sản xuất và kiểm soát chất lượng thông minh</div>
+                  <div className="font-normal text-base text-[#468462]">Giải pháp quản lý sản xuất và kiểm soát chất lượng thông minh</div>
                 </div>
               </div>
             </div>
-            {/* <ArrowSvg className='md:flex hidden' /> */}
-            <img src={ArrowGif} alt="Arrow" className="w-[60px] max-w-[60px] self-center hidden md:block" />
-            <div className='md:hidden inline-block'>
-              <ArrowVerticalSvg />
+
+            <div className='inline-block transform rotate-90 -my-4'>
+              <ArrowLottie />
             </div>
 
             {/* DigiRetail */}
-            <div className="relative group nav-item cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/retails')}>
+            <div className="relative group nav-item shadow-md cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/retails')}>
               <div
                 className="flex flex-row md:px-4 rounded-xl transition-all duration-200 gap-3 items-center md:items-start"
               >
@@ -208,7 +201,7 @@ function MobileNavigation() {
                 </div>
                 <div className="flex flex-col gap-3">
                   <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetail</div>
-                  <div className="font-normal text-base text-[#468462] hidden md:block">Nền tảng bán hàng đa kênh toàn diện</div>
+                  <div className="font-normal text-base text-[#468462]">Nền tảng bán hàng đa kênh toàn diện</div>
                 </div>
               </div>
             </div>
