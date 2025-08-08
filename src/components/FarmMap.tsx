@@ -116,42 +116,53 @@ const MapWithPolygon = () => {
             position={hoverPosition}
             onCloseClick={() => setHovered(false)}
           >
-            <div className="w-[400px]">
+            <div className="w-[380px] bg-gray-100 p-2 rounded-lg space-y-1 text-[14px]">
               {/* <div>Mã ruộng: {activeFeature.properties.FIELD_NAME}</div> */}
-              <div className='bg-gray-100 p-2 rounded-lg space-y-1 text-[14px]'>
+              <div>
                 <h1 className='font-bold mb-2'>Thông tin canh tác:</h1>
 
                 <div>🌱 <b>Giống cây trồng:</b> Mía K{seedingData.properties.Variety}</div>
                 <div>📅 <b>Ngày gieo:</b> {seedingData.properties.Time}</div>
+                <div>🌡️ <b>Nhiệt độ:</b> {tillageData.properties.AIRTEMP} độ C</div>
                 <div>🏔️ <b>Độ cao:</b> {seedingData.properties.Elevation} m</div>
-                <div>💨 <b>Tốc độ gió:</b> {tillageData.properties.WINDSPEED} km/h</div>
+                <div>🌧️ <b>Lượng mưa:</b> {tillageData.properties.RAIN} mm</div>
+                <div>💧 <b>Độ ẩm:</b> {tillageData.properties.HUMIDITY}%</div>
+              </div>
+
+              <div className='mt-3'>
+                <h1 className='font-bold mb-2'>Các cảnh báo, khuyến nghị:</h1>
+
                 <div className="flex items-center gap-1">
-                  <span>🌡️ <b>Nhiệt độ:</b> {tillageData.properties.AIRTEMP} độ C</span>
-                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[12px] text-[#F5222D] px-1 leading-[15px]">
+                  <span>🌡️ <b>Nhiệt độ:</b></span>
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#ffff34] bg-[#ffffeb] rounded-[12px] text-[12px] text-[#373700] px-1 leading-[15px]">
                     <img
                       className="h-[15px] inline"
-                      src={RedAlertIcon}
-                      alt="Alert"
+                      src={WanringIcon}
+                      alt="Wanring"
                     />
                     <span className="py-[2px]">Nhiệt độ quá thấp, ảnh hưởng vùng trồng</span>
                   </span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <span>💧 <b>Độ ẩm:</b> {tillageData.properties.HUMIDITY}%</span>
+                  <span>🦠 <b>Tình hình dịch bệnh:</b></span>
                   <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[12px] text-[#F5222D] px-1 leading-[15px]">
                     {' '}
                     <img
-                      className="h-[12px] inline-block"
-                      src={WanringIcon}
-                      alt="Wanring"
+                      className="h-[15px] inline"
+                      src={RedAlertIcon}
+                      alt="Alert"
                     />
-                    <span className="py-[2px]">Độ ẩm cao, không tốt cho vùng trồng</span>
+                    <span className="py-[2px]">Có dấu hiệu sâu đục thân hại mía</span>
                   </span>
                 </div>
-                <div>🧭 <b>Hướng gió:</b> {tillageData.properties.WINDDRCTN}</div>
-                <div>☁️ <b>Điều kiện thời tiết:</b> Có mây rải rác</div>
-                <div>🚜 <b>Tốc độ máy:</b> {seedingData.properties.VEHICLSPEED} km/h</div>
-
+                <div className="flex items-center gap-1">
+                  <span>💧 <b>Tưới tiêu:</b></span>
+                  <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#00ae00] bg-[#f0ffec] rounded-[12px] text-[12px] text-[#006300] px-1 leading-[15px]">
+                    {' '}
+                    💚
+                    <span className="py-[2px]">Nên tưới 6 lần mỗi lần 65 đến 75 m3/ha</span>
+                  </span>
+                </div>
               </div>
             </div>
 
