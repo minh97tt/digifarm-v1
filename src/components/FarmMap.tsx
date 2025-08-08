@@ -20,6 +20,8 @@ const containerStyle = {
 const firstFeature = boundaries.features[6];
 const firstCoordinate = firstFeature?.geometry.coordinates[0][0];
 
+const sqts = ['7,4', '7,1', '3,8', '3,5', '14,2', '6,8', '9,2', '8,3', '10,7' ]
+
 const center = {
   lat: 11.224,
   lng: 106.01643482963899
@@ -77,7 +79,6 @@ const MapWithPolygon = () => {
 
           // Get color from palette based on index
           const { fillColor, strokeColor } = getColorFromPalette(index);
-
           return (
             <Polygon
               key={feature.properties.FIELD_ID || index}
@@ -91,12 +92,12 @@ const MapWithPolygon = () => {
               }}
               onMouseOver={(e) => {
                 setHovered(true);
-                setActiveFeature(feature);
+                setActiveFeature({...feature, sqt: sqts[index]});
                 setHoverPosition({
                   lat: e.latLng?.lat() ?? 0,
                   lng: e.latLng?.lng() ?? 0,
                 });
-                console.log(e.latLng?.lat(), e.latLng?.lng());
+                // console.log('a@', index);
               }}
               onMouseOut={() => {
                 setHovered(false);
@@ -126,6 +127,7 @@ const MapWithPolygon = () => {
                 <h1 className='font-bold mb-2'>Thông tin canh tác:</h1>
 
                 <div>🌱 <b>Giống cây trồng:</b> Mía K{seedingData.properties.Variety}</div>
+                <div>📐 <b>Diện tích:</b> {activeFeature.sqt} hecta</div>
                 <div>📅 <b>Ngày gieo:</b> {seedingData.properties.Time}</div>
                 <div>🌡️ <b>Nhiệt độ:</b> {tillageData.properties.AIRTEMP} độ C</div>
                 <div>🏔️ <b>Độ cao:</b> {seedingData.properties.Elevation} m</div>
