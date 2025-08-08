@@ -38,12 +38,12 @@ export default function Navigation() {
 
           <div className="flex md:flex-row flex-col md:items-start md:px-8 px-4 items-center justify-center nav-items">
             {/* DigiFarm */}
-            <div className="relative group nav-item">
+            <div className="relative group nav-item cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/farm')}>
               <div
                 className="flex flex-row md:px-4 rounded-xl transition-all duration-200 gap-3 items-center md:items-start"
               >
-                <div className="transition-transform hover:scale-110">
-                  <img src={DigiFarmSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" onClick={() =>  navigate('/farm')} />
+                <div className="transition-transform logo">
+                  <img src={DigiFarmSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" />
                 </div>
                 <div className="flex flex-col gap-3">
                   <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiFarm</div>
@@ -59,13 +59,13 @@ export default function Navigation() {
             </div>
 
             {/* DigiFactory */}
-            <div className="relative group nav-item">
+            <div className="relative group nav-item cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/factory')}>
               <div
                 className="flex flex-row md:px-4 rounded-xl transition-all duration-200 gap-3 items-center md:items-start"
               >
-                <div className="transition-transform hover:scale-110">
+                <div className="transition-transform logo">
                   {/* <DigiFactIcon className='md:!h-15 md:!w-34 !h-12 !w-30' /> */}
-                  <img src={DigiFactSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" onClick={() => navigate('/factory')} />
+                  <img src={DigiFactSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" />
                 </div>
                 <div className="flex flex-col gap-3">
                   <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiFactory</div>
@@ -80,13 +80,13 @@ export default function Navigation() {
             </div>
 
             {/* DigiRetail */}
-            <div className="relative group nav-item">
+            <div className="relative group nav-item cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/retails')}>
               <div
                 className="flex flex-row md:px-4 rounded-xl transition-all duration-200 gap-3 items-center md:items-start"
               >
-                <div className="transition-transform hover:scale-110">
+                <div className="transition-transform logo">
                   {/* <DigiRetailsIcon className='md:!h-15 md:!w-34 !h-10 !w-30' /> */}
-                  <img src={DigiRetailSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" onClick={() => navigate('/retails')} />
+                  <img src={DigiRetailSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" />
                 </div>
                 <div className="flex flex-col gap-3">
                   <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetail</div>
