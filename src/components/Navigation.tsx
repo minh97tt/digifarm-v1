@@ -67,7 +67,7 @@ function DesktopNavigation() {
                       <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiFarm</div>
                       <ArrowSvg />
                     </div>
-                    <div className="font-normal text-base text-[#468462] hidden md:block">Giải pháp quản trị nông nghiệp toàn diện công nghệ cao</div>
+                    <div className="font-normal text-base text-[#468462] hidden md:block">Nền tảng quản trị nông nghiệp toàn diện công nghệ cao</div>
                   </div>
                 </div>
               </div>
@@ -130,7 +130,7 @@ function DesktopNavigation() {
                       <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetail</div>
                       <ArrowSvg />
                     </div>
-                    <div className="font-normal text-base text-[#468462] hidden md:block">Giải pháp bán hàng đa kênh toàn diện</div>
+                    <div className="font-normal text-base text-[#468462] hidden md:block">Nền tảng bán hàng đa kênh toàn diện</div>
                   </div>
                 </div>
               </div>
@@ -161,7 +161,7 @@ function MobileNavigation() {
                 </div>
                 <div className="flex flex-col gap-3">
                   <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiFarm</div>
-                  <div className="font-normal text-base text-[#468462]">Giải pháp quản trị nông nghiệp toàn diện công nghệ cao</div>
+                  <div className="font-normal text-base text-[#468462]">Nền tảng quản trị nông nghiệp toàn diện công nghệ cao</div>
                 </div>
               </div>
             </div>
@@ -201,7 +201,7 @@ function MobileNavigation() {
                 </div>
                 <div className="flex flex-col gap-3">
                   <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetail</div>
-                  <div className="font-normal text-base text-[#468462]">Giải pháp bán hàng đa kênh toàn diện</div>
+                  <div className="font-normal text-base text-[#468462]">Nền tảng bán hàng đa kênh toàn diện</div>
                 </div>
               </div>
             </div>
