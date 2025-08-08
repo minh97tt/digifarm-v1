@@ -17,7 +17,7 @@ const ArrowLottie = () => {
   return (
     <Lottie
       animationData={arrowJson}
-      className='w-30'
+      className='w-25'
     />
   )
 }
