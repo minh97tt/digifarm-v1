@@ -17,7 +17,7 @@ export default function ProductCard({ name, code, image, description, clickable 
         }`}
       onClick={() => {
         if (clickable) {
-          navigate(`/retails/${code}`, { viewTransition: true });
+          navigate(`/farm/${code}`, { viewTransition: true });
         }
       }}
     >

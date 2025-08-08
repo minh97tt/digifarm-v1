@@ -107,7 +107,6 @@ export default function Home() {
             title="Sản phẩm"
             data={productData}
             icon={<PngIcon imageUrl={ProductIcon} />}
-            link={{ label: 'Xem quy trình sản xuất', href: `/factory/${id}` }}
           />
 
           <InfoCard

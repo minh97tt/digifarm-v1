@@ -93,7 +93,6 @@ export default function Factory() {
             title="Kho nguyên liệu"
             data={rawMaterialWarehouseData}
             icon={<PngIcon imageUrl={WarehouseIcon} />}
-            link={{ label: 'Xem quy trình trồng trọt', href: `/farm/${id}` }}
           />
 
           <InfoCard
@@ -112,6 +111,7 @@ export default function Factory() {
             title="Thành phẩm"
             data={finishedProductData}
             icon={<PngIcon imageUrl={ProductIcon} />}
+            link={{ label: 'Xem quy trình phân phối', href: `/retails/${id}` }}
           />
 
           <InfoCard
