@@ -111,7 +111,7 @@ export default function Factory() {
             title="Thành phẩm"
             data={finishedProductData}
             icon={<PngIcon imageUrl={ProductIcon} />}
-            link={{ label: 'Xem quy trình phân phối', href: `/retails/${id}` }}
+            link={{ label: 'Xem quy trình phân phối', href: `/retails/${id || ''}` }}
           />
 
           <InfoCard
