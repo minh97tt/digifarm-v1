@@ -127,8 +127,8 @@ const MapWithPolygon = () => {
                 <h1 className='font-bold mb-2'>Thông tin canh tác:</h1>
 
                 <div>🌱 <b>Giống cây trồng:</b> Mía K{seedingData.properties.Variety}</div>
-                <div>📐 <b>Diện tích:</b> {activeFeature.sqt} hecta</div>
-                <div>📅 <b>Ngày gieo:</b> {seedingData.properties.Time}</div>
+                <div>📐 <b>Diện tích:</b> {activeFeature.sqt} ha</div>
+                <div>📅 <b>Ngày trồng:</b> {seedingData.properties.Time}</div>
                 <div>🌡️ <b>Nhiệt độ:</b> {tillageData.properties.AIRTEMP} độ C</div>
                 <div>🏔️ <b>Độ cao:</b> {seedingData.properties.Elevation} m</div>
                 <div>🌧️ <b>Lượng mưa:</b> {tillageData.properties.RAIN}</div>
