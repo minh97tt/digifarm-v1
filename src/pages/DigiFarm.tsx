@@ -41,7 +41,7 @@ export default function DigiFarm() {
   // Data for planting card
   const plantingData = [
     { label: 'Ngày trồng', value: '15/11/2023' },
-    { label: 'Diện tích trồng', value: '5 ha' },
+    { label: 'Diện tích trồng', value: '6.8 ha' },
     { label: 'Mật độ trồng', value: '12.000 hom/ha' },
     { label: 'Giống sử dụng', value: 'KK3' },
     { label: 'Loại đất', value: 'Đất phù sa, pH 6.5' },

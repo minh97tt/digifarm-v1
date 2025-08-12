@@ -10,12 +10,10 @@
     display: flex;
     justify-content: center;
 
-    &:hover {
-      border: 1px solid #7DD191;
-      border-radius: 12px;
-      background: #fff;
-      cursor: default;
-    }
+    border: 1px solid #7DD191;
+    border-radius: 20px;
+    background: #fff;
+    cursor: default;
   }
 }
 
