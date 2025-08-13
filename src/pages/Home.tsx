@@ -2,10 +2,10 @@ import ProductCard from '../components/ProductCard';
 import HomeCover from '../assets/HomeCoverNew.webp';
 import Navigation from '../components/Navigation';
 
-import af from '../assets/plants/af.avif'
+import af from '../assets/plants/af.jpg'
 import gk from '../assets/plants/gk.avif';
 import ja from '../assets/plants/ja.avif'
-import ua from '../assets/plants/ua.avif';
+import ua from '../assets/plants/ua.webp';
 import sc from '../assets/plants/sc.avif';
 import lo from '../assets/plants/lo.avif';
 import qs from '../assets/plants/qs.avif';
@@ -122,15 +122,15 @@ const plants = [
   },
   {
     id: '5',
-    name: 'Điều giống PN1',
+    name: 'Giống sắn KM98-5',
     image: af,
-    description: 'Điều giống PN1 cho năng suất cao, hạt to đều, tỷ lệ nhân cao.'
+    description: 'Phân nhánh nhẹ, nhặt mắt, thích hợp với điều kiện sinh thái các tỉnh thuộc vùng Đông Nam Bộ'
   },
   {
     id: '6',
-    name: 'Điều giống AB29',
+    name: 'Giống sắn KM140',
     image: ua,
-    description: 'Điều giống AB29 chống chịu bệnh tốt, thích nghi với nhiều loại đất.'
+    description: 'Thân thẳng, nhặt mắt, thích hợp với điều kiện sinh thái Việt Nam.'
   },
   {
     id: '7',
