@@ -102,28 +102,8 @@ export default function Home() {
       <Hero icon={DigiRetailsIcon} coverImage={CoverImage} />
 
       <div className="layout-container no-nav">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <InfoCard
-            title="Sản phẩm"
-            data={productData}
-            icon={<PngIcon imageUrl={ProductIcon} />}
-          />
-
-          <InfoCard
-            title="Nhà phân phối"
-            data={distributorData}
-            icon={<PngIcon imageUrl={DistributorIcon} />}
-          />
-
-          <InfoGroupCard
-            className="md:col-span-2"
-            title="Điểm bán"
-            data={retailLocationData}
-            icon={<PngIcon imageUrl={StoreLocationIcon} />}
-          />
-        </div>
-
         <Chart
+          className="mb-6"
           riskPredictions={[
             {
               icon: StockIcon,
@@ -168,6 +148,27 @@ export default function Home() {
             </div>
           </div>
         </Chart>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <InfoCard
+            title="Sản phẩm"
+            data={productData}
+            icon={<PngIcon imageUrl={ProductIcon} />}
+          />
+
+          <InfoCard
+            title="Nhà phân phối"
+            data={distributorData}
+            icon={<PngIcon imageUrl={DistributorIcon} />}
+          />
+
+          <InfoGroupCard
+            className="md:col-span-2"
+            title="Điểm bán"
+            data={retailLocationData}
+            icon={<PngIcon imageUrl={StoreLocationIcon} />}
+          />
+        </div>
       </div>
     </main>
   )

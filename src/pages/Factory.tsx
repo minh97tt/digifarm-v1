@@ -88,46 +88,8 @@ export default function Factory() {
       />
       <Hero coverImage={CoverImage} icon={DigiFactIcon} />
       <div className="layout-container no-nav">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <InfoCard
-            title="Kho nguyên liệu"
-            data={rawMaterialWarehouseData}
-            icon={<PngIcon imageUrl={WarehouseIcon} />}
-          />
-
-          <InfoCard
-            title="Nhà máy sản xuất"
-            data={factoryData}
-            icon={<PngIcon imageUrl={FactoryIcon} />}
-          />
-
-          <InfoCard
-            title="Dây chuyền sản xuất"
-            data={productionLineData}
-            icon={<PngIcon imageUrl={LineIcon} />}
-          />
-
-          <InfoCard
-            title="Thành phẩm"
-            data={finishedProductData}
-            icon={<PngIcon imageUrl={ProductIcon} />}
-            link={{ label: 'Xem quy trình phân phối', href: `/retails/${id || ''}` }}
-          />
-
-          <InfoCard
-            title="Kho thành phẩm"
-            data={finishedGoodsWarehouseData}
-            icon={<PngIcon imageUrl={ProductWarehouseIcon} />}
-          />
-
-          <InfoCard
-            title="Vận chuyển"
-            data={transportationData}
-            icon={<PngIcon imageUrl={TransportIcon} />}
-          />
-        </div>
-
         <Chart
+          className="mt-10 mb-6"
           riskPredictions={[
             {
               icon: MaterialIcon,
@@ -171,6 +133,45 @@ export default function Factory() {
             </div>
           </div>
         </Chart>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <InfoCard
+            title="Kho nguyên liệu"
+            data={rawMaterialWarehouseData}
+            icon={<PngIcon imageUrl={WarehouseIcon} />}
+          />
+
+          <InfoCard
+            title="Nhà máy sản xuất"
+            data={factoryData}
+            icon={<PngIcon imageUrl={FactoryIcon} />}
+          />
+
+          <InfoCard
+            title="Dây chuyền sản xuất"
+            data={productionLineData}
+            icon={<PngIcon imageUrl={LineIcon} />}
+          />
+
+          <InfoCard
+            title="Thành phẩm"
+            data={finishedProductData}
+            icon={<PngIcon imageUrl={ProductIcon} />}
+            link={{ label: 'Xem quy trình phân phối', href: `/retails/${id || ''}` }}
+          />
+
+          <InfoCard
+            title="Kho thành phẩm"
+            data={finishedGoodsWarehouseData}
+            icon={<PngIcon imageUrl={ProductWarehouseIcon} />}
+          />
+
+          <InfoCard
+            title="Vận chuyển"
+            data={transportationData}
+            icon={<PngIcon imageUrl={TransportIcon} />}
+          />
+        </div>
       </div>
     </main>
   )
