@@ -12,7 +12,7 @@ import RedAlertLottie from '../assets/red-alert.json'
 
 const containerStyle = {
   width: '100%',
-  height: '558px',
+  height: '480px',
   borderRadius: 20,
 };
 
@@ -151,9 +151,9 @@ const dataMap = [
 
 function InfoContent({ activeFeature, seedingData, tillageData }: any) {
   return (
-    <div className="max-w-full text-sm bg-gray-100 p-2 rounded-lg space-y-1">
+    <div className="flex items-baseline max-md:flex-col md:space-x-5 text-sm bg-gray-100 p-2 rounded-lg">
       {/* <div>Mã ruộng: {activeFeature.properties.FIELD_NAME}</div> */}
-      <div className='flex flex-col gap-1'>
+      <div className='md:border-r-1 border-gray-200 md:pr-5'>
         <h1 className='font-bold mb-1'>Thông tin canh tác:</h1>
         <div>⦾ <b>Tên nông trường:</b> DMF Ninh Dien</div>
         <div>⦾ <b>Tên lô:</b> {activeFeature.code}</div>
@@ -166,7 +166,7 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
         <div>💧 <b>Độ ẩm:</b> 65%</div>
       </div>
 
-      <div className='flex flex-col gap-1 mt-2'>
+      <div className='max-md:mt-4'>
         <h1 className='font-bold mb-1'>Cảnh báo, khuyến nghị:</h1>
         <div className='flex items-center'>
           <div>🐛 <b>Tình hình sâu bệnh:</b> Sâu đục {activeFeature.worm === 0.7 ? 'ngọn' : 'thân'} {activeFeature.worm}%
@@ -204,7 +204,7 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
 
         <div className="flex items-center gap-1">
           <span>💧 <b>Tưới tiêu:</b></span>
-          <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#00ae00] bg-[#f0ffec] rounded-[12px] text-[14px] text-[#006300] px-2 leading-[15px]">
+          <span className="ml-1 max-w-full inline-flex items-center gap-1 border-[1px] border-[#00ae00] bg-[#f0ffec] rounded-[12px] text-[14px] text-[#006300] px-2 leading-[15px]">
             {' '}
             💚
             <span className="py-[2px]">{activeFeature.water}</span>
@@ -313,7 +313,7 @@ const MapWithPolygon = () => {
             options={{
               // pixelOffset: new window.google.maps.Size(0, -10),
               disableAutoPan: true,
-              maxWidth: 1000,
+              maxWidth: 1200,
               // maxHeight: 1000,
               headerDisabled: true,
               // You cannot set full CSS here, but some layout things can be tweaked
