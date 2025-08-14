@@ -161,7 +161,7 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
         <div>📐 <b>Diện tích:</b> {activeFeature.square} ha</div>
         <div>📅 <b>Ngày trồng:</b> {activeFeature.date}</div>
         <div>🌡️ <b>Nhiệt độ trung bình:</b> 27.99 °C</div>
-        <div>🌧️ <b>Lượng mưa lũy kê:</b> 1196.38 mm</div>
+        <div>🌧️ <b>Lượng mưa lũy kế:</b> 1196.38 mm</div>
         {/* <div>🏔️ <b>Độ cao:</b> {seedingData.properties.Elevation} m</div> */}
         <div>💧 <b>Độ ẩm:</b> 65%</div>
       </div>
