@@ -4,6 +4,7 @@ const FarmChart = ({
   riskPredictions,
   outputPrediction,
   children,
+  className,
 }: {
   riskPredictions: {
     icon: any
@@ -18,9 +19,10 @@ const FarmChart = ({
     description: string
   }
   children?: React.ReactNode
+  className?: string
 }) => {
   return (
-    <div className="mt-6">
+    <div className={`mt-6 ${className}`}>
       <div className="text-text-primary font-bold text-xl mb-4">
         Phân tích thông minh
       </div>

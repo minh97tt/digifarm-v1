@@ -89,6 +89,61 @@ export default function DigiFarm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <MapWithPolygon />
 
+          <Chart
+            className="md:col-span-2"
+            riskPredictions={[
+              {
+                icon: RainingImg,
+                content: 'Khả năng mưa to gây ngập úng',
+                level: 'Thấp',
+              },
+              {
+                icon: WormImg,
+                content: 'Rủi ro sâu đục thân',
+                level: 'Trung bình',
+              },
+            ]}
+            outputPrediction={{
+              icon: SugarCaneImg,
+              title: 'Dự đoán năng suất',
+              value: '86.44 tấn/ha',
+              percent: '68%',
+              description: 'Nếu giữ được điều kiện hiện tại',
+            }}
+          >
+            <div className="mt-7">
+              <div className="text-text-primary font-bold text-md">
+                Biểu đồ năng suất
+              </div>
+              <div className="w-full h-[400px]">
+                <ProductivityChart
+                  unit="tấn/ha"
+                  unitLabel="tấn/ha"
+                  chartId="chart-1"
+                  xLabels={[
+                    'Lô A01',
+                    'Lô A02',
+                    'Lô A03',
+                    'Lô A04',
+                    'Lô A05',
+                    'Lô A06',
+                    'Lô A07',
+                  ]}
+                  values={[68.38, 77.93, 90.88, 90.65, 91.61, 62.13, 92.22]}
+                />
+              </div>
+            </div>
+
+            <div className="mt-7">
+              <div className="text-text-primary font-bold text-md">
+                Biểu đồ tăng trưởng cây trồng
+              </div>
+              <div className="w-full h-[400px]">
+                <PlantGrowthChart />
+              </div>
+            </div>
+          </Chart>
+
           {/* Crop Variety Information Card */}
           <InfoCard
             title="Giống cây trồng"
@@ -121,60 +176,6 @@ export default function DigiFarm() {
           {/* Harvest Planning Card */}
           {/* <InfoCard className="md:col-span-2" title="Vận chuyển" data={deliveryData} icon={<PngIcon imageUrl={deliveryIcon} />} /> */}
         </div>
-
-        <Chart
-          riskPredictions={[
-            {
-              icon: RainingImg,
-              content: 'Khả năng mưa to gây ngập úng',
-              level: 'Thấp',
-            },
-            {
-              icon: WormImg,
-              content: 'Rủi ro sâu đục thân',
-              level: 'Trung bình',
-            },
-          ]}
-          outputPrediction={{
-            icon: SugarCaneImg,
-            title: 'Dự đoán năng suất',
-            value: '86.44 tấn/ha',
-            percent: '68%',
-            description: 'Nếu giữ được điều kiện hiện tại',
-          }}
-        >
-          <div className="mt-7">
-            <div className="text-text-primary font-bold text-md">
-              Biểu đồ năng suất
-            </div>
-            <div className="w-full h-[400px]">
-              <ProductivityChart
-                unit="tấn/ha"
-                unitLabel="tấn/ha"
-                chartId="chart-1"
-                xLabels={[
-                  'Lô A01',
-                  'Lô A02',
-                  'Lô A03',
-                  'Lô A04',
-                  'Lô A05',
-                  'Lô A06',
-                  'Lô A07',
-                ]}
-                values={[68.38, 77.93, 90.88, 90.65, 91.61, 62.13, 92.22]}
-              />
-            </div>
-          </div>
-
-          <div className="mt-7">
-            <div className="text-text-primary font-bold text-md">
-              Biểu đồ tăng trưởng cây trồng
-            </div>
-            <div className="w-full h-[400px]">
-              <PlantGrowthChart />
-            </div>
-          </div>
-        </Chart>
       </div>
     </main>
   )
