@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import * as echarts from 'echarts'
 
+const textColor = '#00000090'
+
 const PlantGrowthChart = () => {
   useEffect(() => {
     const chartDom = document.getElementById('chart-2')
@@ -28,7 +30,7 @@ const PlantGrowthChart = () => {
         axisLabel: {
           fontWeight: 'bold',
           fontSize: 14,
-          color: '#00000040',
+          color: textColor,
         },
       },
       yAxis: [
@@ -41,7 +43,7 @@ const PlantGrowthChart = () => {
             },
             fontWeight: 'bold',
             fontSize: 14,
-            color: '#00000040',
+            color: textColor,
           },
         },
         {
