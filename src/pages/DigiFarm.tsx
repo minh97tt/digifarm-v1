@@ -46,10 +46,10 @@ export default function DigiFarm() {
   // Data for farming activities card
   const farmingData = [
     { label: 'Bón phân', value: 'NPK 17-7-17, 470kg/ha' },
-    { label: 'Ngày bón phân', value: '5/12/2025' },
+    { label: 'Ngày bón phân', value: '05/12/2025' },
     { label: 'Phun thuốc cỏ', value: 'Atrazine, 1.38l/ha' },
-    { label: 'Thời gian phun', value: '1/19/2025' },
-    { label: 'Ngày tưới tiêu', value: '4/23/2025' },
+    { label: 'Thời gian phun', value: '01/19/2025' },
+    { label: 'Ngày tưới tiêu', value: '04/23/2025' },
     { label: 'Lượng nước (mm)', value: '20 mm' },
   ]
 

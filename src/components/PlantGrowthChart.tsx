@@ -64,7 +64,7 @@ const PlantGrowthChart = () => {
             const isHeight = item.seriesName === 'Chiều cao'
             if (isHeight) {
               content += `
-              Chiều cao TB: ${item.value}m<br/>
+              Chiều cao TB: ${item.value} m<br/>
             `
             } else {
               content += `
