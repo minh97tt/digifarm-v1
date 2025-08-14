@@ -1,8 +1,6 @@
 import { useEffect } from 'react'
 import * as echarts from 'echarts'
 
-const isWindows = navigator.userAgent.includes('Windows')
-
 const ProductivityChart = ({
   unit,
   unitLabel,
@@ -25,7 +23,7 @@ const ProductivityChart = ({
       },
       grid: {
         top: 30,
-        left: isWindows ? 12 : 0,
+        left: 12,
         right: 10,
         bottom: 0,
         containLabel: true,
