@@ -8,6 +8,9 @@ const PlantGrowthChart = () => {
     const chartDom = document.getElementById('chart-2')
     const myChart = echarts.init(chartDom)
     const option: echarts.EChartsOption = {
+      textStyle: {
+        fontFamily: 'Tahoma, sans-serif',
+      },
       grid: {
         top: 50,
         left: isWindows ? 12 : 0,
@@ -63,6 +66,10 @@ const PlantGrowthChart = () => {
               content += `
               Chiều cao TB: ${item.value}m<br/>
             `
+            } else {
+              content += `
+              ${item.seriesName}: ${item.value} cây/m2<br/>
+            `
             }
           })
           return content
@@ -88,7 +95,7 @@ const PlantGrowthChart = () => {
           if (name === 'Chiều cao') {
             return 'Chiều cao (m)'
           }
-          return name
+          return `${name} (cây/m2)`
         },
       },
       series: [

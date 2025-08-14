@@ -20,6 +20,9 @@ const ProductivityChart = ({
     const chartDom = document.getElementById(chartId)
     const myChart = echarts.init(chartDom)
     const option: echarts.EChartsOption = {
+      textStyle: {
+        fontFamily: 'Tahoma, sans-serif',
+      },
       grid: {
         top: 30,
         left: isWindows ? 12 : 0,
