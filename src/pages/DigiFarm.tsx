@@ -24,55 +24,44 @@ export default function DigiFarm() {
   const { id } = useParams()
   // Data for crop variety card
   const cropData = [
-    { label: 'Giống cây trồng', value: 'KK3' },
-    {
-      label: 'Nguồn gốc giống',
-      value: 'Viện Nghiên cứu Mía đường, Trung tâm Nông nghiệp địa phương',
-    },
-    { label: 'Thời gian chọn giống', value: '11/1/2023' },
-    {
-      label: 'Tiêu chí chọn',
-      value: 'Năng suất cao, chịu hạn tốt, kháng sâu bệnh',
-    },
-    { label: 'Hàm lượng đường ước tính', value: '12.5 Brix' },
-    { label: 'Vòng đời', value: '10 - 12 tháng' },
+    { label: 'Tên giống', value: 'VN08-259' },
+    { label: 'Loại giống', value: 'Thương mại' },
+    { label: 'Nguồn gốc giống', value: 'NT Thành Long' },
+    { label: 'Trạm lấy giống', value: 'Trạm 5' },
+    { label: 'Tuổi giống', value: '8 tháng' },
+    { label: 'Tiêu chí chọn giống', value: 'Chín sớm, đất cao' },
   ]
 
   // Data for planting card
   const plantingData = [
-    { label: 'Ngày trồng', value: '15/11/2023' },
-    { label: 'Diện tích trồng', value: '6.8 ha' },
-    { label: 'Mật độ trồng', value: '12.000 hom/ha' },
-    { label: 'Giống sử dụng', value: 'KK3' },
-    { label: 'Loại đất', value: 'Đất phù sa, pH 6.5' },
-    { label: 'Nguồn nước tưới', value: 'Tưới tiêu thủ công từ kênh nội đồng' },
+    { label: 'Ngày trồng', value: '24/12/2024' },
+    { label: 'Diện tích trồng', value: '39.22 Ha' },
+    { label: 'Xử lý hom giống', value: 'Propiconazole 0.16L/ha + Bifenthrin 0.2L/ha' },
+    { label: 'Phân lót', value: 'NPK 16-16-8, 432kg/ha' },
+    { label: 'Tên người trồng', value: 'Lê Đức Phương' },
+    { label: 'Máy trồng', value: 'MK02 - 6120B' },
+    { label: 'Mật độ trồng', value: '11.3 T/Ha' },
   ]
 
   // Data for farming activities card
   const farmingData = [
-    { label: 'Bón phân lần 1', value: '12/10/2023' },
-    { label: 'Loại', value: '(NPK 16-16-8, 500kg/ha)' },
-    { label: 'Làm cỏ', value: '15/1/2024' },
-    { label: 'Bón phân lần 2', value: '15/3/2024' },
-    { label: 'Loại', value: '(Ure + Kali, 400kg/ha)' },
-    { label: 'Tưới tiêu', value: 'Mỗi 10 ngày/lần' },
-    { label: 'Kiểm tra sâu bệnh', value: 'Định kỳ 2 tuần/lần' },
-    { label: 'Biện pháp xử lý sâu bệnh', value: 'Phun thuốc trừ sâu sinh học' },
-    {
-      label: 'Thời tiết dự báo',
-      value: 'Nhiệt độ TB: 29°C, lượng mưa TB: 140 mm/tháng',
-    },
-    { label: 'Tốc độ sinh trưởng ước tính', value: '0.85 m/tháng' },
+    { label: 'Bón phân', value: 'NPK 17-7-17, 470kg/ha' },
+    { label: 'Ngày bón phân', value: '5/12/2025' },
+    { label: 'Phun thuốc cỏ', value: 'Atrazine, 1.38l/ha' },
+    { label: 'Thời gian phun', value: '1/19/2025' },
+    { label: 'Ngày tưới tiêu', value: '4/23/2025' },
+    { label: 'Lượng nước (mm)', value: '20 mm' },
   ]
 
   // Data for harvest planning card
   const harvestData = [
-    { label: 'Ngày thu hoạch', value: '20/9/2024' },
-    { label: 'Năng suất thực tế', value: '87 tấn/ha' },
-    { label: 'Độ đường (Pol)', value: '13.20%' },
-    { label: 'Phương thức thu hoạch', value: 'Cơ giới hóa 70%, thu công 30%' },
-    { label: 'Thời gian thu hoạch', value: '5 ngày' },
-    { label: 'Số nhân công', value: '15 người' },
+    { label: 'Ngày thu hoạch bắt đầu', value: '12/11/2024' },
+    { label: 'Ngày thu hoạch kết thúc', value: '12/11/2024' },
+    { label: 'Diện tích thu hoạch', value: '4.61 Ha' },
+    { label: 'Năng suất sạch', value: '44.79 tấn/ha' },
+    { label: 'Tạp chất', value: '7.04 %' },
+    { label: 'CCS', value: '8.62 %' },
+    { label: 'Hình thức thu hoạch', value: 'Máy thu hoạch số TH0106' },
   ]
 
   return (
