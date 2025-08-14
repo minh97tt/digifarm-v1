@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import * as echarts from 'echarts'
 
-const isWindows = navigator.userAgent.includes('Windows')
+const textColor = '#00000090'
 
 const ProductivityChart = ({
   unit,
@@ -20,9 +20,12 @@ const ProductivityChart = ({
     const chartDom = document.getElementById(chartId)
     const myChart = echarts.init(chartDom)
     const option: echarts.EChartsOption = {
+      textStyle: {
+        fontFamily: 'Tahoma, sans-serif',
+      },
       grid: {
         top: 30,
-        left: isWindows ? 12 : 0,
+        left: 12,
         right: 10,
         bottom: 0,
         containLabel: true,
@@ -54,7 +57,7 @@ const ProductivityChart = ({
           axisLabel: {
             fontWeight: 'bold',
             fontSize: 14,
-            color: '#00000040',
+            color: textColor,
           },
         },
       ],
@@ -68,7 +71,7 @@ const ProductivityChart = ({
             },
             fontWeight: 'bold',
             fontSize: 14,
-            color: '#00000040',
+            color: textColor,
           },
         },
       ],
@@ -87,11 +90,11 @@ const ProductivityChart = ({
             position: 'top',
             formatter: '{c}',
             backgroundColor: '#fff',
-            borderColor: '#00000040',
+            borderColor: textColor,
             borderWidth: 1,
             borderRadius: 4,
             padding: [4, 6],
-            color: '#00000040',
+            color: textColor,
             fontWeight: 'bold',
             shadowColor: 'rgba(0,0,0,0.2)',
             shadowBlur: 3,

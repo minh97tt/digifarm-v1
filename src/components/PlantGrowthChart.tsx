@@ -1,32 +1,26 @@
 import { useEffect } from 'react'
 import * as echarts from 'echarts'
 
-const isWindows = navigator.userAgent.includes('Windows')
+const textColor = '#00000090'
 
 const PlantGrowthChart = () => {
   useEffect(() => {
     const chartDom = document.getElementById('chart-2')
     const myChart = echarts.init(chartDom)
     const option: echarts.EChartsOption = {
+      textStyle: {
+        fontFamily: 'Tahoma, sans-serif',
+      },
       grid: {
         top: 50,
-        left: isWindows ? 12 : 0,
+        left: 12,
         right: 10,
         bottom: 0,
         containLabel: true,
       },
       xAxis: {
         type: 'category',
-        data: [
-          'Tháng 1',
-          'Tháng 2',
-          'Tháng 3',
-          'Tháng 4',
-          'Tháng 5',
-          'Tháng 6',
-          'Tháng 7',
-          'Tháng 8',
-        ],
+        data: ['Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8'],
         axisLine: {
           show: false,
         },
@@ -36,7 +30,7 @@ const PlantGrowthChart = () => {
         axisLabel: {
           fontWeight: 'bold',
           fontSize: 14,
-          color: '#00000040',
+          color: textColor,
         },
       },
       yAxis: [
@@ -49,7 +43,7 @@ const PlantGrowthChart = () => {
             },
             fontWeight: 'bold',
             fontSize: 14,
-            color: '#00000040',
+            color: textColor,
           },
         },
         {
@@ -68,18 +62,13 @@ const PlantGrowthChart = () => {
           let content = `<b style="font-size: 14px; font-weight: bold; color: #202020">${params[0].axisValue}</b> <br/>`
           params.forEach((item: any) => {
             const isHeight = item.seriesName === 'Chiều cao'
-            const isBrix = item.seriesName === 'Độ ngọt'
             if (isHeight) {
               content += `
-              Chiều cao TB: ${item.value}m<br/>
-            `
-            } else if (isBrix) {
-              content += `
-              Độ ngọt: ${item.value} brix<br/>
+              Chiều cao TB: ${item.value} m<br/>
             `
             } else {
               content += `
-             ${item.seriesName}: ${item.value}<br/>
+              ${item.seriesName}: ${item.value} cây/m2<br/>
             `
             }
           })
@@ -95,7 +84,7 @@ const PlantGrowthChart = () => {
             },
           },
           {
-            name: 'Độ ngọt',
+            name: 'Mật độ cây',
             itemStyle: {
               color: '#43C0FF',
             },
@@ -105,16 +94,14 @@ const PlantGrowthChart = () => {
         formatter: function (name) {
           if (name === 'Chiều cao') {
             return 'Chiều cao (m)'
-          } else if (name === 'Độ ngọt') {
-            return 'Độ ngọt (brix)'
           }
-          return ''
+          return `${name} (cây/m2)`
         },
       },
       series: [
         {
           name: 'Chiều cao',
-          data: [0, 0.15, 0.35, 0.75, 1.1, 1.25, 1.4, 1.6],
+          data: [1.1, 1.25, 1.4, 1.6],
           type: 'line',
           smooth: true,
           lineStyle: {
@@ -124,28 +111,8 @@ const PlantGrowthChart = () => {
           symbol: 'none',
         },
         {
-          name: 'Tăng trưởng',
-          data: [
-            '0',
-            '+0.15',
-            '+0.2',
-            '+0.25',
-            '+0.21',
-            '+0.22',
-            '+0.23',
-            '+0.24',
-          ],
-          type: 'bar',
-          itemStyle: {
-            opacity: 0,
-          },
-          emphasis: {
-            disabled: true,
-          },
-        },
-        {
-          name: 'Độ ngọt',
-          data: [0, 1.6, 2.5, 5.2, 6.5, 8, 10.1, 11.5],
+          name: 'Mật độ cây',
+          data: [7.1, 7.1, 7.1, 7.1],
           type: 'line',
           smooth: true,
           lineStyle: {
