@@ -129,7 +129,7 @@ export default function DigiFarm() {
                     'Lô A06',
                     'Lô A07',
                   ]}
-                  values={[68.38, 77.93, 90.88, 90.65, 91.61, 62.13, 92.22]}
+                  values={[88.0, 95.2, 83.4, 101.0, 91.0, 85.0, 99.9]}
                 />
               </div>
             </div>
@@ -170,7 +170,10 @@ export default function DigiFarm() {
             title="Thu hoạch"
             data={harvestData}
             icon={<PngIcon imageUrl={truckIcon} />}
-            link={{ label: 'Xem quy trình sản xuất', href: `/factory/${id || ''}` }}
+            link={{
+              label: 'Xem quy trình sản xuất',
+              href: `/factory/${id || ''}`,
+            }}
           />
 
           {/* Harvest Planning Card */}

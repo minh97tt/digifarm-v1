@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import af from '../assets/plants/af.jpg'
 import gk from '../assets/plants/gk.avif';
 import ja from '../assets/plants/ja.avif'
-import ua from '../assets/plants/ua.webp';
+import te from '../assets/plants/te.avif'
 import sc from '../assets/plants/sc.avif';
 import lo from '../assets/plants/lo.avif';
 import qs from '../assets/plants/qs.avif';
@@ -98,51 +98,53 @@ const products = [
 const plants = [
   {
     id: '1',
-    name: 'Mía giống KK3',
+    name: 'Mía Thường',
     image: ja,
-    description: 'Giống mía KK3 chất lượng cao, năng suất lớn, chống chịu sâu bệnh tốt.'
+    description: '	Giống mía đại trà, phổ biến rộng khắp, dễ tiêu thụ',
   },
   {
     id: '2',
-    name: 'Mía giống LK92-11',
+    name: 'Mía Organic',
     image: sc,
-    description: 'Giống mía LK92-11 có hàm lượng đường cao, thích hợp cho sản xuất đường.'
+    description:
+      '	Giống mía tăng trưởng tốt nhờ xu hướng tiêu dùng sạch, bền vững',
   },
   {
     id: '3',
-    name: 'Dừa giống Xiêm Xanh',
+    name: 'Dừa Thường',
     image: gk,
-    description: 'Dừa Xiêm Xanh cho trái sớm, nước ngọt, thích hợp cho vùng đất phèn.'
+    description: 'Giống dừa trồng đại trà, xuất khẩu phổ thông',
   },
   {
     id: '4',
-    name: 'Dừa giống Dứa',
+    name: 'Dừa Organic',
     image: lk,
-    description: 'Dừa giống Dứa có cơm dày, thơm ngon, thích hợp cho chế biến các sản phẩm từ cơm dừa.'
+    description: 'Giống dừa sử dụng cho sản phẩm cao cấp',
   },
   {
     id: '5',
-    name: 'Giống sắn KM98-5',
-    image: af,
-    description: 'Phân nhánh nhẹ, nhặt mắt, thích hợp với điều kiện sinh thái các tỉnh thuộc vùng Đông Nam Bộ'
+    name: 'Lúa',
+    image: qs,
+    description:
+      '	Giống lúa phù hợp với điều kiện khí hậu - thổ nhưỡng - mùa vụ  của Việt Nam',
   },
   {
     id: '6',
-    name: 'Giống sắn KM140',
-    image: ua,
-    description: 'Thân thẳng, nhặt mắt, thích hợp với điều kiện sinh thái Việt Nam.'
+    name: 'Sắn',
+    image: af,
+    description: 'Giống sắn chủ lực, ổn định, phù hợp với vùng miền',
   },
   {
     id: '7',
-    name: 'Lúa giống ST25',
-    image: qs,
-    description: 'Lúa thích nghi rộng, năng suất cao và chất lượng gạo thượng hạng'
+    name: 'Chuối',
+    image: lo,
+    description: 'Giống chuối kháng bệnh tốt, sử dụng linh hoạt trong chế biến',
   },
   {
-    id: '11',
-    name: 'Chuối giống GL3‑5',
-    image: lo,
-    description: 'Chuối có khả năng kháng bệnh héo vàng rất tốt, năng suất cao'
+    id: '8',
+    name: 'Trà',
+    image: te,
+    description: 'Giống trà nhiều búp, năng suất cao, chất lượng tốt',
   },
 ];
 
