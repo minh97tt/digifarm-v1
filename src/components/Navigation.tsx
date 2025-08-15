@@ -127,7 +127,7 @@ function DesktopNavigation() {
                   </div>
                   <div className="flex flex-col gap-3">
                     <div className='flex items-center justify-between'>
-                      <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetail</div>
+                      <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetails</div>
                       <ArrowSvg />
                     </div>
                     <div className="font-normal text-base text-[#468462] hidden md:block">Nền tảng bán hàng đa kênh toàn diện</div>
