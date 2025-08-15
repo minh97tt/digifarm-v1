@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import Select from 'react-select'
+
 import { DigiFarmIcon } from '../components/icons/DigiFarmIcon'
 import digiFarmCover from '../assets/DigiFarmCover.webp'
 import Hero from '../components/Hero'
@@ -19,9 +22,65 @@ import SugarCaneImg from '../assets/farm/sugar-cane.png'
 import PlantGrowthChart from '../components/PlantGrowthChart'
 import ProductivityChart from '../components/ProductivityChart'
 
+const LoteData = {
+  'A01': {
+    productivity: [80.1, 88.6, 87.4, 88.0],
+    plantGrowth: {
+      heightValues: [1.1, 1.25, 1.4, 1.6],
+      densityValues: [5.7, 6.8, 6.1, 6.4],
+    },
+  },
+  'A02': {
+    productivity: [99.0, 93.0, 97.4, 95.2],
+    plantGrowth: {
+      heightValues: [1.1, 1.25, 1.4, 1.6],
+      densityValues: [7.8, 6.7, 7.3, 7.0],
+    },
+  },
+  'A03': {
+    productivity: [74.4, 70.7, 96.2, 83.4],
+    plantGrowth: {
+      heightValues: [1.1, 1.25, 1.4, 1.6],
+      densityValues: [4.9, 5.3, 7.1, 6.2],
+    },
+  },
+  'A04': {
+    productivity: [119.3, 105.4, 96.7, 101.0],
+    plantGrowth: {
+      heightValues: [1.1, 1.25, 1.4, 1.6],
+      densityValues: [9.0, 7.9, 7.5, 7.7],
+    },
+  },
+  'A05': {
+    productivity: [99.7, 89.4, 92.6, 91.0],
+    plantGrowth: {
+      heightValues: [1.1, 1.25, 1.4, 1.6],
+      densityValues: [7.8, 7.2, 7.5, 7.3],
+    },
+  },
+  'A06': {
+    productivity: [47.4, 84.7, 85.3, 85.0],
+    plantGrowth: {
+      heightValues: [1.1, 1.25, 1.4, 1.6],
+      densityValues: [3.4, 7.3, 6.6, 6.9],
+    },
+  },
+  'A07': {
+    productivity: [102.5, 102.5, 97.2, 99.9],
+    plantGrowth: {
+      heightValues: [1.1, 1.25, 1.4, 1.6],
+      densityValues: [9.1, 9.1, 8.7, 8.9],
+    },
+  },
+}
+
 export default function DigiFarm() {
   // Lấy tham số id từ URL
   const { id } = useParams()
+
+  const [selectedLote, setSelectedLote] = useState('A01')
+  const loteData = LoteData[selectedLote as keyof typeof LoteData]
+
   // Data for crop variety card
   const cropData = [
     { label: 'Tên giống', value: 'VN08-259' },
@@ -64,6 +123,13 @@ export default function DigiFarm() {
     { label: 'Hình thức thu hoạch', value: 'Máy thu hoạch số TH0106' },
   ]
 
+  const selectBoxClasses = `
+    [&_.css-13cymwt-control]:!rounded-[10px]
+    [&_.css-t3ipsp-control]:!rounded-[10px]
+    [&_.css-t3ipsp-control]:!border-[green]
+    [&_.css-tr4s17-option]:!bg-[#30bf71]
+  `
+
   return (
     <main>
       <BreadCrumb
@@ -94,41 +160,50 @@ export default function DigiFarm() {
             ]}
             outputPrediction={{
               icon: SugarCaneImg,
-              title: 'Dự đoán năng suất',
-              value: '86.44 tấn/ha',
+              title: 'Dự đoán năng suất cây trồng',
+              value: `${loteData?.productivity?.[3] || 86.44} tấn/ha`,
               percent: '68%',
               description: 'Nếu giữ được điều kiện hiện tại',
             }}
+            extra={
+              <Select defaultValue={{ value: 'A01', label: 'Lô A01' }} options={[
+                { value: 'A01', label: 'Lô A01' },
+                { value: 'A02', label: 'Lô A02' },
+                { value: 'A03', label: 'Lô A03' },
+                { value: 'A04', label: 'Lô A04' },
+                { value: 'A05', label: 'Lô A05' },
+                { value: 'A06', label: 'Lô A06' },
+                { value: 'A07', label: 'Lô A07' },
+              ]} onChange={(e) => setSelectedLote(e?.value || '')}
+              className={selectBoxClasses} />
+            }
           >
             <div className="mt-7">
               <div className="text-text-primary font-bold text-md">
-                Biểu đồ năng suất
+                Biểu đồ năng suất (Lô {selectedLote})
               </div>
               <div className="w-full h-[400px]">
                 <ProductivityChart
                   unit="tấn/ha"
                   unitLabel="tấn/ha"
                   chartId="chart-1"
-                  xLabels={[
-                    'Lô A01',
-                    'Lô A02',
-                    'Lô A03',
-                    'Lô A04',
-                    'Lô A05',
-                    'Lô A06',
-                    'Lô A07',
-                  ]}
-                  values={[88.0, 95.2, 83.4, 101.0, 91.0, 85.0, 99.9]}
+                  xLabels={['Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8']}
+                  values={loteData?.productivity || LoteData['A01'].productivity}
+                  barMaxWidth="80px"
                 />
               </div>
             </div>
 
             <div className="mt-7">
               <div className="text-text-primary font-bold text-md">
-                Biểu đồ tăng trưởng cây trồng
+                Biểu đồ tăng trưởng cây trồng (Lô {selectedLote})
               </div>
               <div className="w-full h-[400px]">
-                <PlantGrowthChart />
+                <PlantGrowthChart
+                  xLabels={['Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8']}
+                  heightValues={loteData?.plantGrowth?.heightValues || LoteData['A01'].plantGrowth.heightValues}
+                  densityValues={loteData?.plantGrowth?.densityValues || LoteData['A01'].plantGrowth.densityValues}
+                />
               </div>
             </div>
           </Chart>

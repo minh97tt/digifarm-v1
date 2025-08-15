@@ -3,7 +3,15 @@ import * as echarts from 'echarts'
 
 const textColor = '#00000090'
 
-const PlantGrowthChart = () => {
+const PlantGrowthChart = ({
+  xLabels,
+  heightValues,
+  densityValues,
+}: {
+  xLabels: string[]
+  heightValues: number[]
+  densityValues: number[]
+}) => {
   useEffect(() => {
     const chartDom = document.getElementById('chart-2')
     const myChart = echarts.init(chartDom)
@@ -20,7 +28,7 @@ const PlantGrowthChart = () => {
       },
       xAxis: {
         type: 'category',
-        data: ['Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8'],
+        data: xLabels,
         axisLine: {
           show: false,
         },
@@ -101,7 +109,7 @@ const PlantGrowthChart = () => {
       series: [
         {
           name: 'Chiều cao',
-          data: [1.1, 1.25, 1.4, 1.6],
+          data: heightValues,
           type: 'line',
           smooth: true,
           lineStyle: {
@@ -112,7 +120,7 @@ const PlantGrowthChart = () => {
         },
         {
           name: 'Mật độ cây',
-          data: [7.1, 7.1, 7.1, 7.1],
+          data: densityValues,
           type: 'line',
           smooth: true,
           lineStyle: {
@@ -134,7 +142,7 @@ const PlantGrowthChart = () => {
       window.removeEventListener('resize', resize)
       myChart.dispose()
     }
-  }, [])
+  }, [heightValues, densityValues])
 
   return <div id="chart-2" style={{ width: '100%', height: '100%' }}></div>
 }
