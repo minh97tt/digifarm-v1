@@ -27,9 +27,10 @@ const dataMap = [
     date: '24/12/2024',
     worm: 4.95,
     tree: 6.4,
-    evaluate: 'Khá, 6.4 cây/m2, 88 T/Ha',
+    evaluate_d: '6.4 cây/m2, 88 T/Ha',
+    evaluate: 'Khá',
     ns: 88,
-    nutrion: '160 kg N, 40 kg P, 100 kg K, 20 kg S, 400kg Ca',
+    nutrion: '160 kg N, 40 kg P, 100 kg K',
     water: '5 ngày trước mưa 45mm'
   },
   {
@@ -42,9 +43,10 @@ const dataMap = [
     date: '6/1/2025',
     worm: 4.33,
     tree: 7.0,
-    evaluate: 'Tốt, 7 cây/m2, 95 T/Ha',
+    evaluate_d: '7 cây/m2, 95 T/Ha',
+    evaluate: 'Tốt',
     ns: 95,
-    nutrion: '160 kg N, 50 kg P, 100 kg K, 20 kg S, 800kg Ca',
+    nutrion: '160 kg N, 50 kg P, 100 kg K',
     water: '5 ngày trước mưa 45mm'
   },
   {
@@ -58,8 +60,9 @@ const dataMap = [
     worm: 5.25,
     tree: 6.2,
     ns: 83,
-    evaluate: 'Khá, 6.2 cây/m2, 83 T/Ha',
-    nutrion: '154 kg N, 44 kg P, 88 kg K, 16.5 kg S, 800kg Ca',
+    evaluate_d: '6.2 cây/m2, 83 T/Ha',
+    evaluate: 'Khá',
+    nutrion: '154 kg N, 44 kg P, 88 kg K',
     water: '5 ngày trước mưa 45mm'
   },
   {
@@ -73,8 +76,9 @@ const dataMap = [
     worm: 5.76,
     tree: 7.7,
     ns: 101,
-    evaluate: 'Tốt, 7.7 cây/m2, 101 T/Ha',
-    nutrion: '140 kg N, 40 kg P, 80 kg K, 15 kg S, 800kg Ca',
+    evaluate_d: '7.7 cây/m2, 101 T/Ha',
+    evaluate: 'Tốt',
+    nutrion: '140 kg N, 40 kg P, 80 kg K',
     water: '5 ngày trước mưa 45mm'
   },
   {
@@ -88,8 +92,9 @@ const dataMap = [
     worm: 5.76,
     tree: 7.3,
     ns: 91,
-    evaluate: 'Tốt, 7.3 cây/m2, 91 T/Ha',
-    nutrion: '160 kg N, 0 kg P, 100 kg K, 20 kg S',
+    evaluate_d: '7.3 cây/m2, 91 T/Ha',
+    evaluate: 'Tốt',
+    nutrion: '160 kg N, 0 kg P, 100 kg K',
     water: '5 ngày trước mưa 45mm'
   },
   {
@@ -103,8 +108,9 @@ const dataMap = [
     worm: 6.72,
     tree: 6.9,
     ns: 85,
-    evaluate: 'Khá, 6.9 cây/m2, 85 T/Ha',
-    nutrion: '176 kg N, 22 kg P, 110 kg K, 16.5 kg S, 800kg Ca',
+    evaluate_d: '6.9 cây/m2, 85 T/Ha',
+    evaluate: 'Khá',
+    nutrion: '176 kg N, 22 kg P, 110 kg K',
     water: '5 ngày trước mưa 45mm'
   },
   {
@@ -118,8 +124,9 @@ const dataMap = [
     worm: 4.16,
     tree: 6.9,
     ns: 100,
-    evaluate: 'Tốt, 8.9 cây/m2, 100 T/Ha',
-    nutrion: '134 kg N, 44 kg P, 68 kg K, 72 kg S',
+    evaluate_d: '8.9 cây/m2, 100 T/Ha',
+    evaluate: 'Tốt',
+    nutrion: '134 kg N, 44 kg P, 68 kg K',
     water: 'Nên tưới 10-15 mm/lần'
   },
   {
@@ -133,8 +140,9 @@ const dataMap = [
     worm: 0.7,
     tree: 26.2,
     ns: 60,
-    evaluate: 'Trung bình, 26.2 cây/m2, 60 T/Ha, đề xuất trồng dặm',
-    nutrion: '133 kg N, 23 kg P, 99 kg K, 15 kg S',
+    evaluate_d: '26.2 cây/m2, 60 T/Ha',
+    evaluate: 'Trung bình',
+    nutrion: '133 kg N, 23 kg P, 99 kg K',
     water: 'Nên tưới 10-15 mm/lần'
   },
 ]
@@ -159,10 +167,10 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
   }
 
   return (
-    <div className="flex items-baseline max-md:flex-col md:space-x-4 text-sm bg-gray-100 p-2 rounded-lg">
+    <div className="md:grid md:grid-cols-2 md:divide-x divide-gray-300 max-md:flex-col md:space-x-4 text-sm bg-gray-100 p-2 rounded-lg">
       {/* <div>Mã ruộng: {activeFeature.properties.FIELD_NAME}</div> */}
-      <div className='md:border-r-1 border-gray-300 md:pr-5 space-y-1'>
-        <h1 className='font-bold mb-1'>Thông tin canh tác:</h1>
+      <div className='space-y-1'>
+        <h1 className='font-bold mb-2 underline text-base text-center'>Thông tin canh tác:</h1>
         <div>🌾 <b>Tên nông trường:</b> DMF Ninh Dien</div>
         <div>🗂️ <b>Tên lô:</b> {activeFeature.code}</div>
         <div>🌱 <b>Giống cây trồng:</b> Mía {activeFeature.variety}</div>
@@ -175,28 +183,29 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
       </div>
 
       <div className='max-md:mt-3 space-y-1'>
-        <h1 className='font-bold mb-1'>Cảnh báo, khuyến nghị:</h1>
-        {/* <div className='flex items-center'> */}
-        <div>🐛 <b>Tình hình sâu bệnh:</b> Sâu đục {activeFeature.worm === 0.7 ? 'ngọn' : 'thân'} {activeFeature.worm}%
+        <h1 className='font-bold mb-2 text-base underline text-center'>Cảnh báo, khuyến nghị:</h1>
+        <div className='flex items-center max-md:flex-col'>
+          <div>🐛 <b>Tình hình sâu bệnh:</b> Sâu đục {activeFeature.worm === 0.7 ? 'ngọn' : 'thân'} {activeFeature.worm}%
 
-          {/** */}
-          {/* <Lottie animationData={RedAlertLottie} loop={true} className='w-[40px] flex-shrink-0' /> */}
-        </div>
-        {/* <div className="flex items-center gap-1"> */}
-        <div className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[14px] text-[#F5222D] px-2 leading-[15px]">
-          <div className='flex items-center justify-center w-[14px] h-[14px]'>
-            <Lottie animationData={RedAlertLottie} loop={true} className='w-[40px] flex-shrink-0' />
+            {/** */}
+            {/* <Lottie animationData={RedAlertLottie} loop={true} className='w-[40px] flex-shrink-0' /> */}
           </div>
-          <div className="py-[2px]">Khuyến cáo {activeFeature.worm > 5 || activeFeature.worm === 0.7 ? 'phun thuốc' : 'thả Ong mắt đỏ'}</div>
+          {/* <div className="flex items-center gap-1"> */}
+          <div className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[14px] text-[#F5222D] px-2 leading-[15px]">
+            <div className='flex items-center justify-center w-[14px] h-[14px]'>
+              <Lottie animationData={RedAlertLottie} loop={true} className='w-[40px] flex-shrink-0' />
+            </div>
+            <div className="py-[2px]">{activeFeature.worm > 5 || activeFeature.worm === 0.7 ? 'Nên phun thuốc' : 'Thả Ong mắt đỏ'}</div>
+          </div>
         </div>
-        {/* </div> */}
         {/* </div> */}
 
         {/* <div>⦾ <b>Mật độ cây:</b> {activeFeature.tree} cây/m2</div> */}
         <div>📈 <b>Đánh giá sinh trưởng: </b>
-          <span className={`px-2 py-[2px] border-1 rounded-full ${evaluateClassName()}`}>
+          <span className={`px-2 border-1 rounded-full ${evaluateClassName()} max-md:inline-block`}>
             {activeFeature.evaluate}
           </span>
+          <span className='text-sm'> ({activeFeature.evaluate_d})</span>
         </div>
         {/* <div>⦾ <b>Ước tính năng suất: </b> {activeFeature.ns} T/ha</div> */}
         <div className='my-1'>🧪 <b>Khuyến cáo dinh dưỡng: </b> {activeFeature.nutrion}</div>
@@ -214,7 +223,7 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
 
 
 
-        <div className="flex items-baseline gap-1">
+        <div className="flex max-md:flex-col items-baseline gap-1">
           <span>💧 <b>Tưới tiêu:</b></span>
           <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#00ae00] bg-[#f0ffec] rounded-[12px] text-[14px] text-[#006300] px-2 leading-[15px]">
             💚
