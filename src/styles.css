@@ -34,3 +34,12 @@
   --color-text-content: rgba(32, 32, 32, 1);
   --color-text-label-secondary: rgba(111, 111, 111, 1);
 }
+
+.gm-style .gm-style-iw {
+  border-radius: 14px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.gm-style-iw-d {
+  overflow: visible !important;
+}

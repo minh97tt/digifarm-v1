@@ -167,7 +167,7 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
   }
 
   return (
-    <div className="md:flex md:flex-row md:divide-x divide-gray-300 max-md:flex-col md:space-x-2 text-sm bg-gray-100 p-2 rounded-lg">
+    <div className="md:flex md:flex-row md:divide-x divide-gray-300 max-md:flex-col md:space-x-2 text-sm bg-white p-3 rounded-xl">
       {/* <div>Mã ruộng: {activeFeature.properties.FIELD_NAME}</div> */}
       <div className='space-y-1 md:pr-14'>
         <h1 className='font-bold mb-2 underline text-base text-center'>Thông tin canh tác:</h1>
