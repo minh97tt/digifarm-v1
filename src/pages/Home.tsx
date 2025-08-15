@@ -9,7 +9,7 @@ import bnn from '../assets/plants/banana.png'
 import ric from '../assets/plants/rice.jpg'
 import yuc from '../assets/plants/yuca.jpg'
 import ca1 from '../assets/plants/cane.jpg'
-import ca2 from '../assets/plants/cane-o.jpg'
+import ca2 from '../assets/plants/cane-o.png'
 
 // Danh sách sản phẩm mía, dừa, điều
 const products = [
