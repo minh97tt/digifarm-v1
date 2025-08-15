@@ -2,9 +2,9 @@ import ProductCard from '../components/ProductCard';
 import HomeCover from '../assets/HomeCoverNew.webp';
 import Navigation from '../components/Navigation';
 
-import gk from '../assets/plants/gk.avif';
 import te from '../assets/plants/te.avif';
-import cco from '../assets/plants/coconut-o.jpg';
+import cc1 from '../assets/plants/coconut.jpg';
+import cc2 from '../assets/plants/coconut-o.jpg';
 import bnn from '../assets/plants/banana.jpg';
 import ric from '../assets/plants/rice.jpg';
 import yuc from '../assets/plants/yuca.jpg';
@@ -112,13 +112,13 @@ const plants = [
   {
     id: 'coconut1',
     name: 'Dừa canh tác thông thường',
-    image: gk,
+    image: cc1,
     description: 'Giống dừa trồng đại trà, xuất khẩu phổ thông',
   },
   {
     id: 'coconut2',
     name: 'Dừa hữu cơ',
-    image: cco,
+    image: cc2,
     description: 'Giống dừa sử dụng cho sản phẩm cao cấp',
   },
   {
