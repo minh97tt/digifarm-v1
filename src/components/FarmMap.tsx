@@ -208,7 +208,7 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
           <span className='text-sm'> ({activeFeature.evaluate_d})</span>
         </div>
         {/* <div>⦾ <b>Ước tính năng suất: </b> {activeFeature.ns} T/ha</div> */}
-        <div className='my-1'>🧪 <b>Khuyến cáo dinh dưỡng: </b> {activeFeature.nutrion}</div>
+        <div className='my-1'>🧪 <b>Khuyến cáo dinh dưỡng: </b>Nên bón {activeFeature.nutrion}</div>
         {/* <div className="flex items-center gap-1">
           <span>🌡️ <b>Nhiệt độ:</b></span>
           <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#ffff34] bg-[#ffffeb] text-[14px] rounded-[12px] text-[#373700] px-2 leading-[15px]">
@@ -220,8 +220,6 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
             <span className="py-[2px]">Nhiệt độ quá thấp, ảnh hưởng vùng trồng</span>
           </span>
         </div> */}
-
-
 
         <div className="flex max-md:flex-col items-baseline gap-1">
           <span>💧 <b>Tưới tiêu:</b></span>
