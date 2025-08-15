@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import Select from 'react-select'
 
-import { DigiFarmIcon } from '../components/icons/DigiFarmIcon'
-import digiFarmCover from '../assets/DigiFarmCover.webp'
-import Hero from '../components/Hero'
+import digiFarmCover from '../assets/farm_cover.webp'
 import InfoCard from '../components/InfoCard'
 import MapWithPolygon from '../components/FarmMap'
 import { PngIcon } from '../components/PngIcon'
@@ -142,9 +140,10 @@ export default function DigiFarm() {
           { title: 'Digifarm', active: true },
         ]}
       />
-      <Hero icon={DigiFarmIcon} coverImage={digiFarmCover} />
+      {/* <Hero coverImage={digiFarmCover} /> */}
+      <img src={digiFarmCover} />
 
-      <div className="layout-container no-nav">
+      <div className="layout-container no-nav md:!-mt-40 !-mt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <MapWithPolygon />
 
