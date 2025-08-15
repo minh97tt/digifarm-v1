@@ -98,26 +98,26 @@ const products = [
 const plants = [
   {
     id: 'sugarcane1',
-    name: 'Mía Thường',
+    name: 'Mía canh tác thông thường',
     image: ja,
     description: '	Giống mía đại trà, phổ biến rộng khắp, dễ tiêu thụ',
   },
   {
     id: 'sugarcane2',
-    name: 'Mía Organic',
+    name: 'Mía hữu cơ',
     image: sc,
     description:
       '	Giống mía tăng trưởng tốt nhờ xu hướng tiêu dùng sạch, bền vững',
   },
   {
     id: 'coconut1',
-    name: 'Dừa Thường',
+    name: 'Dừa canh tác thông thường',
     image: gk,
     description: 'Giống dừa trồng đại trà, xuất khẩu phổ thông',
   },
   {
     id: 'coconut2',
-    name: 'Dừa Organic',
+    name: 'Dừa hữu cơ',
     image: lk,
     description: 'Giống dừa sử dụng cho sản phẩm cao cấp',
   },

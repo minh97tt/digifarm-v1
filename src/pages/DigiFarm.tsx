@@ -17,6 +17,7 @@ import Chart from '../components/Chart'
 import { BreadCrumb } from '../components/BreadCrumb'
 
 import WormImg from '../assets/farm/worm.png'
+import BeeImg from '../assets/farm/bee.png'
 import RainingImg from '../assets/farm/raining.png'
 import SugarCaneImg from '../assets/farm/sugar-cane.png'
 import PlantGrowthChart from '../components/PlantGrowthChart'
@@ -156,9 +157,14 @@ export default function DigiFarm() {
                 level: 'Thấp',
               },
               {
-                icon: WormImg,
+                icon: BeeImg,
                 content: 'Rủi ro sâu đục thân',
+                extra: <img src={WormImg} alt="" className="w-[18px] inline-block" />,
                 level: 'Trung bình',
+                iconClass: 'w-[72px]',
+                py: 'py-0',
+                px: 'px-2',
+                gap: 'gap-0',
               },
             ]}
             outputPrediction={{

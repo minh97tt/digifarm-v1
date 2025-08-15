@@ -10,7 +10,12 @@ const FarmChart = ({
   riskPredictions: {
     icon: any
     content: string
+    extra?: React.ReactNode
     level: string
+    iconClass?: string
+    px?: string
+    py?: string
+    gap?: string
   }[]
   outputPrediction: {
     icon: any
@@ -38,7 +43,7 @@ const FarmChart = ({
             {riskPredictions.map((item, index) => (
               <div
                 key={item.content}
-                className="flex items-center rounded-[60px] py-3 px-6 gap-4"
+                className={`flex items-center rounded-[60px] ${item.py || 'py-3'} ${item.px || 'px-6'} ${item.gap || 'gap-5'}`}
                 style={{
                   background:
                     index === 0
@@ -47,11 +52,11 @@ const FarmChart = ({
                 }}
               >
                 <div>
-                  <img src={item.icon} alt="" className="w-[32px]" />
+                  <img src={item.icon} alt="" className={item.iconClass || "w-[32px]"} />
                 </div>
                 <div>
                   <div className="font-normal text-[16px] text-[#202020]">
-                    {item.content}
+                    {item.content} {item.extra}
                   </div>
                   <div className="font-bold text-[16px] text-[#202020]">
                     {item.level}
