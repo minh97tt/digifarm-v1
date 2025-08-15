@@ -106,7 +106,7 @@ export default function DigiFarm() {
   const farmingData = [
     { label: 'Bón phân', value: 'NPK 17-7-17, 470 kg/ha' },
     { label: 'Ngày bón phân', value: '05/12/2025' },
-    { label: 'Phun thuốc cỏ', value: 'Atrazine, 1.38l/ha' },
+    { label: 'Phun thuốc cỏ', value: 'Atrazine, 1.38 l/ha' },
     { label: 'Thời gian phun', value: '01/19/2025' },
     { label: 'Ngày tưới tiêu', value: '04/23/2025' },
     { label: 'Lượng nước (mm)', value: '20 mm' },
