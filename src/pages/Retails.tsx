@@ -21,17 +21,19 @@ import { useParams } from 'react-router-dom'
 import { PRODUCT_ITEMS } from '../components/consts'
 
 export default function Home() {
+  const { id } = useParams()
 
-  const { id } = useParams();
-
-  const dbProduct = PRODUCT_ITEMS.find((item) => item.code === id);
+  const dbProduct = PRODUCT_ITEMS.find((item) => item.code === id)
 
   const productData = [
-    { label: 'Thành phẩm', value: dbProduct?.name || 'Đường Mía Thiên Nhiên 1kg' },
+    {
+      label: 'Thành phẩm',
+      value: dbProduct?.name || 'Đường Mía Thiên Nhiên 1kg',
+    },
     { label: 'Thương hiệu', value: 'Biên Hoà' },
     { label: 'Mã sản phẩm', value: dbProduct?.code || '0000064873' },
-    { label: 'Ngày sản xuất', value: '24/09/2024' },
-    { label: 'Ngày hết hạn', value: '24/09/2025' },
+    { label: 'Ngày sản xuất', value: '19/11/2024' },
+    { label: 'Ngày hết hạn', value: '19/11/2027' },
   ]
 
   const distributorData = [
@@ -53,7 +55,7 @@ export default function Home() {
           value: 'Cộng Hoà, Phường 13, Quận Tân Bình, TPHCM, Việt Nam',
         },
         { label: 'Đơn đặt hàng', value: '#OYMXOSZE' },
-        { label: 'Ngày đặt hàng', value: '01/10/2024' },
+        { label: 'Ngày đặt hàng', value: '12/01/2025' },
       ],
     },
     {
@@ -67,7 +69,10 @@ export default function Home() {
             </span>
           ),
         },
-        { label: 'Tên sản phẩm', value: dbProduct?.name || 'Đường mía thiên nhiên 1kg' },
+        {
+          label: 'Tên sản phẩm',
+          value: dbProduct?.name || 'Đường mía thiên nhiên 1kg',
+        },
         { label: 'Thương hiệu', value: 'Biên Hoà' },
         { label: 'Mã sản phẩm', value: dbProduct?.code || '20100042' },
         { label: 'Giá', value: '185.000đ' },

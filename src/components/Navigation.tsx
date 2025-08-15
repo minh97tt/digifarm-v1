@@ -127,7 +127,7 @@ function DesktopNavigation() {
                   </div>
                   <div className="flex flex-col gap-3">
                     <div className='flex items-center justify-between'>
-                      <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetail</div>
+                      <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetails</div>
                       <ArrowSvg />
                     </div>
                     <div className="font-normal text-base text-[#468462] hidden md:block">Nền tảng bán hàng đa kênh toàn diện</div>
@@ -200,7 +200,7 @@ function MobileNavigation() {
                   <img src={DigiRetailSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" />
                 </div>
                 <div className="flex flex-col gap-3">
-                  <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetail</div>
+                  <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetails</div>
                   <div className="font-normal text-base text-[#468462]">Nền tảng bán hàng đa kênh toàn diện</div>
                 </div>
               </div>

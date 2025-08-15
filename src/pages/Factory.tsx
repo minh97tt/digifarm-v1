@@ -26,8 +26,8 @@ const rawMaterialWarehouseData = [
     label: 'Địa chỉ',
     value: 'Xã Tân Hưng, Huyện Tân Châu, Tỉnh Tây Ninh, Việt Nam',
   },
-  { label: 'Ngày nhập kho', value: '22/09/2024' },
-  { label: 'Ngày xuất kho', value: '23/09/2024' },
+  { label: 'Ngày nhập kho', value: '15/11/2024' },
+  { label: 'Ngày xuất kho', value: '17/11/2024' },
 ]
 
 const factoryData = [
@@ -48,8 +48,8 @@ const productionLineData = [
 
 const finishedGoodsWarehouseData = [
   { label: 'Kho', value: 'Kho thành phẩm TTCS' },
-  { label: 'Ngày nhập kho', value: '25/09/2024' },
-  { label: 'Ngày xuất kho', value: '30/09/2024' },
+  { label: 'Ngày nhập kho', value: '03/12/2024' },
+  { label: 'Ngày xuất kho', value: '23/12/2024' },
 ]
 
 const transportationData = [
@@ -65,17 +65,19 @@ const transportationData = [
 ]
 
 export default function Factory() {
+  const { id } = useParams()
 
-  const { id } = useParams();
-
-  const dbProduct = PRODUCT_ITEMS.find((item) => item.code === id);
+  const dbProduct = PRODUCT_ITEMS.find((item) => item.code === id)
 
   const finishedProductData = [
-    { label: 'Thành phẩm', value: dbProduct?.name || 'Đường Mía Thiên Nhiên 1kg' },
+    {
+      label: 'Thành phẩm',
+      value: dbProduct?.name || 'Đường Mía Thiên Nhiên 1kg',
+    },
     { label: 'Mã sản phẩm', value: dbProduct?.code || '20100042' },
     { label: 'Lô hàng', value: '0000064873' },
-    { label: 'Ngày sản xuất', value: '24/09/2024' },
-    { label: 'Ngày hết hạn', value: '24/09/2025' },
+    { label: 'Ngày sản xuất', value: '19/11/2024' },
+    { label: 'Ngày hết hạn', value: '19/11/2027' },
   ]
 
   return (
@@ -157,7 +159,10 @@ export default function Factory() {
             title="Thành phẩm"
             data={finishedProductData}
             icon={<PngIcon imageUrl={ProductIcon} />}
-            link={{ label: 'Xem quy trình phân phối', href: `/retails/${id || ''}` }}
+            link={{
+              label: 'Xem quy trình phân phối',
+              href: `/retails/${id || ''}`,
+            }}
           />
 
           <InfoCard
