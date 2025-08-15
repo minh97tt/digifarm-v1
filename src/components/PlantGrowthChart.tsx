@@ -30,7 +30,10 @@ const PlantGrowthChart = ({
         type: 'category',
         data: xLabels,
         axisLine: {
-          show: false,
+          show: true,
+          lineStyle: {
+            color: '#EAEAEA',
+          }
         },
         axisTick: {
           show: false,
@@ -53,6 +56,12 @@ const PlantGrowthChart = ({
             fontSize: 14,
             color: textColor,
           },
+          splitLine: {
+            lineStyle: {
+              type: 'dashed',
+              color: '#EAEAEA',
+            }
+          }
         },
         {
           type: 'value',

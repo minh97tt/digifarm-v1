@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import Select from 'react-select'
 
-import { DigiFarmIcon } from '../components/icons/DigiFarmIcon'
-import digiFarmCover from '../assets/DigiFarmCover.webp'
-import Hero from '../components/Hero'
+import digiFarmCover from '../assets/farm_cover.webp'
 import InfoCard from '../components/InfoCard'
 import MapWithPolygon from '../components/FarmMap'
 import { PngIcon } from '../components/PngIcon'
@@ -17,6 +15,7 @@ import Chart from '../components/Chart'
 import { BreadCrumb } from '../components/BreadCrumb'
 
 import WormImg from '../assets/farm/worm.png'
+import BeeImg from '../assets/farm/bee.png'
 import RainingImg from '../assets/farm/raining.png'
 import SugarCaneImg from '../assets/farm/sugar-cane.png'
 import PlantGrowthChart from '../components/PlantGrowthChart'
@@ -141,9 +140,10 @@ export default function DigiFarm() {
           { title: 'Digifarm', active: true },
         ]}
       />
-      <Hero icon={DigiFarmIcon} coverImage={digiFarmCover} />
+      {/* <Hero coverImage={digiFarmCover} /> */}
+      <img src={digiFarmCover} />
 
-      <div className="layout-container no-nav">
+      <div className="layout-container no-nav md:!-mt-40 !-mt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <MapWithPolygon />
 
@@ -156,9 +156,14 @@ export default function DigiFarm() {
                 level: 'Thấp',
               },
               {
-                icon: WormImg,
+                icon: BeeImg,
                 content: 'Rủi ro sâu đục thân',
+                extra: <img src={WormImg} alt="" className="w-[18px] inline-block" />,
                 level: 'Trung bình',
+                iconClass: 'w-[72px]',
+                py: 'py-0',
+                px: 'px-2',
+                gap: 'gap-0',
               },
             ]}
             outputPrediction={{

@@ -2,14 +2,14 @@ import ProductCard from '../components/ProductCard';
 import HomeCover from '../assets/HomeCoverNew.webp';
 import Navigation from '../components/Navigation';
 
-import af from '../assets/plants/af.jpg'
-import gk from '../assets/plants/gk.avif';
-import ja from '../assets/plants/ja.avif'
-import te from '../assets/plants/te.avif'
-import sc from '../assets/plants/sc.avif';
-import lo from '../assets/plants/lo.avif';
-import qs from '../assets/plants/qs.avif';
-import lk from '../assets/plants/lk.avif'
+import te from '../assets/plants/te.avif';
+import cc1 from '../assets/plants/coconut.jpg';
+import cc2 from '../assets/plants/coconut-o.jpg';
+import bnn from '../assets/plants/banana.jpg';
+import ric from '../assets/plants/rice.jpg';
+import yuc from '../assets/plants/yuca.jpg';
+import ca1 from '../assets/plants/cane.jpg';
+import ca2 from '../assets/plants/cane-o.jpg';
 
 // Danh sách sản phẩm mía, dừa, điều
 const products = [
@@ -98,46 +98,46 @@ const products = [
 const plants = [
   {
     id: 'sugarcane1',
-    name: 'Mía Thường',
-    image: ja,
+    name: 'Mía canh tác thông thường',
+    image: ca1,
     description: '	Giống mía đại trà, phổ biến rộng khắp, dễ tiêu thụ',
   },
   {
     id: 'sugarcane2',
-    name: 'Mía Organic',
-    image: sc,
+    name: 'Mía hữu cơ',
+    image: ca2,
     description:
       '	Giống mía tăng trưởng tốt nhờ xu hướng tiêu dùng sạch, bền vững',
   },
   {
     id: 'coconut1',
-    name: 'Dừa Thường',
-    image: gk,
+    name: 'Dừa canh tác thông thường',
+    image: cc1,
     description: 'Giống dừa trồng đại trà, xuất khẩu phổ thông',
   },
   {
     id: 'coconut2',
-    name: 'Dừa Organic',
-    image: lk,
+    name: 'Dừa hữu cơ',
+    image: cc2,
     description: 'Giống dừa sử dụng cho sản phẩm cao cấp',
   },
   {
     id: 'banana',
     name: 'Chuối',
-    image: lo,
+    image: bnn,
     description: 'Giống chuối kháng bệnh tốt, sử dụng linh hoạt trong chế biến',
   },
   {
     id: 'rice',
     name: 'Lúa',
-    image: qs,
+    image: ric,
     description:
       '	Giống lúa phù hợp với điều kiện khí hậu - thổ nhưỡng - mùa vụ  của Việt Nam',
   },
   {
-    id: 'san',
+    id: 'yuca',
     name: 'Sắn',
-    image: af,
+    image: yuc,
     description: 'Giống sắn chủ lực, ổn định, phù hợp với vùng miền',
   },
   {

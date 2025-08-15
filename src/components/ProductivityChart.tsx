@@ -54,7 +54,10 @@ const ProductivityChart = ({
             show: false,
           },
           axisLine: {
-            show: false,
+            show: true,
+            lineStyle: {
+              color: '#EAEAEA',
+            }
           },
           axisLabel: {
             fontWeight: 'bold',
@@ -75,6 +78,12 @@ const ProductivityChart = ({
             fontSize: 14,
             color: textColor,
           },
+          splitLine: {
+            lineStyle: {
+              type: 'dashed',
+              color: '#EAEAEA',
+            }
+          }
         },
       ],
       series: [
@@ -84,8 +93,25 @@ const ProductivityChart = ({
           barMaxWidth: barMaxWidth,
           data: values,
           itemStyle: {
-            color: '#3ED094',
+            color: new echarts.graphic.LinearGradient(
+              0, 0, 0, 1,
+              [
+                { offset: 0, color: '#11FFBD' },  // top
+                { offset: 1, color: '#AAFFA9' }   // bottom
+              ]
+            ),
             borderRadius: [10, 10, 0, 0],
+          },
+          emphasis: {
+            itemStyle: {
+              color: new echarts.graphic.LinearGradient(
+                0, 0, 0, 1,
+                [
+                  { offset: 0, color: '#92FE9D' }, // top hover color
+                  { offset: 1, color: '#00C9FF' }  // bottom hover color
+                ]
+              )
+            }
           },
           label: {
             show: true,
