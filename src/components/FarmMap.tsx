@@ -193,14 +193,13 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
         {/* </div> */}
 
         {/* <div>⦾ <b>Mật độ cây:</b> {activeFeature.tree} cây/m2</div> */}
-        <div>📈
-          <b>Đánh giá sinh trưởng: </b>
+        <div>📈 <b>Đánh giá sinh trưởng: </b>
           <span className={`px-2 py-[2px] border-1 rounded-full ${evaluateClassName()}`}>
             {activeFeature.evaluate}
           </span>
         </div>
         {/* <div>⦾ <b>Ước tính năng suất: </b> {activeFeature.ns} T/ha</div> */}
-        <div>🧪 <b>Khuyến cáo dinh dưỡng: </b> {activeFeature.nutrion}</div>
+        <div className='my-1'>🧪 <b>Khuyến cáo dinh dưỡng: </b> {activeFeature.nutrion}</div>
         {/* <div className="flex items-center gap-1">
           <span>🌡️ <b>Nhiệt độ:</b></span>
           <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#ffff34] bg-[#ffffeb] text-[14px] rounded-[12px] text-[#373700] px-2 leading-[15px]">
