@@ -23,49 +23,49 @@ import PlantGrowthChart from '../components/PlantGrowthChart'
 import ProductivityChart from '../components/ProductivityChart'
 
 const LoteData = {
-  'A01': {
+  A01: {
     productivity: [80.1, 88.6, 87.4, 88.0],
     plantGrowth: {
       heightValues: [1.85, 2.2, 2.45, 2.6],
       densityValues: [5.7, 6.8, 6.1, 6.4],
     },
   },
-  'A02': {
+  A02: {
     productivity: [99.0, 93.0, 97.4, 95.2],
     plantGrowth: {
       heightValues: [1.9, 2.25, 2.5, 2.65],
       densityValues: [7.8, 6.7, 7.3, 7.0],
     },
   },
-  'A03': {
+  A03: {
     productivity: [74.4, 70.7, 96.2, 83.4],
     plantGrowth: {
       heightValues: [1.88, 2.23, 2.48, 2.63],
       densityValues: [4.9, 5.3, 7.1, 6.2],
     },
   },
-  'A04': {
+  A04: {
     productivity: [119.3, 105.4, 96.7, 101.0],
     plantGrowth: {
       heightValues: [1.83, 2.18, 2.43, 2.58],
       densityValues: [9.0, 7.9, 7.5, 7.7],
     },
   },
-  'A05': {
+  A05: {
     productivity: [99.7, 89.4, 92.6, 91.0],
     plantGrowth: {
       heightValues: [1.82, 2.16, 2.4, 2.55],
       densityValues: [7.8, 7.2, 7.5, 7.3],
     },
   },
-  'A06': {
+  A06: {
     productivity: [47.4, 84.7, 85.3, 85.0],
     plantGrowth: {
       heightValues: [1.89, 2.24, 2.49, 2.64],
       densityValues: [3.4, 7.3, 6.6, 6.9],
     },
   },
-  'A07': {
+  A07: {
     productivity: [102.5, 102.5, 97.2, 99.9],
     plantGrowth: {
       heightValues: [1.91, 2.26, 2.51, 2.66],
@@ -95,7 +95,10 @@ export default function DigiFarm() {
   const plantingData = [
     { label: 'Ngày trồng', value: '24/12/2024' },
     { label: 'Diện tích trồng', value: '39.22 ha' },
-    { label: 'Xử lý hom giống', value: 'Propiconazole 0.16 l/ha + Bifenthrin 0.2 l/ha' },
+    {
+      label: 'Xử lý hom giống',
+      value: 'Propiconazole 0.16 l/ha + Bifenthrin 0.2 l/ha',
+    },
     { label: 'Phân lót', value: 'NPK 16-16-8, 432 kg/ha' },
     { label: 'Tên người trồng', value: 'Lê Đức Phương' },
     { label: 'Máy trồng', value: 'MK02 - 6120B' },
@@ -166,16 +169,20 @@ export default function DigiFarm() {
               description: 'Nếu giữ được điều kiện hiện tại',
             }}
             extra={
-              <Select defaultValue={{ value: 'A01', label: 'Lô A01' }} options={[
-                { value: 'A01', label: 'Lô A01' },
-                { value: 'A02', label: 'Lô A02' },
-                { value: 'A03', label: 'Lô A03' },
-                { value: 'A04', label: 'Lô A04' },
-                { value: 'A05', label: 'Lô A05' },
-                { value: 'A06', label: 'Lô A06' },
-                { value: 'A07', label: 'Lô A07' },
-              ]} onChange={(e) => setSelectedLote(e?.value || '')}
-              className={selectBoxClasses} />
+              <Select
+                defaultValue={{ value: 'A01', label: 'Lô A01' }}
+                options={[
+                  { value: 'A01', label: 'Lô A01' },
+                  { value: 'A02', label: 'Lô A02' },
+                  { value: 'A03', label: 'Lô A03' },
+                  { value: 'A04', label: 'Lô A04' },
+                  { value: 'A05', label: 'Lô A05' },
+                  { value: 'A06', label: 'Lô A06' },
+                  { value: 'A07', label: 'Lô A07' },
+                ]}
+                onChange={(e) => setSelectedLote(e?.value || '')}
+                className={selectBoxClasses}
+              />
             }
           >
             <div className="mt-7">
@@ -188,7 +195,9 @@ export default function DigiFarm() {
                   unitLabel="tấn/ha"
                   chartId="chart-1"
                   xLabels={['Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8']}
-                  values={loteData?.productivity || LoteData['A01'].productivity}
+                  values={
+                    loteData?.productivity || LoteData['A01'].productivity
+                  }
                   barMaxWidth="80px"
                 />
               </div>
@@ -201,8 +210,14 @@ export default function DigiFarm() {
               <div className="w-full h-[400px]">
                 <PlantGrowthChart
                   xLabels={['Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8']}
-                  heightValues={loteData?.plantGrowth?.heightValues || LoteData['A01'].plantGrowth.heightValues}
-                  densityValues={loteData?.plantGrowth?.densityValues || LoteData['A01'].plantGrowth.densityValues}
+                  heightValues={
+                    loteData?.plantGrowth?.heightValues ||
+                    LoteData['A01'].plantGrowth.heightValues
+                  }
+                  densityValues={
+                    loteData?.plantGrowth?.densityValues ||
+                    LoteData['A01'].plantGrowth.densityValues
+                  }
                 />
               </div>
             </div>
@@ -231,7 +246,7 @@ export default function DigiFarm() {
 
           {/* Harvest Planning Card */}
           <InfoCard
-            title="Thu hoạch"
+            title="Thu hoạch vụ trước"
             data={harvestData}
             icon={<PngIcon imageUrl={truckIcon} />}
             link={{
