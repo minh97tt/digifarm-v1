@@ -97,51 +97,51 @@ const products = [
 
 const plants = [
   {
-    id: '1',
+    id: 'sugarcane1',
     name: 'Mía Thường',
     image: ja,
     description: '	Giống mía đại trà, phổ biến rộng khắp, dễ tiêu thụ',
   },
   {
-    id: '2',
+    id: 'sugarcane2',
     name: 'Mía Organic',
     image: sc,
     description:
       '	Giống mía tăng trưởng tốt nhờ xu hướng tiêu dùng sạch, bền vững',
   },
   {
-    id: '3',
+    id: 'coconut1',
     name: 'Dừa Thường',
     image: gk,
     description: 'Giống dừa trồng đại trà, xuất khẩu phổ thông',
   },
   {
-    id: '4',
+    id: 'coconut2',
     name: 'Dừa Organic',
     image: lk,
     description: 'Giống dừa sử dụng cho sản phẩm cao cấp',
   },
   {
-    id: '5',
+    id: 'banana',
+    name: 'Chuối',
+    image: lo,
+    description: 'Giống chuối kháng bệnh tốt, sử dụng linh hoạt trong chế biến',
+  },
+  {
+    id: 'rice',
     name: 'Lúa',
     image: qs,
     description:
       '	Giống lúa phù hợp với điều kiện khí hậu - thổ nhưỡng - mùa vụ  của Việt Nam',
   },
   {
-    id: '6',
+    id: 'san',
     name: 'Sắn',
     image: af,
     description: 'Giống sắn chủ lực, ổn định, phù hợp với vùng miền',
   },
   {
-    id: '7',
-    name: 'Chuối',
-    image: lo,
-    description: 'Giống chuối kháng bệnh tốt, sử dụng linh hoạt trong chế biến',
-  },
-  {
-    id: '8',
+    id: 'tea',
     name: 'Trà',
     image: te,
     description: 'Giống trà nhiều búp, năng suất cao, chất lượng tốt',
