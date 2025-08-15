@@ -84,7 +84,13 @@ const ProductivityChart = ({
           barMaxWidth: barMaxWidth,
           data: values,
           itemStyle: {
-            color: '#3ED094',
+            color: new echarts.graphic.LinearGradient(
+              0, 0, 0, 1,
+              [
+                { offset: 0, color: '#92FE9D' },  // top
+                { offset: 1, color: '#00C9FF' }   // bottom
+              ]
+            ),
             borderRadius: [10, 10, 0, 0],
           },
           label: {
