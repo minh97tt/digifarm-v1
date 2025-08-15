@@ -26,49 +26,49 @@ const LoteData = {
   'A01': {
     productivity: [80.1, 88.6, 87.4, 88.0],
     plantGrowth: {
-      heightValues: [1.1, 1.25, 1.4, 1.6],
+      heightValues: [1.85, 2.2, 2.45, 2.6],
       densityValues: [5.7, 6.8, 6.1, 6.4],
     },
   },
   'A02': {
     productivity: [99.0, 93.0, 97.4, 95.2],
     plantGrowth: {
-      heightValues: [1.1, 1.25, 1.4, 1.6],
+      heightValues: [1.9, 2.25, 2.5, 2.65],
       densityValues: [7.8, 6.7, 7.3, 7.0],
     },
   },
   'A03': {
     productivity: [74.4, 70.7, 96.2, 83.4],
     plantGrowth: {
-      heightValues: [1.1, 1.25, 1.4, 1.6],
+      heightValues: [1.88, 2.23, 2.48, 2.63],
       densityValues: [4.9, 5.3, 7.1, 6.2],
     },
   },
   'A04': {
     productivity: [119.3, 105.4, 96.7, 101.0],
     plantGrowth: {
-      heightValues: [1.1, 1.25, 1.4, 1.6],
+      heightValues: [1.83, 2.18, 2.43, 2.58],
       densityValues: [9.0, 7.9, 7.5, 7.7],
     },
   },
   'A05': {
     productivity: [99.7, 89.4, 92.6, 91.0],
     plantGrowth: {
-      heightValues: [1.1, 1.25, 1.4, 1.6],
+      heightValues: [1.82, 2.16, 2.4, 2.55],
       densityValues: [7.8, 7.2, 7.5, 7.3],
     },
   },
   'A06': {
     productivity: [47.4, 84.7, 85.3, 85.0],
     plantGrowth: {
-      heightValues: [1.1, 1.25, 1.4, 1.6],
+      heightValues: [1.89, 2.24, 2.49, 2.64],
       densityValues: [3.4, 7.3, 6.6, 6.9],
     },
   },
   'A07': {
     productivity: [102.5, 102.5, 97.2, 99.9],
     plantGrowth: {
-      heightValues: [1.1, 1.25, 1.4, 1.6],
+      heightValues: [1.91, 2.26, 2.51, 2.66],
       densityValues: [9.1, 9.1, 8.7, 8.9],
     },
   },
