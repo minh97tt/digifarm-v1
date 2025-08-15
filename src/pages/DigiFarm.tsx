@@ -94,17 +94,17 @@ export default function DigiFarm() {
   // Data for planting card
   const plantingData = [
     { label: 'Ngày trồng', value: '24/12/2024' },
-    { label: 'Diện tích trồng', value: '39.22 Ha' },
-    { label: 'Xử lý hom giống', value: 'Propiconazole 0.16L/ha + Bifenthrin 0.2L/ha' },
-    { label: 'Phân lót', value: 'NPK 16-16-8, 432kg/ha' },
+    { label: 'Diện tích trồng', value: '39.22 ha' },
+    { label: 'Xử lý hom giống', value: 'Propiconazole 0.16 l/ha + Bifenthrin 0.2 l/ha' },
+    { label: 'Phân lót', value: 'NPK 16-16-8, 432 kg/ha' },
     { label: 'Tên người trồng', value: 'Lê Đức Phương' },
     { label: 'Máy trồng', value: 'MK02 - 6120B' },
-    { label: 'Mật độ trồng', value: '11.3 T/Ha' },
+    { label: 'Mật độ trồng', value: '11.3 t/ha' },
   ]
 
   // Data for farming activities card
   const farmingData = [
-    { label: 'Bón phân', value: 'NPK 17-7-17, 470kg/ha' },
+    { label: 'Bón phân', value: 'NPK 17-7-17, 470 kg/ha' },
     { label: 'Ngày bón phân', value: '05/12/2025' },
     { label: 'Phun thuốc cỏ', value: 'Atrazine, 1.38l/ha' },
     { label: 'Thời gian phun', value: '01/19/2025' },
@@ -116,7 +116,7 @@ export default function DigiFarm() {
   const harvestData = [
     { label: 'Ngày thu hoạch bắt đầu', value: '12/11/2024' },
     { label: 'Ngày thu hoạch kết thúc', value: '12/11/2024' },
-    { label: 'Diện tích thu hoạch', value: '4.61 Ha' },
+    { label: 'Diện tích thu hoạch', value: '4.61 ha' },
     { label: 'Năng suất sạch', value: '44.79 tấn/ha' },
     { label: 'Tạp chất', value: '7.04 %' },
     { label: 'CCS', value: '8.62 %' },
