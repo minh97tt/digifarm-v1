@@ -9,12 +9,14 @@ const ProductivityChart = ({
   chartId,
   xLabels,
   values,
+  barMaxWidth = '40px',
 }: {
   unit: string
   unitLabel: string
   chartId: string
   xLabels: string[]
   values: any[]
+  barMaxWidth?: string
 }) => {
   useEffect(() => {
     const chartDom = document.getElementById(chartId)
@@ -79,7 +81,7 @@ const ProductivityChart = ({
         {
           name: '',
           type: 'bar',
-          barMaxWidth: '40px',
+          barMaxWidth: barMaxWidth,
           data: values,
           itemStyle: {
             color: '#3ED094',
@@ -112,7 +114,7 @@ const ProductivityChart = ({
       window.removeEventListener('resize', resize)
       myChart.dispose()
     }
-  }, [])
+  }, [values])
 
   return <div id={chartId} style={{ width: '100%', height: '100%' }}></div>
 }

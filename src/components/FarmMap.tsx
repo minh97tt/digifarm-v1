@@ -12,7 +12,7 @@ import RedAlertLottie from '../assets/red-alert.json'
 
 const containerStyle = {
   width: '100%',
-  height: '580px',
+  height: '480px',
   borderRadius: 20,
 };
 
@@ -27,10 +27,11 @@ const dataMap = [
     date: '24/12/2024',
     worm: 4.95,
     tree: 6.4,
-    evaluate: 'Sinh trưởng Khá',
+    evaluate_d: '6.4 cây/m2, 88 T/Ha',
+    evaluate: 'Khá',
     ns: 88,
-    nutrion: '160 kg N, 40 kg P, 100 kg K, 20 kg S, 400kg Ca',
-    water: '5 ngày trước mưa 45mm, đất cao, kiểm tra khai nước nếu phát hiện ngập úng'
+    nutrion: '160 kg N, 40 kg P, 100 kg K',
+    water: '5 ngày trước mưa 45mm'
   },
   {
     id: 2,
@@ -42,10 +43,11 @@ const dataMap = [
     date: '6/1/2025',
     worm: 4.33,
     tree: 7.0,
-    evaluate: 'Sinh trưởng Tốt',
+    evaluate_d: '7 cây/m2, 95 T/Ha',
+    evaluate: 'Tốt',
     ns: 95,
-    nutrion: '160 kg N, 50 kg P, 100 kg K, 20 kg S, 800kg Ca',
-    water: '5 ngày trước mưa 45mm, đất cao, kiểm tra khai nước nếu phát hiện ngập úng'
+    nutrion: '160 kg N, 50 kg P, 100 kg K',
+    water: '5 ngày trước mưa 45mm'
   },
   {
     id: 3,
@@ -58,9 +60,10 @@ const dataMap = [
     worm: 5.25,
     tree: 6.2,
     ns: 83,
-    evaluate: 'Sinh trưởng Khá',
-    nutrion: '154 kg N, 44 kg P, 88 kg K, 16.5 kg S, 800kg Ca',
-    water: '5 ngày trước mưa 45mm, đất thấp nên khai úng'
+    evaluate_d: '6.2 cây/m2, 83 T/Ha',
+    evaluate: 'Khá',
+    nutrion: '154 kg N, 44 kg P, 88 kg K',
+    water: '5 ngày trước mưa 45mm'
   },
   {
     id: 4,
@@ -73,9 +76,10 @@ const dataMap = [
     worm: 5.76,
     tree: 7.7,
     ns: 101,
-    evaluate: 'Sinh trưởng Tốt',
-    nutrion: '140 kg N, 40 kg P, 80 kg K, 15 kg S, 800kg Ca',
-    water: '5 ngày trước mưa 45mm, đất thấp nên khai úng'
+    evaluate_d: '7.7 cây/m2, 101 T/Ha',
+    evaluate: 'Tốt',
+    nutrion: '140 kg N, 40 kg P, 80 kg K',
+    water: '5 ngày trước mưa 45mm'
   },
   {
     id: 5,
@@ -88,9 +92,10 @@ const dataMap = [
     worm: 5.76,
     tree: 7.3,
     ns: 91,
-    evaluate: 'Sinh trưởng Tốt',
-    nutrion: '160 kg N, 0 kg P, 100 kg K, 20 kg S',
-    water: '5 ngày trước mưa 45mm, đất cao, kiểm tra khai nước nếu phát hiện ngập úng'
+    evaluate_d: '7.3 cây/m2, 91 T/Ha',
+    evaluate: 'Tốt',
+    nutrion: '160 kg N, 0 kg P, 100 kg K',
+    water: '5 ngày trước mưa 45mm'
   },
   {
     id: 6,
@@ -103,9 +108,10 @@ const dataMap = [
     worm: 6.72,
     tree: 6.9,
     ns: 85,
-    evaluate: 'Sinh trưởng Khá',
-    nutrion: '176 kg N, 22 kg P, 110 kg K, 16.5 kg S, 800kg Ca',
-    water: '5 ngày trước mưa 45mm, đất thấp nên khai úng'
+    evaluate_d: '6.9 cây/m2, 85 T/Ha',
+    evaluate: 'Khá',
+    nutrion: '176 kg N, 22 kg P, 110 kg K',
+    water: '5 ngày trước mưa 45mm'
   },
   {
     id: 7,
@@ -118,24 +124,26 @@ const dataMap = [
     worm: 4.16,
     tree: 6.9,
     ns: 100,
-    evaluate: 'Sinh trưởng Tốt',
-    nutrion: '134 kg N, 44 kg P, 68 kg K, 72 kg S',
-    water: 'Thời tiết khô hạn hơn 10 ngày, kiểm tra, nên tưới 10-15 mm/lần'
+    evaluate_d: '8.9 cây/m2, 100 T/Ha',
+    evaluate: 'Tốt',
+    nutrion: '134 kg N, 44 kg P, 68 kg K',
+    water: 'Nên tưới 10-15 mm/lần'
   },
   {
     id: 8,
     code: 'A08',
     name: 'DMF Ninh Dien',
-    variety: 'SRA17',
+    variety: 'EVA17',
     area: '100000',
     square: '0.66',
     date: '8/6/2025',
     worm: 0.7,
     tree: 26.2,
     ns: 60,
-    evaluate: 'Sinh trưởng Trung bình',
-    nutrion: '133 kg N, 23 kg P, 99 kg K, 15 kg S',
-    water: 'Thời tiết khô hạn hơn 10 ngày, kiểm tra, nên tưới 10-15 mm/lần'
+    evaluate_d: '26.2 cây/m2, 60 T/Ha',
+    evaluate: 'Trung bình',
+    nutrion: '133 kg N, 23 kg P, 99 kg K',
+    water: 'Nên tưới 10-15 mm/lần'
   },
 ]
 
@@ -150,13 +158,21 @@ const dataMap = [
 // </div>}
 
 function InfoContent({ activeFeature, seedingData, tillageData }: any) {
+
+  const evaluateClassName = () => {
+    if (activeFeature.evaluate.includes('Tốt') || activeFeature.evaluate.includes('Khá')) {
+      return 'border-[#00ae00] bg-[#f0ffec] text-[#006300]'
+    }
+    return 'border-[#FFC107] bg-[#FFFBE6] text-[#FFA000]'
+  }
+
   return (
-    <div className="max-w-full text-sm bg-gray-100 p-2 rounded-lg space-y-1">
+    <div className="md:flex md:flex-row md:divide-x divide-gray-300 max-md:flex-col md:space-x-2 text-sm bg-white p-3 !pb-0 !pr-0 rounded-xl">
       {/* <div>Mã ruộng: {activeFeature.properties.FIELD_NAME}</div> */}
-      <div className='flex flex-col gap-1'>
-        <h1 className='font-bold mb-1'>Thông tin canh tác:</h1>
-        <div>⦾ <b>Tên nông trường:</b> DMF Ninh Dien</div>
-        <div>⦾ <b>Tên lô:</b> {activeFeature.code}</div>
+      <div className='space-y-1 md:pr-14'>
+        <h1 className='font-bold mb-2 underline text-base text-center'>Thông tin canh tác:</h1>
+        <div>🌾 <b>Tên nông trường:</b> DMF Ninh Dien</div>
+        <div>🗂️ <b>Tên lô:</b> {activeFeature.code}</div>
         <div>🌱 <b>Giống cây trồng:</b> Mía {activeFeature.variety}</div>
         <div>📐 <b>Diện tích:</b> {activeFeature.square} ha</div>
         <div>📅 <b>Ngày trồng:</b> {activeFeature.date}</div>
@@ -166,28 +182,33 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
         <div>💧 <b>Độ ẩm:</b> 65%</div>
       </div>
 
-      <div className='flex flex-col gap-1 mt-2'>
-        <h1 className='font-bold mb-1'>Cảnh báo, khuyến nghị:</h1>
-        <div className='flex items-center'>
-          <div>🐛 <b>Tình hình sâu bệnh:</b> Sâu đục thân {activeFeature.worm}%
+      <div className='max-md:mt-3 space-y-1'>
+        <h1 className='font-bold mb-2 text-base underline text-center'>Cảnh báo, khuyến nghị:</h1>
+        <div className='flex items-center max-md:flex-col'>
+          <div>🐛 <b>Tình hình sâu bệnh:</b> Sâu đục {activeFeature.worm === 0.7 ? 'ngọn' : 'thân'} {activeFeature.worm}%
 
             {/** */}
             {/* <Lottie animationData={RedAlertLottie} loop={true} className='w-[40px] flex-shrink-0' /> */}
           </div>
-          <div className="flex items-center gap-1">
-            <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[14px] text-[#F5222D] px-2 leading-[15px]">
-              <div className='flex items-center justify-center w-[14px] h-[14px]'>
-                <Lottie animationData={RedAlertLottie} loop={true} className='w-[40px] flex-shrink-0' />
-              </div>
-              <span className="py-[2px]">Khuyến cáo {activeFeature.worm > 5 ? 'phun thuốc' : 'thả Ong mắt đỏ'}</span>
-            </span>
+          {/* <div className="flex items-center gap-1"> */}
+          <div className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#FFD6D3] bg-[#FFF1F0] rounded-[12px] text-[14px] text-[#F5222D] px-2 leading-[15px]">
+            <div className='flex items-center justify-center w-[14px] h-[14px]'>
+              <Lottie animationData={RedAlertLottie} loop={true} className='w-[40px] flex-shrink-0' />
+            </div>
+            <div className="py-[2px]">{activeFeature.worm > 5 || activeFeature.worm === 0.7 ? 'Nên phun thuốc' : 'Thả Ong mắt đỏ'}</div>
           </div>
         </div>
+        {/* </div> */}
 
-        <div>⦾ <b>Mật độ cây:</b> {activeFeature.tree} cây/m2</div>
-        <div>⦾ <b>Đánh giá sinh trưởng: </b> {activeFeature.evaluate}</div>
-        <div>⦾ <b>Ước tính năng suất: </b> {activeFeature.ns} T/ha</div>
-        <div>⦾ <b>Dinh dưỡng: </b> {activeFeature.nutrion}</div>
+        {/* <div>⦾ <b>Mật độ cây:</b> {activeFeature.tree} cây/m2</div> */}
+        <div>📈 <b>Đánh giá sinh trưởng: </b>
+          <span className={`px-2 border-1 rounded-full ${evaluateClassName()} max-md:inline-block`}>
+            {activeFeature.evaluate}
+          </span>
+          <span className='text-sm'> ({activeFeature.evaluate_d})</span>
+        </div>
+        {/* <div>⦾ <b>Ước tính năng suất: </b> {activeFeature.ns} T/ha</div> */}
+        <div className='my-1'>🧪 <b>Khuyến cáo dinh dưỡng: </b>Nên bón {activeFeature.nutrion}</div>
         {/* <div className="flex items-center gap-1">
           <span>🌡️ <b>Nhiệt độ:</b></span>
           <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#ffff34] bg-[#ffffeb] text-[14px] rounded-[12px] text-[#373700] px-2 leading-[15px]">
@@ -200,14 +221,11 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
           </span>
         </div> */}
 
-
-
-        <div className="flex items-center gap-1">
+        <div className="flex max-md:flex-col items-baseline gap-1">
           <span>💧 <b>Tưới tiêu:</b></span>
           <span className="ml-1 inline-flex items-center gap-1 border-[1px] border-[#00ae00] bg-[#f0ffec] rounded-[12px] text-[14px] text-[#006300] px-2 leading-[15px]">
-            {' '}
             💚
-            <span className="py-[2px]">{activeFeature.water}</span>
+            <span className="py-[2px] md:max-w-60 text-center">{activeFeature.water}</span>
           </span>
         </div>
       </div>
@@ -220,9 +238,8 @@ const firstFeature = boundaries.features[6];
 const firstCoordinate = firstFeature?.geometry.coordinates[0][0];
 
 
-
 const center = {
-  lat: 11.224,
+  lat: 11.220,
   lng: 106.01643482963899
 };
 
@@ -313,7 +330,7 @@ const MapWithPolygon = () => {
             options={{
               // pixelOffset: new window.google.maps.Size(0, -10),
               disableAutoPan: true,
-              maxWidth: 1000,
+              maxWidth: 1200,
               // maxHeight: 1000,
               headerDisabled: true,
               // You cannot set full CSS here, but some layout things can be tweaked

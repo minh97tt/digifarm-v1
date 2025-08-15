@@ -5,6 +5,7 @@ const FarmChart = ({
   outputPrediction,
   children,
   className,
+  extra,
 }: {
   riskPredictions: {
     icon: any
@@ -20,11 +21,15 @@ const FarmChart = ({
   }
   children?: React.ReactNode
   className?: string
+  extra?: React.ReactNode
 }) => {
   return (
     <div className={`mt-6 ${className}`}>
-      <div className="text-text-primary font-bold text-xl mb-4">
-        Phân tích thông minh
+      <div className={`flex items-center ${extra ? 'mb-2' : 'mb-4'}`}>
+        <div className="text-text-primary font-bold text-xl flex-1">
+          Phân tích thông minh
+        </div>
+        {extra}
       </div>
 
       <div className="flex flex-col rounded-[20px] border border-card-border p-6">
