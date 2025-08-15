@@ -47,11 +47,11 @@ function DesktopNavigation() {
   const navigate = useNavigate()
   return (
     <nav className="w-full z-1 md:px-10 sm:px-6 nav-container">
-      <div className="max-w-7xl shadow-md md:rounded-[20px] rounded-2xl bg-gradient-to-tr from-[rgba(244,250,245,1)] to-[rgba(172,221,187,1)]">
+      <div className="max-w-7xl shadow-md md:rounded-[20px] py- rounded-2xl bg-gradient-to-tr from-[rgba(244,250,245,1)] to-[rgba(172,221,187,1)]">
         <div className="md:pt-1 md:pb-6 py-2">
-          <h2 className="text-center md:text-2xl md:my-4 my-1 text-lg font-bold text-text-primary">Hệ thống chuỗi cung ứng</h2>
+          <h2 className="text-center text-3xl my-5 font-bold text-text-primary">Hệ thống chuỗi cung ứng</h2>
 
-          <div className="flex items-stretch gap-2 md:flex-row flex-col px-4 justify-center nav-items">
+          <div className="flex items-stretch pt-2 gap-2 md:flex-row flex-col px-4 justify-center nav-items">
 
             {/* DigiFarm */}
             <div className="flex-1 relative group nav-item cursor-pointer hover:[&_.logo]:scale-110" onClick={() => navigate('/farm')}>
@@ -62,12 +62,12 @@ function DesktopNavigation() {
                   <div className="transition-transform logo">
                     <img src={DigiFarmSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" />
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2">
                     <div className='flex items-center justify-between'>
-                      <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiFarm</div>
+                      <div className="font-bold text-[#007836] md:text-2xl text-[16px]">DigiFarm</div>
                       <ArrowSvg />
                     </div>
-                    <div className="font-normal text-base text-[#468462] hidden md:block">Nền tảng quản trị nông nghiệp toàn diện công nghệ cao</div>
+                    <div className="font-normal text-lg text-[#468462] hidden md:block">Nền tảng quản trị nông nghiệp toàn diện công nghệ cao</div>
                   </div>
                 </div>
               </div>
@@ -94,12 +94,12 @@ function DesktopNavigation() {
                     {/* <DigiFactIcon className='md:!h-15 md:!w-34 !h-12 !w-30' /> */}
                     <img src={DigiFactSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer mr-3" />
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2">
                     <div className='flex items-center justify-between'>
-                      <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiFactory</div>
+                      <div className="font-bold text-[#007836] md:text-2xl text-[16px]">DigiFactory</div>
                       <ArrowSvg />
                     </div>
-                    <div className="font-normal text-base text-[#468462] hidden md:block">Giải pháp quản lý sản xuất và kiểm soát chất lượng thông minh</div>
+                    <div className="font-normal text-lg text-[#468462] hidden md:block">Giải pháp quản lý sản xuất và kiểm soát chất lượng thông minh</div>
                   </div>
                 </div>
               </div>
@@ -125,12 +125,12 @@ function DesktopNavigation() {
                     {/* <DigiRetailsIcon className='md:!h-15 md:!w-34 !h-10 !w-30' /> */}
                     <img src={DigiRetailSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer mr-3" />
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2">
                     <div className='flex items-center justify-between'>
-                      <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetails</div>
+                      <div className="font-bold text-[#007836] md:text-2xl text-[16px]">DigiRetails</div>
                       <ArrowSvg />
                     </div>
-                    <div className="font-normal text-base text-[#468462] hidden md:block">Nền tảng bán hàng đa kênh toàn diện</div>
+                    <div className="font-normal text-lg text-[#468462] hidden md:block">Nền tảng bán hàng đa kênh toàn diện</div>
                   </div>
                 </div>
               </div>
@@ -159,8 +159,8 @@ function MobileNavigation() {
                 <div className="transition-transform logo">
                   <img src={DigiFarmSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" />
                 </div>
-                <div className="flex flex-col gap-3">
-                  <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiFarm</div>
+                <div className="flex flex-col gap-2">
+                  <div className="font-bold text-[#007836] md:text-2xl text-[16px]">DigiFarm</div>
                   <div className="font-normal text-base text-[#468462]">Nền tảng quản trị nông nghiệp toàn diện công nghệ cao</div>
                 </div>
               </div>
@@ -179,8 +179,8 @@ function MobileNavigation() {
                   {/* <DigiFactIcon className='md:!h-15 md:!w-34 !h-12 !w-30' /> */}
                   <img src={DigiFactSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" />
                 </div>
-                <div className="flex flex-col gap-3">
-                  <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiFactory</div>
+                <div className="flex flex-col gap-2">
+                  <div className="font-bold text-[#007836] md:text-2xl text-[16px]">DigiFactory</div>
                   <div className="font-normal text-base text-[#468462]">Giải pháp quản lý sản xuất và kiểm soát chất lượng thông minh</div>
                 </div>
               </div>
@@ -199,8 +199,8 @@ function MobileNavigation() {
                   {/* <DigiRetailsIcon className='md:!h-15 md:!w-34 !h-10 !w-30' /> */}
                   <img src={DigiRetailSvg} alt="DigiFarm" className="max-w-none md:w-[56px] w-[40px] cursor-pointer" />
                 </div>
-                <div className="flex flex-col gap-3">
-                  <div className="font-bold text-[#007836] md:text-[20px] text-[16px]">DigiRetails</div>
+                <div className="flex flex-col gap-2">
+                  <div className="font-bold text-[#007836] md:text-2xl text-[16px]">DigiRetails</div>
                   <div className="font-normal text-base text-[#468462]">Nền tảng bán hàng đa kênh toàn diện</div>
                 </div>
               </div>

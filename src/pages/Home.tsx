@@ -1,5 +1,5 @@
 import ProductCard from '../components/ProductCard'
-import HomeCover from '../assets/HomeCoverNew.webp'
+import HomeCover from '../assets/homeCover.webp'
 import Navigation from '../components/Navigation'
 
 import te from '../assets/plants/te.avif'
@@ -175,7 +175,7 @@ export default function Home() {
   return (
     <main className="relative">
       <div
-        className="relative z-1 w-full items-center h-120 bg-cover bg-no-repeat"
+        className="relative z-1 w-full items-center h-100 bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${HomeCover})` }}
       >
         <div className="inset-0 h-full bg-black/20 bg-opacity-40 flex flex-col justify-center items-center text-white md:px-6 md:pt-2 md:pb-19 pb-22">
@@ -183,7 +183,7 @@ export default function Home() {
             Hệ sinh thái sản phẩm Agris
           </h1>
           <p className="md:text-xl text-base text-center max-w-2xl">
-            Các giống mía, dừa, điều chất lượng cao cho nông nghiệp bền vững
+            Nông nghiệp công nghệ cao và bền vững trên nền tảng Dữ liệu
           </p>
         </div>
       </div>
