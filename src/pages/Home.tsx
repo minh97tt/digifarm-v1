@@ -32,6 +32,22 @@ const products = [
       'Đường mía thiên nhiên Biên Hòa 1kg được làm từ 100% mía tự nhiên, mang lại vị ngọt dịu nhẹ. Sản phẩm này không chỉ giúp món ăn thêm phần hấp dẫn với màu sắc và hương vị đặc trưng mà còn đảm bảo an toàn với phương pháp sản xuất hiện đại, không sử dụng chất tạo màu.',
   },
   {
+    id: '5',
+    name: 'Nước dừa đóng hộp Cocoxim Xanh 330ml/hộp',
+    image:
+      'https://product.hstatic.net/200000721249/product/nuoc_dua_xiem_xanh_cocoxim_330ml_2_caf0b6a1f3774f0d9d3dee20865fa125_master.jpg',
+    description:
+      'Được làm từ 100% nước dừa tươi nguyên chất, mang trọn vẹn hương vị Dừa Xiêm Xanh Bến Tre - một trong những loại dừa nổi tiếng nhất của vùng đất được mệnh danh là "thủ phủ" dừa của Việt Nam',
+  },
+  {
+    id: '11',
+    name: 'Nước Cốt Dừa Đóng Lon XIM - Mom Cooks 400ml/lon',
+    description:
+      'Nước Cốt Dừa XIM – Mom Cooks với 94,75% nước cốt dừa nguyên chất được chắt chiu từ những trái dừa ngon đệ nhất của thủ phủ dừa Bến Tre. Bằng công nghệ ép lạnh và tiệt trùng hàng đầu, sản xuất trong 24h đã đưa những tinh túy sánh mịn, tự nhiên ấy vào lon tiện lợi vô cùng mà không cần sử dụng bất kì chất bảo quả và hương liệu tạo béo nào, giúp bạn dễ dàng trong việc chế biến món ăn và thức uống. Chỉ cần bật nắp lon nước cốt dừa XIM – Mom Cooks tươi hảo hàng là bạn đang bật công tắc cho vạn món ngon thơm béo, khó cưỡng.',
+    image:
+      'https://product.hstatic.net/200000721249/product/lon_400ml__1__af2f8cf157254da4be146d7731632ce7_master.png',
+  },
+  {
     id: '10',
     code: '20100020',
     name: 'Đường đen Nữ Hoàng 1kg',
@@ -65,14 +81,7 @@ const products = [
     description:
       'Được làm từ 100% nước dừa nguyên chất từ những quả dừa Organic trồng theo phương pháp hữu cơ (không sử dụng phân bón hóa học, thuốc trừ sâu, nguyên liệu biến đổi Gen,...), hoàn toàn không thêm đường',
   },
-  {
-    id: '5',
-    name: 'Nước dừa đóng hộp Cocoxim Xanh 330ml/hộp',
-    image:
-      'https://product.hstatic.net/200000721249/product/nuoc_dua_xiem_xanh_cocoxim_330ml_2_caf0b6a1f3774f0d9d3dee20865fa125_master.jpg',
-    description:
-      'Được làm từ 100% nước dừa tươi nguyên chất, mang trọn vẹn hương vị Dừa Xiêm Xanh Bến Tre - một trong những loại dừa nổi tiếng nhất của vùng đất được mệnh danh là "thủ phủ" dừa của Việt Nam',
-  },
+  
   {
     id: '8',
     name: 'Nước Cốt Dừa XIM - Mom Cooks 200ml/hộp',
@@ -99,14 +108,7 @@ const products = [
       'https://product.hstatic.net/200000721249/product/z5869358870236_8e273bdcd9457929da625745540c6591_92afec2c76754e378c258bd596d43b50_master.jpg',
   },
 
-  {
-    id: '11',
-    name: 'Nước Cốt Dừa Đóng Lon XIM - Mom Cooks 400ml/lon',
-    description:
-      'Nước Cốt Dừa XIM – Mom Cooks với 94,75% nước cốt dừa nguyên chất được chắt chiu từ những trái dừa ngon đệ nhất của thủ phủ dừa Bến Tre. Bằng công nghệ ép lạnh và tiệt trùng hàng đầu, sản xuất trong 24h đã đưa những tinh túy sánh mịn, tự nhiên ấy vào lon tiện lợi vô cùng mà không cần sử dụng bất kì chất bảo quả và hương liệu tạo béo nào, giúp bạn dễ dàng trong việc chế biến món ăn và thức uống. Chỉ cần bật nắp lon nước cốt dừa XIM – Mom Cooks tươi hảo hàng là bạn đang bật công tắc cho vạn món ngon thơm béo, khó cưỡng.',
-    image:
-      'https://product.hstatic.net/200000721249/product/lon_400ml__1__af2f8cf157254da4be146d7731632ce7_master.png',
-  },
+  
 
   {
     id: '12',
@@ -179,10 +181,10 @@ export default function Home() {
         style={{ backgroundImage: `url(${HomeCover})` }}
       >
         <div className="inset-0 h-full bg-black/20 bg-opacity-40 flex flex-col justify-center items-center text-white md:px-6 md:pt-2 md:pb-19 pb-22">
-          <h1 className="md:text-4xl text-xl font-bold md:mb-2 text-center">
+          <h1 className="md:text-[38px] text-2xl font-bold md:mb-2 text-center">
             Hệ sinh thái sản phẩm Agris
           </h1>
-          <p className="md:text-xl text-base text-center max-w-2xl">
+          <p className="md:text-[22px] text-lg max-md:mb-9 text-center max-w-2xl">
             Nông nghiệp công nghệ cao và bền vững trên nền tảng Dữ liệu
           </p>
         </div>

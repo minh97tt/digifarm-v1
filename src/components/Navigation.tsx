@@ -47,7 +47,7 @@ function DesktopNavigation() {
   const navigate = useNavigate()
   return (
     <nav className="w-full z-1 md:px-10 sm:px-6 nav-container">
-      <div className="max-w-7xl shadow-md md:rounded-[20px] py- rounded-2xl bg-gradient-to-tr from-[rgba(244,250,245,1)] to-[rgba(172,221,187,1)]">
+      <div className="max-w-7xl shadow-md md:rounded-[20px] py- rounded-2xl bg-gradient-to-tr from-[#ffffff] to-[#c2f4d1]">
         <div className="md:pt-1 md:pb-6 py-2">
           <h2 className="text-center text-3xl my-5 font-bold text-text-primary">Hệ thống chuỗi cung ứng</h2>
 
@@ -146,9 +146,9 @@ function MobileNavigation() {
   const navigate = useNavigate()
   return (
     <nav className="w-full z-1 md:px-10 sm:px-6">
-      <div className="max-w-7xl !mx-8 shadow-md lg:mx-10 md:rounded-[20px] rounded-2xl bg-gradient-to-tr from-[rgba(244,250,245,1)] to-[rgba(172,221,187,1)]">
+      <div className="max-w-7xl !mx-8 shadow-md lg:mx-10 md:rounded-[20px] rounded-2xl bg-gradient-to-tr from-[#ffffff] to-[#c0ebcd]">
         <div className="md:pt-1 md:pb-6 py-2">
-          <h2 className="text-center md:text-2xl md:my-4 my-1 text-lg font-bold text-text-primary">Hệ thống chuỗi cung ứng</h2>
+          <h2 className="text-center md:text-2xl md:my-4 mt-2 text-xl font-bold text-text-primary">Hệ thống chuỗi cung ứng</h2>
 
           <div className="flex md:flex-row flex-col md:items-start md:px-8 pb-1 px-4 items-center justify-center nav-items">
             {/* DigiFarm */}
@@ -166,7 +166,7 @@ function MobileNavigation() {
               </div>
             </div>
 
-            <div className='inline-block transform rotate-90 -my-4'>
+            <div className='inline-block transform rotate-90 -my-6'>
               <ArrowLottie />
             </div>
 
