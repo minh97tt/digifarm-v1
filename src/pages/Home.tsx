@@ -182,7 +182,7 @@ export default function Home() {
       >
         <div className="inset-0 h-full bg-black/20 bg-opacity-40 flex flex-col justify-center items-center text-white md:px-6 md:pt-2 md:pb-19 pb-22">
           <h1 className="md:text-[38px] text-2xl font-bold md:mb-2 text-center">
-            Hệ sinh thái sản phẩm Agris
+            Hệ sinh thái sản phẩm AgriS
           </h1>
           <p className="md:text-[22px] text-lg max-md:mb-9 text-center max-w-2xl">
             Nông nghiệp công nghệ cao và bền vững trên nền tảng Dữ liệu

@@ -16,7 +16,7 @@ export default function ProductCard({ name, code, image, description, clickable 
       className={`bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-card-border group relative ${clickable ? 'cursor-pointer' : 'cursor-default'
         }`}
       onClick={() => {
-        if (clickable) {
+        if (clickable && name.toLowerCase().includes('đường')) {
           navigate(`/farm/${code}`, { viewTransition: true });
         }
       }}
