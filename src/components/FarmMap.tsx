@@ -135,7 +135,7 @@ const dataMap = [
     name: 'DMF Ninh Dien',
     variety: 'EVA17',
     area: '100000',
-    square: '0.66',
+    square: '16',
     date: '08/06/2025',
     worm: 0.7,
     tree: 26.2,
