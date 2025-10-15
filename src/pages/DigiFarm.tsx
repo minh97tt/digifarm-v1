@@ -21,6 +21,8 @@ import SugarCaneImg from '../assets/farm/sugar-cane.png'
 import PlantGrowthChart from '../components/PlantGrowthChart'
 import ProductivityChart from '../components/ProductivityChart'
 
+import farmVideo from '../assets/videos/farm_3.mp4'
+
 const LoteData = {
   A01: {
     productivity: [80.1, 88.6, 87.4, 88.0],
@@ -141,7 +143,13 @@ export default function DigiFarm() {
         ]}
       />
       {/* <Hero coverImage={digiFarmCover} /> */}
-      <img src={digiFarmCover} />
+      <video
+        src={farmVideo}
+        autoPlay
+        loop
+        muted
+        className="w-full h-[500px] object-cover"
+      />
 
       <div className="layout-container no-nav md:!-mt-40 !-mt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
