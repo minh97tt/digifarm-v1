@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Select from 'react-select'
 
-import digiFarmCover from '../assets/farm_cover.webp'
 import InfoCard from '../components/InfoCard'
 import MapWithPolygon from '../components/FarmMap'
 import { PngIcon } from '../components/PngIcon'
@@ -21,7 +20,9 @@ import SugarCaneImg from '../assets/farm/sugar-cane.png'
 import PlantGrowthChart from '../components/PlantGrowthChart'
 import ProductivityChart from '../components/ProductivityChart'
 
-import farmVideo from '../assets/videos/farm_3.mp4'
+import farmVideo from '../assets/videos/farm-vid.mp4'
+
+import { DigiFarmIcon } from '../components/icons/DigiFarmIcon'
 
 const LoteData = {
   A01: {
@@ -143,13 +144,17 @@ export default function DigiFarm() {
         ]}
       />
       {/* <Hero coverImage={digiFarmCover} /> */}
+      {/* <img src={digiFarmCover} /> */}
       <video
         src={farmVideo}
         autoPlay
         loop
         muted
-        className="w-full h-[500px] object-cover"
+        className="w-full h-[200px] md:h-[500px] object-cover"
       />
+      <div className='absolute top-14 md:top-50 left-1/2 -translate-x-1/2 bg-white/70 shadow-white/60 shadow-xl rounded-4xl px-4 md:py-4'>
+        <DigiFarmIcon className='md:w-70 w-40' />
+      </div>
 
       <div className="layout-container no-nav md:!-mt-40 !-mt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
