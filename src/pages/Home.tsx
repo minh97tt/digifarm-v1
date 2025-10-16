@@ -11,6 +11,8 @@ import yuc from '../assets/plants/yuca.png'
 import ca1 from '../assets/plants/cane.jpg'
 import ca2 from '../assets/plants/cane-o.png'
 
+import agrisVideo from '../assets/videos/agris_optimized.mp4'
+
 // Danh sách sản phẩm mía, dừa, điều
 const products = [
   {
@@ -81,7 +83,7 @@ const products = [
     description:
       'Được làm từ 100% nước dừa nguyên chất từ những quả dừa Organic trồng theo phương pháp hữu cơ (không sử dụng phân bón hóa học, thuốc trừ sâu, nguyên liệu biến đổi Gen,...), hoàn toàn không thêm đường',
   },
-  
+
   {
     id: '8',
     name: 'Nước Cốt Dừa XIM - Mom Cooks 200ml/hộp',
@@ -108,7 +110,7 @@ const products = [
       'https://product.hstatic.net/200000721249/product/z5869358870236_8e273bdcd9457929da625745540c6591_92afec2c76754e378c258bd596d43b50_master.jpg',
   },
 
-  
+
 
   {
     id: '12',
@@ -177,10 +179,10 @@ export default function Home() {
   return (
     <main className="relative">
       <div
-        className="relative z-1 w-full items-center h-100 bg-cover bg-no-repeat"
-        style={{ backgroundImage: `url(${HomeCover})` }}
+        className="relative z-1 w-full items-center md:h-120 h-40 bg-cover bg-no-repeat"
+      // style={{ backgroundImage: `url(${HomeCover})` }}
       >
-        <div className="inset-0 h-full bg-black/20 bg-opacity-40 flex flex-col justify-center items-center text-white md:px-6 md:pt-2 md:pb-19 pb-22">
+        <div className="max-md:hidden absolute inset-0 h-140 pb-25 z-2 flex flex-col justify-end items-center text-white">
           <h1 className="md:text-[38px] text-2xl font-bold md:mb-2 text-center">
             Hệ sinh thái sản phẩm AgriS
           </h1>
@@ -188,9 +190,22 @@ export default function Home() {
             Nông nghiệp công nghệ cao và bền vững trên nền tảng Dữ liệu
           </p>
         </div>
+
+        <video
+          src={agrisVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          controls={false}
+          webkit-playsinline="true"
+          x-webkit-airplay="allow"
+          preload="auto"
+          className="w-full absolute top-0 h-[200px] md:h-140 object-cover pointer-events-none"
+        />
       </div>
 
-      <div className="relative -mt-16 max-md:-mt-48 z-9">
+      <div className="relative z-9">
         <Navigation />
       </div>
 
