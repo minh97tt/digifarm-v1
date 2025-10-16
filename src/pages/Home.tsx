@@ -182,11 +182,11 @@ export default function Home() {
         className="relative z-1 w-full items-center md:h-98 h-40 bg-cover bg-no-repeat"
       // style={{ backgroundImage: `url(${HomeCover})` }}
       >
-        <div className="max-md:hidden absolute inset-0 h-110 pb-20 z-2 flex flex-col justify-end items-center text-white ">
-          <p className="z-99 md:text-3xl text-2xl font-bold md:mb-2 text-center text-shadow-amber-600">
+        <div className="max-md:hidden absolute inset-0 h-110 pb-51 z-2 flex flex-col justify-end items-center text-white">
+          <p className="z-99 md:text-3xl text-2xl font-bold md:mb-2 text-center text-shadow-black/20 !text-shadow-lg">
             Hệ sinh thái sản phẩm AgriS
           </p>
-          <p className="md:text-xl text-lg max-md:mb-9 text-center max-w-2xl">
+          <p className="md:text-xl text-lg max-md:mb-9 text-center max-w-2xl text-shadow-black/20 !text-shadow-lg">
             Nông nghiệp công nghệ cao và bền vững trên nền tảng Dữ liệu
           </p>
         </div>
