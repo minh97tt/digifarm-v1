@@ -136,7 +136,7 @@ export default function DigiFarm() {
   `
 
   return (
-    <main>
+    <main className='relative'>
       <BreadCrumb
         breadCrumbList={[
           { title: 'Trang chủ', link: '/' },
@@ -150,10 +150,15 @@ export default function DigiFarm() {
         autoPlay
         loop
         muted
-        className="w-full h-[200px] md:h-[500px] object-cover"
+        playsInline
+        controls={false}
+        webkit-playsinline="true"
+        x-webkit-airplay="allow"
+        preload="auto"
+        className="w-full h-[200px] md:h-[500px] object-cover pointer-events-none"
       />
-      <div className='absolute top-14 md:top-50 left-1/2 -translate-x-1/2 bg-white/70 shadow-white/60 shadow-xl rounded-4xl px-4 md:py-4'>
-        <DigiFarmIcon className='md:w-70 w-40' />
+      <div className='absolute top-14 md:top-4 right-5 bg-white/80 shadow-lg rounded-2xl px-2 md:py-2'>
+        <DigiFarmIcon className='md:w-40 h-auto w-30' />
       </div>
 
       <div className="layout-container no-nav md:!-mt-40 !-mt-20">
