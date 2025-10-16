@@ -179,14 +179,14 @@ export default function Home() {
   return (
     <main className="relative">
       <div
-        className="relative z-1 w-full items-center md:h-90 h-40 bg-cover bg-no-repeat"
+        className="relative z-1 w-full items-center md:h-98 h-40 bg-cover bg-no-repeat"
       // style={{ backgroundImage: `url(${HomeCover})` }}
       >
-        <div className="max-md:hidden absolute inset-0 h-110 pb-25 z-2 flex flex-col justify-end items-center text-white ">
-          <h1 className="md:text-3xl text-2xl font-bold md:mb-2 text-center">
+        <div className="max-md:hidden absolute inset-0 h-110 pb-51 z-2 flex flex-col justify-end items-center text-white">
+          <p className="z-99 md:text-3xl text-2xl font-bold md:mb-2 text-center text-shadow-black/20 !text-shadow-lg">
             Hệ sinh thái sản phẩm AgriS
-          </h1>
-          <p className="md:text-xl text-lg max-md:mb-9 text-center max-w-2xl">
+          </p>
+          <p className="md:text-xl text-lg max-md:mb-9 text-center max-w-2xl text-shadow-black/20 !text-shadow-lg">
             Nông nghiệp công nghệ cao và bền vững trên nền tảng Dữ liệu
           </p>
         </div>
@@ -201,7 +201,7 @@ export default function Home() {
           webkit-playsinline="true"
           x-webkit-airplay="allow"
           preload="auto"
-          className="w-full absolute top-0 h-50 md:h-100 object-cover pointer-events-none"
+          className="w-full absolute top-0 h-50 md:h-110 object-cover pointer-events-none"
         />
       </div>
 

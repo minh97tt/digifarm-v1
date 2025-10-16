@@ -23,8 +23,6 @@ const containerStyle = {
   borderRadius: 20,
 };
 
-const markerPath = `M100.232 149.198c-2.8 0-5.4-1.8-7.2-5.2-22.2-41-22.4-41.4-22.4-41.6-3.2-5.1-4.9-11.3-4.9-17.6 0-19.1 15.5-34.6 34.6-34.6s34.6 15.5 34.6 34.6c0 6.5-1.8 12.8-5.2 18.2 0 0-1.2 2.4-22.2 41-1.9 3.4-4.4 5.2-7.3 5.2zm.1-95c-16.9 0-30.6 13.7-30.6 30.6 0 5.6 1.5 11.1 4.5 15.9.6 1.3 16.4 30.4 22.4 41.5 2.1 3.9 5.2 3.9 7.4 0 7.5-13.8 21.7-40.1 22.2-41 3.1-5 4.7-10.6 4.7-16.3-.1-17-13.8-30.7-30.6-30.7z" /> <path fill="#282828" d="M100.332 105.598c-10.6 0-19.1-8.6-19.1-19.1s8.5-19.2 19.1-19.2c10.6 0 19.1 8.6 19.1 19.1s-8.6 19.2-19.1 19.2zm0-34.3c-8.3 0-15.1 6.8-15.1 15.1s6.8 15.1 15.1 15.1 15.1-6.8 15.1-15.1-6.8-15.1-15.1-15.1z`;
-
 const dataMap = [
   {
     id: 1,
@@ -180,7 +178,7 @@ function InfoContent({ activeFeature, seedingData, tillageData }: any) {
       {/* <div>Mã ruộng: {activeFeature.properties.FIELD_NAME}</div> */}
       <div className='space-y-1 md:pr-14'>
         <h1 className='font-bold mb-2 underline text-base text-center'>Thông tin canh tác:</h1>
-        <div>🌾 <b>Tên nông trường:</b> DMF Ninh Dien</div>
+        {/* <div>🌾 <b>Tên nông trường:</b> DMF</div> */}
         <div>🗂️ <b>Tên lô:</b> {activeFeature.code}</div>
         <div>🌱 <b>Giống cây trồng:</b> Mía {activeFeature.variety}</div>
         <div>📐 <b>Diện tích:</b> {activeFeature.square} ha</div>
@@ -247,8 +245,8 @@ const firstFeature = boundaries.features[6];
 const firstCoordinate = firstFeature?.geometry.coordinates[0][0];
 
 const center = {
-  lat: 11.204,
-  lng: 105.99
+  lat: 11.236,
+  lng: 106
 };
 
 // Function to convert GeoJSON coordinates to Google Maps LatLng format
@@ -293,7 +291,7 @@ const MapWithPolygon = () => {
         // mapTypeId="satellite"
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={13}
+        zoom={11.4}
         options={{
           disableDefaultUI: true,
           zoomControl: true,
@@ -311,7 +309,7 @@ const MapWithPolygon = () => {
           // icon={{
           //   url: '/marker.png',
           // }}
-          position={{ lat: 11.225, lng: 105.96 }}
+          position={{ lat: 11.225, lng: 105.93 }}
           label={{
             text: "Nông trường Thành Long",
             color: "white",
@@ -325,7 +323,7 @@ const MapWithPolygon = () => {
           // icon={{
           //   url: '/marker.png',
           // }}
-          position={{ lat: 11.220, lng: 106.016 }}
+          position={{ lat: 11.210, lng: 106.025 }}
           title="Location 1"
           label={{
             text: "Nông trường Ninh Điền",
@@ -339,9 +337,23 @@ const MapWithPolygon = () => {
           // icon={{
           //   url: '/marker.png',
           // }}
-          position={{ lat: 11.188, lng: 106.012 }}
+          position={{ lat: 11.18, lng: 106.0 }}
           label={{
-            text: "Nông trường Cam",
+            text: "Nông trường Kasekam",
+            color: "white",
+            fontSize: "17px",
+            fontWeight: '500',
+            className: ""
+          }}
+        />
+
+        <Marker
+          // icon={{
+          //   url: '/marker.png',
+          // }}
+          position={{ lat: 11.15, lng: 106.05 }}
+          label={{
+            text: "Nông trường Bến Cầu",
             color: "white",
             fontSize: "17px",
             fontWeight: '500',
@@ -369,6 +381,7 @@ const MapWithPolygon = () => {
               }}
               onMouseOver={(e) => {
                 setHovered(true);
+
                 setActiveFeature({ ...feature, ...dataMap[index] });
                 setHoverPosition({
                   lat: e.latLng?.lat() ?? 0,
@@ -426,7 +439,7 @@ const MapWithPolygon = () => {
             options={{
               // pixelOffset: new window.google.maps.Size(0, -10),
               disableAutoPan: true,
-              maxWidth: 1200,
+              maxWidth: 1000,
               // maxHeight: 1000,
               headerDisabled: true,
               // You cannot set full CSS here, but some layout things can be tweaked

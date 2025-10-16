@@ -90,7 +90,7 @@ export default function DigiFarm() {
     { label: 'Loại giống', value: 'Thương mại' },
     { label: 'Nguồn gốc giống', value: 'NT Thành Long' },
     { label: 'Trạm lấy giống', value: 'Trạm 5' },
-    { label: 'Tuổi giống', value: '8 tháng' },
+    { label: 'Tuổi giống', value: '12 tháng' },
     { label: 'Tiêu chí chọn giống', value: 'Chín sớm, đất cao' },
   ]
 
@@ -123,7 +123,7 @@ export default function DigiFarm() {
     { label: 'Ngày thu hoạch bắt đầu', value: '12/11/2024' },
     { label: 'Ngày thu hoạch kết thúc', value: '12/11/2024' },
     { label: 'Diện tích thu hoạch', value: '4.61 ha' },
-    { label: 'Năng suất sạch', value: '44.79 tấn/ha' },
+    { label: 'Năng suất sạch', value: '64.79 tấn/ha' },
     { label: 'Tạp chất', value: '7.04 %' },
     { label: 'CCS', value: '8.62 %' },
     { label: 'Hình thức thu hoạch', value: 'Máy thu hoạch số TH0106' },
