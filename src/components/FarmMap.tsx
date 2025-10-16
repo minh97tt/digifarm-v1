@@ -293,7 +293,7 @@ const MapWithPolygon = () => {
         // mapTypeId="satellite"
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={11}
+        zoom={11.8}
 
       >
         {/* Map through each feature in the boundaries data */}
