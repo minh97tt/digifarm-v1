@@ -10,6 +10,14 @@ import boundaries from '../assets/boundaries';
 import WanringIcon from '../assets/farm/warning.png'
 import RedAlertLottie from '../assets/red-alert.json'
 
+import points from '../assets/polygons'
+
+import { groupBy } from 'lodash-es';
+
+const polygons = groupBy(points, (p) => p[0])
+
+console.log('polygons', polygons)
+
 const containerStyle = {
   width: '100%',
   height: '480px',
@@ -285,7 +293,7 @@ const MapWithPolygon = () => {
         // mapTypeId="satellite"
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={14}
+        zoom={12}
 
       >
         {/* Map through each feature in the boundaries data */}
@@ -309,6 +317,41 @@ const MapWithPolygon = () => {
               onMouseOver={(e) => {
                 setHovered(true);
                 setActiveFeature({ ...feature, ...dataMap[index] });
+                setHoverPosition({
+                  lat: e.latLng?.lat() ?? 0,
+                  lng: e.latLng?.lng() ?? 0,
+                });
+                // console.log('a@', index);
+              }}
+              onMouseOut={() => {
+                setHovered(false);
+                setActiveFeature(null);
+                setHoverPosition(null);
+              }}
+            />
+          );
+        })}
+
+        {Object.keys(polygons).map((key, idx) => {
+          const coords = polygons[key];
+          const { fillColor, strokeColor } = getColorFromPalette(idx);
+          const featureId = idx % 6;
+          const feature = boundaries.features[featureId] || {};
+          const extInfo = dataMap[featureId] || {};
+          return (
+            <Polygon
+              key={key}
+              paths={coords.map((p) => ({ lat: Number(p[3]), lng: Number(p[4]) }))}
+              options={{
+                fillColor,
+                fillOpacity: 0.6,
+                strokeColor,
+                strokeOpacity: 1,
+                strokeWeight: 1,
+              }}
+              onMouseOver={(e) => {
+                setHovered(true);
+                setActiveFeature({ ...feature, ...extInfo });
                 setHoverPosition({
                   lat: e.latLng?.lat() ?? 0,
                   lng: e.latLng?.lng() ?? 0,
