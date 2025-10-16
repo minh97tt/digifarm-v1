@@ -21,6 +21,7 @@ import PlantGrowthChart from '../components/PlantGrowthChart'
 import ProductivityChart from '../components/ProductivityChart'
 
 import farmVideo from '../assets/videos/farm-vid.mp4'
+import digiFarmCover from '../assets/farm_cover.webp'
 
 import { DigiFarmIcon } from '../components/icons/DigiFarmIcon'
 
@@ -144,8 +145,8 @@ export default function DigiFarm() {
         ]}
       />
       {/* <Hero coverImage={digiFarmCover} /> */}
-      {/* <img src={digiFarmCover} /> */}
-      <video
+      <img src={digiFarmCover} />
+      {/* <video
         src={farmVideo}
         autoPlay
         loop
@@ -156,10 +157,10 @@ export default function DigiFarm() {
         x-webkit-airplay="allow"
         preload="auto"
         className="w-full h-[200px] md:h-[500px] object-cover pointer-events-none"
-      />
-      <div className='absolute top-14 md:top-4 right-5 bg-white/80 shadow-lg rounded-2xl px-2 md:py-2'>
+      /> */}
+      {/* <div className='absolute top-14 md:top-4 right-5 bg-white/80 shadow-lg rounded-2xl px-2 md:py-2'>
         <DigiFarmIcon className='md:w-40 h-auto w-30' />
-      </div>
+      </div> */}
 
       <div className="layout-container no-nav md:!-mt-40 !-mt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
