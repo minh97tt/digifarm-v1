@@ -63,7 +63,7 @@ const products = [
     code: '20100075',
     name: 'Đường phèn Biên Hoà Pro 500g',
     image:
-      'https://product.hstatic.net/200000721249/product/dg_phen_pro_19d0f25959d54dff87fa728d06ddbdac_master.jpg',
+      'https://cdn.hstatic.net/products/200000721249/banner_phen_pro_lazada-01_5abc79c9c72b4de998182e8b5872d11d_master.jpg',
     description:
       'Sản phẩm chất lượng cao, ngọt thanh tự nhiên, không thể thiếu trong gian bếp của bạn.',
   },
